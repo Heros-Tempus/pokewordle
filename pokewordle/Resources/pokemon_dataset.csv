@@ -1,0 +1,1026 @@
+dex_number,name,type_01,type_02,ability_01,ability_02,hidden_ability,is_legendary,red_availability,blue_availability,yellow_availability
+0,Bulbasaur,Grass, Poison,Overgrow,,Chlorophyll,FALSE,0;1;2;3;4;5;6;7;8,0;1;2;3;4;5;6;7;8,0;1;2
+1,Ivysaur,Grass, Poison,Overgrow,,Chlorophyll,FALSE,0;1;2;3;4;5;6;7;8,0;1;2;3;4;5;6;7;8,0;1;2
+2,Venusaur,Grass, Poison,Overgrow,,Chlorophyll,FALSE,0;1;2;3;4;5;6;7;8,0;1;2;3;4;5;6;7;8,0;1;2
+3,Charmander,Fire,,Blaze,,Solar Power,FALSE,0;1;2;3;4;5;6;7;8,0;1;2;3;4;5;6;7;8,3;4;5
+4,Charmeleon,Fire,,Blaze,,Solar Power,FALSE,0;1;2;3;4;5;6;7;8,0;1;2;3;4;5;6;7;8,3;4;5
+5,Charizard,Fire, Flying,Blaze,,Solar Power,FALSE,0;1;2;3;4;5;6;7;8,0;1;2;3;4;5;6;7;8,3;4;5
+6,Squirtle,Water,,Torrent,,Rain Dish,FALSE,0;1;2;3;4;5;6;7;8,0;1;2;3;4;5;6;7;8,6;7;8
+7,Wartortle,Water,,Torrent,,Rain Dish,FALSE,0;1;2;3;4;5;6;7;8,0;1;2;3;4;5;6;7;8,6;7;8
+8,Blastoise,Water,,Torrent,,Rain Dish,FALSE,0;1;2;3;4;5;6;7;8,0;1;2;3;4;5;6;7;8,6;7;8
+9,Caterpie,Bug,,Shield,,Run Away,FALSE,,,
+10,Metapod,Bug,,Shed,,,FALSE,,,
+11,Butterfree,Bug, Flying,Compound,,Tinted Lens,FALSE,,,
+12,Weedle,Bug, Poison,Shield,,Run Away,FALSE,,,unavailable
+13,Kakuna,Bug, Poison,Shed,,,FALSE,,,unavailable
+14,Beedrill,Bug, Poison,Swarm,,Sniper,FALSE,,,unavailable
+15,Pidgey,Normal, Flying,Keen, Tangled,Big Pecks,FALSE,,,
+16,Pidgeotto,Normal, Flying,Keen, Tangled,Big Pecks,FALSE,,,
+17,Pidgeot,Normal, Flying,Keen, Tangled,Big Pecks,FALSE,,,
+18,Rattata,Normal,,Run, Guts,Hustle,FALSE,,,
+19,Raticate,Normal,,Run, Guts,Hustle,FALSE,,,
+20,Spearow,Normal, Flying,Keen,,Sniper,FALSE,,,
+21,Fearow,Normal, Flying,Keen,,Sniper,FALSE,,,
+22,Ekans,Poison,,Intimidate, Shed,Unnerve,FALSE,,unavailable,unavailable
+23,Arbok,Poison,,Intimidate, Shed,Unnerve,FALSE,,unavailable,unavailable
+24,Pikachu,Electric,,Static,,Lightning Rod,FALSE,,,
+25,Raichu,Electric,,Static,,Lightning Rod,FALSE,,,unavailable
+26,Sandshrew,Ground,,Sand,,Sand Rush,FALSE,unavailable,,
+27,Sandslash,Ground,,Sand,,Sand Rush,FALSE,unavailable,,
+28,Nidoran (female),Poison,,Poison, Rivalry,Hustle,FALSE,,,
+29,Nidorina,Poison,,Poison, Rivalry,Hustle,FALSE,,,
+30,Nidoqueen,Poison, Ground,Poison, Rivalry,Sheer Force,FALSE,,,
+31,Nidoran (male),Poison,,Poison, Rivalry,Hustle,FALSE,,,
+32,Nidorino,Poison,,Poison, Rivalry,Hustle,FALSE,,,
+33,Nidoking,Poison, Ground,Poison, Rivalry,Sheer Force,FALSE,,,
+34,Clefairy,Fairy,,Cute, Magic,Friend Guard,FALSE,,,
+35,Clefable,Fairy,,Cute, Magic,Unaware,FALSE,,,
+36,Vulpix,Fire,,Flash,,Drought,FALSE,unavailable,,
+37,Ninetales,Fire,,Flash,,Drought,FALSE,unavailable,,
+38,Jigglypuff,Normal, Fairy,Cute, Competitive,Friend Guard,FALSE,,,
+39,Wigglytuff,Normal, Fairy,Cute, Competitive,Frisk,FALSE,,,
+40,Zubat,Poison, Flying,Inner,,Infiltrator,FALSE,,,
+41,Golbat,Poison, Flying,Inner,,Infiltrator,FALSE,,,
+42,Oddish,Grass, Poison,Chlorophyll,,Run Away,FALSE,,unavailable,
+43,Gloom,Grass, Poison,Chlorophyll,,Stench,FALSE,,unavailable,
+44,Vileplume,Grass, Poison,Chlorophyll,,Effect Spore,FALSE,,unavailable,
+45,Paras,Bug, Grass,Effect, Dry,Damp,FALSE,,,
+46,Parasect,Bug, Grass,Effect, Dry,Damp,FALSE,,,
+47,Venonat,Bug, Poison,Compound, Tinted,Run Away,FALSE,,,
+48,Venomoth,Bug, Poison,Shield, Tinted,Wonder Skin,FALSE,,,
+49,Diglett,Ground,,Sand, Arena,Sand Force,FALSE,,,
+50,Dugtrio,Ground,,Sand, Arena,Sand Force,FALSE,,,
+51,Meowth,Normal,,Pickup, Technician,Unnerve and Galarian,FALSE,unavailable,,unavailable
+52,Persian,Normal,,Limber, Technician,Unnerve,FALSE,unavailable,,unavailable
+53,Psyduck,Water,,Damp, Cloud,Swift Swim,FALSE,,,
+54,Golduck,Water,,Damp, Cloud,Swift Swim,FALSE,,,
+55,Mankey,Fighting,,Vital, Anger,Defiant,FALSE,,unavailable,
+56,Primeape,Fighting,,Vital, Anger,Defiant,FALSE,,unavailable,
+57,Growlithe,Fire,,Intimidate, Flash,Justified,FALSE,,unavailable,
+58,Arcanine,Fire,,Intimidate, Flash,Justified,FALSE,,unavailable,
+59,Poliwag,Water,,Water, Damp,Swift Swim,FALSE,,,
+60,Poliwhirl,Water,,Water, Damp,Swift Swim,FALSE,,,
+61,Poliwrath,Water, Fighting,Water, Damp,Swift Swim,FALSE,,,
+62,Abra,Psychic,,Synchronize, Inner,Magic Guard,FALSE,,,
+63,Kadabra,Psychic,,Synchronize, Inner,Magic Guard,FALSE,,,
+64,Alakazam,Psychic,,Synchronize, Inner,Magic Guard,FALSE,,,
+65,Machop,Fighting,,Guts, No,Steadfast,FALSE,,,
+66,Machoke,Fighting,,Guts, No,Steadfast,FALSE,,,
+67,Machamp,Fighting,,Guts, No,Steadfast,FALSE,,,
+68,Bellsprout,Grass, Poison,Chlorophyll,,Gluttony,FALSE,unavailable,,
+69,Weepinbell,Grass, Poison,Chlorophyll,,Gluttony,FALSE,unavailable,,
+70,Victreebel,Grass, Poison,Chlorophyll,,Gluttony,FALSE,unavailable,,
+71,Tentacool,Water, Poison,Clear, Liquid,Rain Dish,FALSE,,,
+72,Tentacruel,Water, Poison,Clear, Liquid,Rain Dish,FALSE,,,
+73,Geodude,Rock, Ground,Rock, Sturdy,Sand Veil,FALSE,,,
+74,Graveler,Rock, Ground,Rock, Sturdy,Sand Veil,FALSE,,,
+75,Golem,Rock, Ground,Rock, Sturdy,Sand Veil,FALSE,,,
+76,Ponyta,Fire,,Run, Flash,Flame Body,FALSE,,,
+77,Rapidash,Fire,,Run, Flash,Flame Body,FALSE,,,
+78,Slowpoke,Water, Psychic,Oblivious, Own,Regenerator,FALSE,,,
+79,Slowbro,Water, Psychic,Oblivious, Own,Regenerator,FALSE,,,
+80,Magnemite,Electric, Steel,Magnet, Sturdy,Analytic,FALSE,,,
+81,Magneton,Electric, Steel,Magnet, Sturdy,Analytic,FALSE,,,
+82,Farfetch'd,Normal, Flying,Keen, Inner,Defiant,FALSE,,,
+83,Doduo,Normal, Flying,Run, Early,Tangled Feet,FALSE,,,
+84,Dodrio,Normal, Flying,Run, Early,Tangled Feet,FALSE,,,
+85,Seel,Water,,Thick, Hydration,Ice Body,FALSE,,,
+86,Dewgong,Water, Ice,Thick, Hydration,Ice Body,FALSE,,,
+87,Grimer,Poison,,Stench, Sticky,Poison Touch,FALSE,,,
+88,Muk,Poison,,Stench, Sticky,Poison Touch,FALSE,,,
+89,Shellder,Water,,Shell, Skill,Overcoat,FALSE,,,
+90,Cloyster,Water, Ice,Shell, Skill,Overcoat,FALSE,,,
+91,Gastly,Ghost, Poison,Levitate,,,FALSE,,,
+92,Haunter,Ghost, Poison,Levitate,,,FALSE,,,
+93,Gengar,Ghost, Poison,Cursed,,,FALSE,,,
+94,Onix,Rock, Ground,Rock, Sturdy,Weak Armor,FALSE,,,
+95,Drowzee,Psychic,,Insomnia, Forewarn,Inner Focus,FALSE,,,
+96,Hypno,Psychic,,Insomnia, Forewarn,Inner Focus,FALSE,,,
+97,Krabby,Water,,Hyper, Shell,Sheer Force,FALSE,,,
+98,Kingler,Water,,Hyper, Shell,Sheer Force,FALSE,,,
+99,Voltorb,Electric,,Soundproof, Static,Aftermath,FALSE,,,
+100,Electrode,Electric,,Soundproof, Static,Aftermath,FALSE,,,
+101,Exeggcute,Grass, Psychic,Chlorophyll,,Harvest,FALSE,,,
+102,Exeggutor,Grass, Psychic,Chlorophyll,,Harvest,FALSE,,,
+103,Cubone,Ground,,Rock, Lightning,Battle Armor,FALSE,,,
+104,Marowak,Ground,,Rock, Lightning,Battle Armor,FALSE,,,
+105,Hitmonlee,Fighting,,Limber, Reckless,Unburden,FALSE,105;106,105;106,105;106
+106,Hitmonchan,Fighting,,Keen, Iron,Inner Focus,FALSE,105;106,105;106,105;106
+107,Lickitung,Normal,,Own, Oblivious,Cloud Nine,FALSE,,,
+108,Koffing,Poison,,Levitate, Neutralizing GasGen ,Stench,FALSE,,,unavailable
+109,Weezing,Poison,,Levitate, Neutralizing,Stench,FALSE,,,unavailable
+110,Rhyhorn,Ground, Rock,Lightning, Rock,Reckless,FALSE,,,
+111,Rhydon,Ground, Rock,Lightning, Rock,Reckless,FALSE,,,
+112,Chansey,Normal,,Natural, Serene,Healer,FALSE,,,
+113,Tangela,Grass,,Chlorophyll, Leaf,Regenerator,FALSE,,,
+114,Kangaskhan,Normal,,Early, Scrappy,Inner Focus,FALSE,,,
+115,Horsea,Water,,Swift, Sniper,Damp,FALSE,,,
+116,Seadra,Water,,Poison, Sniper,Damp,FALSE,,,
+117,Goldeen,Water,,Swift, Water,Lightning Rod,FALSE,,,
+118,Seaking,Water,,Swift, Water,Lightning Rod,FALSE,,,
+119,Staryu,Water,,Illuminate, Natural,Analytic,FALSE,,,
+120,Starmie,Water, Psychic,Illuminate, Natural,Analytic,FALSE,,,
+121,Mr. Mime,Psychic, Fairy,Soundproof, Filter,Technician,FALSE,,,
+122,Scyther,Bug, Flying,Swarm, Technician,Steadfast,FALSE,,unavailable,
+123,Jynx,Ice, Psychic,Oblivious, Forewarn,Dry Skin,FALSE,,,unavailable
+124,Electabuzz,Electric,,Static,,Vital Spirit,FALSE,,unavailable,unavailable
+125,Magmar,Fire,,Flame,,Vital Spirit,FALSE,unavailable,,unavailable
+126,Pinsir,Bug,,Hyper, Mold,Moxie,FALSE,unavailable,,
+127,Tauros,Normal,,Intimidate, Anger,Sheer Force,FALSE,,,
+128,Magikarp,Water,,Swift,,Rattled,FALSE,,,
+129,Gyarados,Water, Flying,Intimidate,,Moxie,FALSE,,,
+130,Lapras,Water, Ice,Water, Shell,Hydration,FALSE,,,
+131,Ditto,Normal,,Limber,,Imposter,FALSE,,,
+132,Eevee,Normal,,Run, Adaptability,Anticipation,FALSE,132;133;134;135,132;133;134;135,132;133;134;135
+133,Vaporeon,Water,,Water,,Hydration,FALSE,132;133;134;135,132;133;134;135,132;133;134;135
+134,Jolteon,Electric,,Volt,,Quick Feet,FALSE,132;133;134;135,132;133;134;135,132;133;134;135
+135,Flareon,Fire,,Flash,,Guts,FALSE,132;133;134;135,132;133;134;135,132;133;134;135
+136,Porygon,Normal,,Trace, Download,Analytic,FALSE,,,
+137,Omanyte,Rock, Water,Swift, Shell,Weak Armor,FALSE,137;138;139;140,137;138;139;140,137;138;139;140
+138,Omastar,Rock, Water,Swift, Shell,Weak Armor,FALSE,137;138;139;140,137;138;139;140,137;138;139;140
+139,Kabuto,Rock, Water,Swift, Battle,Weak Armor,FALSE,137;138;139;140,137;138;139;140,137;138;139;140
+140,Kabutops,Rock, Water,Swift, Battle,Weak Armor,FALSE,137;138;139;140,137;138;139;140,137;138;139;140
+141,Aerodactyl,Rock, Flying,Rock, Pressure,Unnerve,FALSE,,,
+142,Snorlax,Normal,,Immunity, Thick,Gluttony,FALSE,,,
+143,Articuno,Ice, Flying,Pressure,,Snow Cloak,TRUE,,,
+144,Zapdos,Electric, Flying,Pressure,,Static,TRUE,,,
+145,Moltres,Fire, Flying,Pressure,,Flame Body,TRUE,,,
+146,Dratini,Dragon,,Shed,,Marvel Scale,FALSE,,,
+147,Dragonair,Dragon,,Shed,,Marvel Scale,FALSE,,,
+148,Dragonite,Dragon, Flying,Inner,,Multiscale,FALSE,,,
+149,Mewtwo,Psychic,,Pressure,,Unnerve,TRUE,,,
+150,Mew,Psychic,,Synchronize,,,TRUE,unavailable,unavailable,unavailable
+151,Chikorita,Grass,,Overgrow,,Leaf Guard,FALSE,unavailable,unavailable,unavailable
+152,Bayleef,Grass,,Overgrow,,Leaf Guard,FALSE,unavailable,unavailable,unavailable
+153,Meganium,Grass,,Overgrow,,Leaf Guard,FALSE,unavailable,unavailable,unavailable
+154,Cyndaquil,Fire,,Blaze,,Flash Fire,FALSE,unavailable,unavailable,unavailable
+155,Quilava,Fire,,Blaze,,Flash Fire,FALSE,unavailable,unavailable,unavailable
+156,Typhlosion,Fire,,Blaze,,Flash Fire,FALSE,unavailable,unavailable,unavailable
+157,Totodile,Water,,Torrent,,Sheer Force,FALSE,unavailable,unavailable,unavailable
+158,Croconaw,Water,,Torrent,,Sheer Force,FALSE,unavailable,unavailable,unavailable
+159,Feraligatr,Water,,Torrent,,Sheer Force,FALSE,unavailable,unavailable,unavailable
+160,Sentret,Normal,,Run, Keen,Frisk,FALSE,unavailable,unavailable,unavailable
+161,Furret,Normal,,Run, Keen,Frisk,FALSE,unavailable,unavailable,unavailable
+162,Hoothoot,Normal, Flying,Insomnia, Keen,Tinted Lens,FALSE,unavailable,unavailable,unavailable
+163,Noctowl,Normal, Flying,Insomnia, Keen,Tinted Lens,FALSE,unavailable,unavailable,unavailable
+164,Ledyba,Bug, Flying,Swarm, Early,Rattled,FALSE,unavailable,unavailable,unavailable
+165,Ledian,Bug, Flying,Swarm, Early,Iron Fist,FALSE,unavailable,unavailable,unavailable
+166,Spinarak,Bug, Poison,Swarm, Insomnia,Sniper,FALSE,unavailable,unavailable,unavailable
+167,Ariados,Bug, Poison,Swarm, Insomnia,Sniper,FALSE,unavailable,unavailable,unavailable
+168,Crobat,Poison, Flying,Inner,,Infiltrator,FALSE,unavailable,unavailable,unavailable
+169,Chinchou,Water, Electric,Volt, Illuminate,Water Absorb,FALSE,unavailable,unavailable,unavailable
+170,Lanturn,Water, Electric,Volt, Illuminate,Water Absorb,FALSE,unavailable,unavailable,unavailable
+171,Pichu,Electric,,Static,,Lightning Rod,FALSE,unavailable,unavailable,unavailable
+172,Cleffa,Fairy,,Cute, Magic,Friend Guard,FALSE,unavailable,unavailable,unavailable
+173,Igglybuff,Normal, Fairy,Cute, Competitive,Friend Guard,FALSE,unavailable,unavailable,unavailable
+174,Togepi,Fairy,,Hustle, Serene,Super Luck,FALSE,unavailable,unavailable,unavailable
+175,Togetic,Fairy, Flying,Hustle, Serene,Super Luck,FALSE,unavailable,unavailable,unavailable
+176,Natu,Psychic, Flying,Synchronize, Early,Magic Bounce,FALSE,unavailable,unavailable,unavailable
+177,Xatu,Psychic, Flying,Synchronize, Early,Magic Bounce,FALSE,unavailable,unavailable,unavailable
+178,Mareep,Electric,,Static,,Plus,FALSE,unavailable,unavailable,unavailable
+179,Flaaffy,Electric,,Static,,Plus,FALSE,unavailable,unavailable,unavailable
+180,Ampharos,Electric,,Static,,Plus,FALSE,unavailable,unavailable,unavailable
+181,Bellossom,Grass,,Chlorophyll,,Healer,FALSE,unavailable,unavailable,unavailable
+182,Marill,Water, Fairy,Thick, Huge,Sap Sipper,FALSE,unavailable,unavailable,unavailable
+183,Azumarill,Water, Fairy,Thick, Huge,Sap Sipper,FALSE,unavailable,unavailable,unavailable
+184,Sudowoodo,Rock,,Sturdy, Rock,Rattled,FALSE,unavailable,unavailable,unavailable
+185,Politoed,Water,,Water, Damp,Drizzle,FALSE,unavailable,unavailable,unavailable
+186,Hoppip,Grass, Flying,Chlorophyll, Leaf,Infiltrator,FALSE,unavailable,unavailable,unavailable
+187,Skiploom,Grass, Flying,Chlorophyll, Leaf,Infiltrator,FALSE,unavailable,unavailable,unavailable
+188,Jumpluff,Grass, Flying,Chlorophyll, Leaf,Infiltrator,FALSE,unavailable,unavailable,unavailable
+189,Aipom,Normal,,Run, Pickup,Skill Link,FALSE,unavailable,unavailable,unavailable
+190,Sunkern,Grass,,Chlorophyll, Solar,Early Bird,FALSE,unavailable,unavailable,unavailable
+191,Sunflora,Grass,,Chlorophyll, Solar,Early Bird,FALSE,unavailable,unavailable,unavailable
+192,Yanma,Bug, Flying,Speed, Compound,Frisk,FALSE,unavailable,unavailable,unavailable
+193,Wooper,Water, Ground,Damp, Water,Unaware,FALSE,unavailable,unavailable,unavailable
+194,Quagsire,Water, Ground,Damp, Water,Unaware,FALSE,unavailable,unavailable,unavailable
+195,Espeon,Psychic,,Synchronize,,Magic Bounce,FALSE,unavailable,unavailable,unavailable
+196,Umbreon,Dark,,Synchronize,,Inner Focus,FALSE,unavailable,unavailable,unavailable
+197,Murkrow,Dark, Flying,Insomnia, Super,Prankster,FALSE,unavailable,unavailable,unavailable
+198,Slowking,Water, Psychic,Oblivious, Own,Regenerator,FALSE,unavailable,unavailable,unavailable
+199,Misdreavus,Ghost,,Levitate,,,FALSE,unavailable,unavailable,unavailable
+200,Unown,Psychic,,Levitate,,,FALSE,unavailable,unavailable,unavailable
+201,Wobbuffet,Psychic,,Shadow,,Telepathy,FALSE,unavailable,unavailable,unavailable
+202,Girafarig,Normal, Psychic,Inner, Early,Sap Sipper,FALSE,unavailable,unavailable,unavailable
+203,Pineco,Bug,,Sturdy,,Overcoat,FALSE,unavailable,unavailable,unavailable
+204,Forretress,Bug, Steel,Sturdy,,Overcoat,FALSE,unavailable,unavailable,unavailable
+205,Dunsparce,Normal,,Serene, Run,Rattled,FALSE,unavailable,unavailable,unavailable
+206,Gligar,Ground, Flying,Hyper, Sand,Immunity,FALSE,unavailable,unavailable,unavailable
+207,Steelix,Steel, Ground,Rock, Sturdy,Sheer Force,FALSE,unavailable,unavailable,unavailable
+208,Snubbull,Fairy,,Intimidate, Run,Rattled,FALSE,unavailable,unavailable,unavailable
+209,Granbull,Fairy,,Intimidate, Quick,Rattled,FALSE,unavailable,unavailable,unavailable
+210,Qwilfish,Water, Poison,Poison, Swift,Intimidate,FALSE,unavailable,unavailable,unavailable
+211,Scizor,Bug, Steel,Swarm, Technician,Light Metal,FALSE,unavailable,unavailable,unavailable
+212,Shuckle,Bug, Rock,Sturdy, Gluttony,Contrary,FALSE,unavailable,unavailable,unavailable
+213,Heracross,Bug, Fighting,Swarm, Guts,Moxie,FALSE,unavailable,unavailable,unavailable
+214,Sneasel,Dark, Ice,Inner, Keen,Pickpocket,FALSE,unavailable,unavailable,unavailable
+215,Teddiursa,Normal,,Pickup, Quick,Honey Gather,FALSE,unavailable,unavailable,unavailable
+216,Ursaring,Normal,,Guts, Quick,Unnerve,FALSE,unavailable,unavailable,unavailable
+217,Slugma,Fire,,Magma, Flame,Weak Armor,FALSE,unavailable,unavailable,unavailable
+218,Magcargo,Fire, Rock,Magma, Flame,Weak Armor,FALSE,unavailable,unavailable,unavailable
+219,Swinub,Ice, Ground,Oblivious, Snow,Thick Fat,FALSE,unavailable,unavailable,unavailable
+220,Piloswine,Ice, Ground,Oblivious, Snow,Thick Fat,FALSE,unavailable,unavailable,unavailable
+221,Corsola,Water, Rock,Hustle, Natural,Regenerator,FALSE,unavailable,unavailable,unavailable
+222,Remoraid,Water,,Hustle, Sniper,Moody,FALSE,unavailable,unavailable,unavailable
+223,Octillery,Water,,Suction, Sniper,Moody,FALSE,unavailable,unavailable,unavailable
+224,Delibird,Ice, Flying,Vital, Hustle,Insomnia,FALSE,unavailable,unavailable,unavailable
+225,Mantine,Water, Flying,Swift, Water,Water Veil,FALSE,unavailable,unavailable,unavailable
+226,Skarmory,Steel, Flying,Keen, Sturdy,Weak Armor,FALSE,unavailable,unavailable,unavailable
+227,Houndour,Dark, Fire,Early, Flash,Unnerve,FALSE,unavailable,unavailable,unavailable
+228,Houndoom,Dark, Fire,Early, Flash,Unnerve,FALSE,unavailable,unavailable,unavailable
+229,Kingdra,Water, Dragon,Swift, Sniper,Damp,FALSE,unavailable,unavailable,unavailable
+230,Phanpy,Ground,,Pickup,,Sand Veil,FALSE,unavailable,unavailable,unavailable
+231,Donphan,Ground,,Sturdy,,Sand Veil,FALSE,unavailable,unavailable,unavailable
+232,Porygon2,Normal,,Trace, Download,Analytic,FALSE,unavailable,unavailable,unavailable
+233,Stantler,Normal,,Intimidate, Frisk,Sap Sipper,FALSE,unavailable,unavailable,unavailable
+234,Smeargle,Normal,,Own, Technician,Moody,FALSE,unavailable,unavailable,unavailable
+235,Tyrogue,Fighting,,Guts, Steadfast,Vital Spirit,FALSE,unavailable,unavailable,unavailable
+236,Hitmontop,Fighting,,Intimidate, Technician,Steadfast,FALSE,unavailable,unavailable,unavailable
+237,Smoochum,Ice, Psychic,Oblivious, Forewarn,Hydration,FALSE,unavailable,unavailable,unavailable
+238,Elekid,Electric,,Static,,Vital Spirit,FALSE,unavailable,unavailable,unavailable
+239,Magby,Fire,,Flame,,Vital Spirit,FALSE,unavailable,unavailable,unavailable
+240,Miltank,Normal,,Thick, Scrappy,Sap Sipper,FALSE,unavailable,unavailable,unavailable
+241,Blissey,Normal,,Natural, Serene,Healer,FALSE,unavailable,unavailable,unavailable
+242,Raikou,Electric,,Pressure,,Inner Focus,TRUE,unavailable,unavailable,unavailable
+243,Entei,Fire,,Pressure,,Inner Focus,TRUE,unavailable,unavailable,unavailable
+244,Suicune,Water,,Pressure,,Inner Focus,TRUE,unavailable,unavailable,unavailable
+245,Larvitar,Rock, Ground,Guts,,Sand Veil,FALSE,unavailable,unavailable,unavailable
+246,Pupitar,Rock, Ground,Shed,,,FALSE,unavailable,unavailable,unavailable
+247,Tyranitar,Rock, Dark,Sand,,Unnerve,FALSE,unavailable,unavailable,unavailable
+248,Lugia,Psychic, Flying,Pressure,,Multiscale,TRUE,unavailable,unavailable,unavailable
+249,Ho-Oh,Fire, Flying,Pressure,,Regenerator,TRUE,unavailable,unavailable,unavailable
+250,Celebi,Psychic, Grass,Natural,,,TRUE,unavailable,unavailable,unavailable
+251,Treecko,Grass,,Overgrow,,Unburden,FALSE,unavailable,unavailable,unavailable
+252,Grovyle,Grass,,Overgrow,,Unburden,FALSE,unavailable,unavailable,unavailable
+253,Sceptile,Grass,,Overgrow,,Unburden,FALSE,unavailable,unavailable,unavailable
+254,Torchic,Fire,,Blaze,,Speed Boost,FALSE,unavailable,unavailable,unavailable
+255,Combusken,Fire, Fighting,Blaze,,Speed Boost,FALSE,unavailable,unavailable,unavailable
+256,Blaziken,Fire, Fighting,Blaze,,Speed Boost,FALSE,unavailable,unavailable,unavailable
+257,Mudkip,Water,,Torrent,,Damp,FALSE,unavailable,unavailable,unavailable
+258,Marshtomp,Water, Ground,Torrent,,Damp,FALSE,unavailable,unavailable,unavailable
+259,Swampert,Water, Ground,Torrent,,Damp,FALSE,unavailable,unavailable,unavailable
+260,Poochyena,Dark,,Run, Quick,Rattled,FALSE,unavailable,unavailable,unavailable
+261,Mightyena,Dark,,Intimidate, Quick,Moxie,FALSE,unavailable,unavailable,unavailable
+262,Zigzagoon,Normal,,Pickup, Gluttony,Quick Feet,FALSE,unavailable,unavailable,unavailable
+263,Linoone,Normal,,Pickup, Gluttony,Quick Feet,FALSE,unavailable,unavailable,unavailable
+264,Wurmple,Bug,,Shield,,Run Away,FALSE,unavailable,unavailable,unavailable
+265,Silcoon,Bug,,Shed,,,FALSE,unavailable,unavailable,unavailable
+266,Beautifly,Bug, Flying,Swarm,,Rivalry,FALSE,unavailable,unavailable,unavailable
+267,Cascoon,Bug,,Shed,,,FALSE,unavailable,unavailable,unavailable
+268,Dustox,Bug, Poison,Shield,,Compound Eyes,FALSE,unavailable,unavailable,unavailable
+269,Lotad,Water, Grass,Swift, Rain,Own Tempo,FALSE,unavailable,unavailable,unavailable
+270,Lombre,Water, Grass,Swift, Rain,Own Tempo,FALSE,unavailable,unavailable,unavailable
+271,Ludicolo,Water, Grass,Swift, Rain,Own Tempo,FALSE,unavailable,unavailable,unavailable
+272,Seedot,Grass,,Chlorophyll, Early,Pickpocket,FALSE,unavailable,unavailable,unavailable
+273,Nuzleaf,Grass, Dark,Chlorophyll, Early,Pickpocket,FALSE,unavailable,unavailable,unavailable
+274,Shiftry,Grass, Dark,Chlorophyll, Wind,Pickpocket,FALSE,unavailable,unavailable,unavailable
+275,Taillow,Normal, Flying,Guts,,Scrappy,FALSE,unavailable,unavailable,unavailable
+276,Swellow,Normal, Flying,Guts,,Scrappy,FALSE,unavailable,unavailable,unavailable
+277,Wingull,Water, Flying,Keen, Hydration,Rain Dish,FALSE,unavailable,unavailable,unavailable
+278,Pelipper,Water, Flying,Keen, Drizzle,Rain Dish,FALSE,unavailable,unavailable,unavailable
+279,Ralts,Psychic, Fairy,Synchronize, Trace,Telepathy,FALSE,unavailable,unavailable,unavailable
+280,Kirlia,Psychic, Fairy,Synchronize, Trace,Telepathy,FALSE,unavailable,unavailable,unavailable
+281,Gardevoir,Psychic, Fairy,Synchronize, Trace,Telepathy,FALSE,unavailable,unavailable,unavailable
+282,Surskit,Bug, Water,Swift,,Rain Dish,FALSE,unavailable,unavailable,unavailable
+283,Masquerain,Bug, Flying,Intimidate,,Unnerve,FALSE,unavailable,unavailable,unavailable
+284,Shroomish,Grass,,Effect, Poison,Quick Feet,FALSE,unavailable,unavailable,unavailable
+285,Breloom,Grass, Fighting,Effect, Poison,Technician,FALSE,unavailable,unavailable,unavailable
+286,Slakoth,Normal,,Truant,,,FALSE,unavailable,unavailable,unavailable
+287,Vigoroth,Normal,,Vital,,,FALSE,unavailable,unavailable,unavailable
+288,Slaking,Normal,,Truant,,,FALSE,unavailable,unavailable,unavailable
+289,Nincada,Bug, Ground,Compound,,Run Away,FALSE,unavailable,unavailable,unavailable
+290,Ninjask,Bug, Flying,Speed,,Infiltrator,FALSE,unavailable,unavailable,unavailable
+291,Shedinja,Bug, Ghost,Wonder,,,FALSE,unavailable,unavailable,unavailable
+292,Whismur,Normal,,Soundproof,,Rattled,FALSE,unavailable,unavailable,unavailable
+293,Loudred,Normal,,Soundproof,,Scrappy,FALSE,unavailable,unavailable,unavailable
+294,Exploud,Normal,,Soundproof,,Scrappy,FALSE,unavailable,unavailable,unavailable
+295,Makuhita,Fighting,,Thick, Guts,Sheer Force,FALSE,unavailable,unavailable,unavailable
+296,Hariyama,Fighting,,Thick, Guts,Sheer Force,FALSE,unavailable,unavailable,unavailable
+297,Azurill,Normal, Fairy,Thick, Huge,Sap Sipper,FALSE,unavailable,unavailable,unavailable
+298,Nosepass,Rock,,Sturdy, Magnet,Sand Force,FALSE,unavailable,unavailable,unavailable
+299,Skitty,Normal,,Cute, Normalize,Wonder Skin,FALSE,unavailable,unavailable,unavailable
+300,Delcatty,Normal,,Cute, Normalize,Wonder Skin,FALSE,unavailable,unavailable,unavailable
+301,Sableye,Dark, Ghost,Keen, Stall,Prankster,FALSE,unavailable,unavailable,unavailable
+302,Mawile,Steel, Fairy,Hyper, Intimidate,Sheer Force,FALSE,unavailable,unavailable,unavailable
+303,Aron,Steel, Rock,Sturdy, Rock,Heavy Metal,FALSE,unavailable,unavailable,unavailable
+304,Lairon,Steel, Rock,Sturdy, Rock,Heavy Metal,FALSE,unavailable,unavailable,unavailable
+305,Aggron,Steel, Rock,Sturdy, Rock,Heavy Metal,FALSE,unavailable,unavailable,unavailable
+306,Meditite,Fighting, Psychic,Pure,,Telepathy,FALSE,unavailable,unavailable,unavailable
+307,Medicham,Fighting, Psychic,Pure,,Telepathy,FALSE,unavailable,unavailable,unavailable
+308,Electrike,Electric,,Static, Lightning,Minus,FALSE,unavailable,unavailable,unavailable
+309,Manectric,Electric,,Static, Lightning,Minus,FALSE,unavailable,unavailable,unavailable
+310,Plusle,Electric,,Plus,,Lightning Rod,FALSE,unavailable,unavailable,unavailable
+311,Minun,Electric,,Minus,,Volt Absorb,FALSE,unavailable,unavailable,unavailable
+312,Volbeat,Bug,,Illuminate, Swarm,Prankster,FALSE,unavailable,unavailable,unavailable
+313,Illumise,Bug,,Oblivious, Tinted,Prankster,FALSE,unavailable,unavailable,unavailable
+314,Roselia,Grass, Poison,Natural, Poison,Leaf Guard,FALSE,unavailable,unavailable,unavailable
+315,Gulpin,Poison,,Liquid, Sticky,Gluttony,FALSE,unavailable,unavailable,unavailable
+316,Swalot,Poison,,Liquid, Sticky,Gluttony,FALSE,unavailable,unavailable,unavailable
+317,Carvanha,Water, Dark,Rough,,Speed Boost,FALSE,unavailable,unavailable,unavailable
+318,Sharpedo,Water, Dark,Rough,,Speed Boost,FALSE,unavailable,unavailable,unavailable
+319,Wailmer,Water,,Water, Oblivious,Pressure,FALSE,unavailable,unavailable,unavailable
+320,Wailord,Water,,Water, Oblivious,Pressure,FALSE,unavailable,unavailable,unavailable
+321,Numel,Fire, Ground,Oblivious, Simple,Own Tempo,FALSE,unavailable,unavailable,unavailable
+322,Camerupt,Fire, Ground,Magma, Solid,Anger Point,FALSE,unavailable,unavailable,unavailable
+323,Torkoal,Fire,,White, Drought,Shell Armor,FALSE,unavailable,unavailable,unavailable
+324,Spoink,Psychic,,Thick, Own,Gluttony,FALSE,unavailable,unavailable,unavailable
+325,Grumpig,Psychic,,Thick, Own,Gluttony,FALSE,unavailable,unavailable,unavailable
+326,Spinda,Normal,,Own, Tangled,Contrary,FALSE,unavailable,unavailable,unavailable
+327,Trapinch,Ground,,Hyper, Arena,Sheer Force,FALSE,unavailable,unavailable,unavailable
+328,Vibrava,Ground, Dragon,Levitate,,,FALSE,unavailable,unavailable,unavailable
+329,Flygon,Ground, Dragon,Levitate,,,FALSE,unavailable,unavailable,unavailable
+330,Cacnea,Grass,,Sand,,Water Absorb,FALSE,unavailable,unavailable,unavailable
+331,Cacturne,Grass, Dark,Sand,,Water Absorb,FALSE,unavailable,unavailable,unavailable
+332,Swablu,Normal, Flying,Natural,,Cloud Nine,FALSE,unavailable,unavailable,unavailable
+333,Altaria,Dragon, Flying,Natural,,Cloud Nine,FALSE,unavailable,unavailable,unavailable
+334,Zangoose,Normal,,Immunity,,Toxic Boost,FALSE,unavailable,unavailable,unavailable
+335,Seviper,Poison,,Shed,,Infiltrator,FALSE,unavailable,unavailable,unavailable
+336,Lunatone,Rock, Psychic,Levitate,,,FALSE,unavailable,unavailable,unavailable
+337,Solrock,Rock, Psychic,Levitate,,,FALSE,unavailable,unavailable,unavailable
+338,Barboach,Water, Ground,Oblivious, Anticipation,Hydration,FALSE,unavailable,unavailable,unavailable
+339,Whiscash,Water, Ground,Oblivious, Anticipation,Hydration,FALSE,unavailable,unavailable,unavailable
+340,Corphish,Water,,Hyper, Shell,Adaptability,FALSE,unavailable,unavailable,unavailable
+341,Crawdaunt,Water, Dark,Hyper, Shell,Adaptability,FALSE,unavailable,unavailable,unavailable
+342,Baltoy,Ground, Psychic,Levitate,,,FALSE,unavailable,unavailable,unavailable
+343,Claydol,Ground, Psychic,Levitate,,,FALSE,unavailable,unavailable,unavailable
+344,Lileep,Rock, Grass,Suction,,Storm Drain,FALSE,unavailable,unavailable,unavailable
+345,Cradily,Rock, Grass,Suction,,Storm Drain,FALSE,unavailable,unavailable,unavailable
+346,Anorith,Rock, Bug,Battle,,Swift Swim,FALSE,unavailable,unavailable,unavailable
+347,Armaldo,Rock, Bug,Battle,,Swift Swim,FALSE,unavailable,unavailable,unavailable
+348,Feebas,Water,,Swift, Oblivious,Adaptability,FALSE,unavailable,unavailable,unavailable
+349,Milotic,Water,,Marvel, Competitive,Cute Charm,FALSE,unavailable,unavailable,unavailable
+350,Castform,Normal,,Forecast,,,FALSE,unavailable,unavailable,unavailable
+351,Kecleon,Normal,,Color,,Protean,FALSE,unavailable,unavailable,unavailable
+352,Shuppet,Ghost,,Insomnia, Frisk,Cursed Body,FALSE,unavailable,unavailable,unavailable
+353,Banette,Ghost,,Insomnia, Frisk,Cursed Body,FALSE,unavailable,unavailable,unavailable
+354,Duskull,Ghost,,Levitate,,Frisk,FALSE,unavailable,unavailable,unavailable
+355,Dusclops,Ghost,,Pressure,,Frisk,FALSE,unavailable,unavailable,unavailable
+356,Tropius,Grass, Flying,Chlorophyll, Solar,Harvest,FALSE,unavailable,unavailable,unavailable
+357,Chimecho,Psychic,,Levitate,,,FALSE,unavailable,unavailable,unavailable
+358,Absol,Dark,,Pressure, Super,Justified,FALSE,unavailable,unavailable,unavailable
+359,Wynaut,Psychic,,Shadow,,Telepathy,FALSE,unavailable,unavailable,unavailable
+360,Snorunt,Ice,,Inner, Ice,Moody,FALSE,unavailable,unavailable,unavailable
+361,Glalie,Ice,,Inner, Ice,Moody,FALSE,unavailable,unavailable,unavailable
+362,Spheal,Ice, Water,Thick, Ice,Oblivious,FALSE,unavailable,unavailable,unavailable
+363,Sealeo,Ice, Water,Thick, Ice,Oblivious,FALSE,unavailable,unavailable,unavailable
+364,Walrein,Ice, Water,Thick, Ice,Oblivious,FALSE,unavailable,unavailable,unavailable
+365,Clamperl,Water,,Shell,,Rattled,FALSE,unavailable,unavailable,unavailable
+366,Huntail,Water,,Swift,,Water Veil,FALSE,unavailable,unavailable,unavailable
+367,Gorebyss,Water,,Swift,,Hydration,FALSE,unavailable,unavailable,unavailable
+368,Relicanth,Water, Rock,Swift, Rock,Sturdy,FALSE,unavailable,unavailable,unavailable
+369,Luvdisc,Water,,Swift,,Hydration,FALSE,unavailable,unavailable,unavailable
+370,Bagon,Dragon,,Rock,,Sheer Force,FALSE,unavailable,unavailable,unavailable
+371,Shelgon,Dragon,,Rock,,Overcoat,FALSE,unavailable,unavailable,unavailable
+372,Salamence,Dragon, Flying,Intimidate,,Moxie,FALSE,unavailable,unavailable,unavailable
+373,Beldum,Steel, Psychic,Clear,,Light Metal,FALSE,unavailable,unavailable,unavailable
+374,Metang,Steel, Psychic,Clear,,Light Metal,FALSE,unavailable,unavailable,unavailable
+375,Metagross,Steel, Psychic,Clear,,Light Metal,FALSE,unavailable,unavailable,unavailable
+376,Regirock,Rock,,Clear,,Sturdy,TRUE,unavailable,unavailable,unavailable
+377,Regice,Ice,,Clear,,Ice Body,TRUE,unavailable,unavailable,unavailable
+378,Registeel,Steel,,Clear,,Light Metal,TRUE,unavailable,unavailable,unavailable
+379,Latias,Dragon, Psychic,Levitate,,,TRUE,unavailable,unavailable,unavailable
+380,Latios,Dragon, Psychic,Levitate,,,TRUE,unavailable,unavailable,unavailable
+381,Kyogre,Water,,Drizzle,,,TRUE,unavailable,unavailable,unavailable
+382,Groudon,Ground,,Drought,,,TRUE,unavailable,unavailable,unavailable
+383,Rayquaza,Dragon, Flying,Air,,,TRUE,unavailable,unavailable,unavailable
+384,Jirachi,Steel, Psychic,Serene,,,TRUE,unavailable,unavailable,unavailable
+385,Deoxys,Psychic,,Pressure,,,TRUE,unavailable,unavailable,unavailable
+386,Turtwig,Grass,,Overgrow,,Shell Armor,FALSE,unavailable,unavailable,unavailable
+387,Grotle,Grass,,Overgrow,,Shell Armor,FALSE,unavailable,unavailable,unavailable
+388,Torterra,Grass, Ground,Overgrow,,Shell Armor,FALSE,unavailable,unavailable,unavailable
+389,Chimchar,Fire,,Blaze,,Iron Fist,FALSE,unavailable,unavailable,unavailable
+390,Monferno,Fire, Fighting,Blaze,,Iron Fist,FALSE,unavailable,unavailable,unavailable
+391,Infernape,Fire, Fighting,Blaze,,Iron Fist,FALSE,unavailable,unavailable,unavailable
+392,Piplup,Water,,Torrent,,Competitive ,FALSE,unavailable,unavailable,unavailable
+393,Prinplup,Water,,Torrent,,Competitive ,FALSE,unavailable,unavailable,unavailable
+394,Empoleon,Water, Steel,Torrent,,Competitive ,FALSE,unavailable,unavailable,unavailable
+395,Starly,Normal, Flying,Keen,,Reckless,FALSE,unavailable,unavailable,unavailable
+396,Staravia,Normal, Flying,Intimidate,,Reckless,FALSE,unavailable,unavailable,unavailable
+397,Staraptor,Normal, Flying,Intimidate,,Reckless,FALSE,unavailable,unavailable,unavailable
+398,Bidoof,Normal,,Simple, Unaware,Moody,FALSE,unavailable,unavailable,unavailable
+399,Bibarel,Normal, Water,Simple, Unaware,Moody,FALSE,unavailable,unavailable,unavailable
+400,Kricketot,Bug,,Shed,,Run Away,FALSE,unavailable,unavailable,unavailable
+401,Kricketune,Bug,,Swarm,,Technician,FALSE,unavailable,unavailable,unavailable
+402,Shinx,Electric,,Rivalry, Intimidate,Guts,FALSE,unavailable,unavailable,unavailable
+403,Luxio,Electric,,Rivalry, Intimidate,Guts,FALSE,unavailable,unavailable,unavailable
+404,Luxray,Electric,,Rivalry, Intimidate,Guts,FALSE,unavailable,unavailable,unavailable
+405,Budew,Grass, Poison,Natural, Poison,Leaf Guard,FALSE,unavailable,unavailable,unavailable
+406,Roserade,Grass, Poison,Natural, Poison,Technician,FALSE,unavailable,unavailable,unavailable
+407,Cranidos,Rock,,Mold,,Sheer Force,FALSE,unavailable,unavailable,unavailable
+408,Rampardos,Rock,,Mold,,Sheer Force,FALSE,unavailable,unavailable,unavailable
+409,Shieldon,Rock, Steel,Sturdy,,Soundproof,FALSE,unavailable,unavailable,unavailable
+410,Bastiodon,Rock, Steel,Sturdy,,Soundproof,FALSE,unavailable,unavailable,unavailable
+411,Burmy,Bug,,Shed,,Overcoat,FALSE,unavailable,unavailable,unavailable
+412,Wormadam,Bug, Grass,Anticipation,,Overcoat,FALSE,unavailable,unavailable,unavailable
+413,Mothim,Bug, Flying,Swarm,,Tinted Lens,FALSE,unavailable,unavailable,unavailable
+414,Combee,Bug, Flying,Honey,,Hustle,FALSE,unavailable,unavailable,unavailable
+415,Vespiquen,Bug, Flying,Pressure,,Unnerve,FALSE,unavailable,unavailable,unavailable
+416,Pachirisu,Electric,,Run, Pickup,Volt Absorb,FALSE,unavailable,unavailable,unavailable
+417,Buizel,Water,,Swift,,Water Veil,FALSE,unavailable,unavailable,unavailable
+418,Floatzel,Water,,Swift,,Water Veil,FALSE,unavailable,unavailable,unavailable
+419,Cherubi,Grass,,Chlorophyll,,,FALSE,unavailable,unavailable,unavailable
+420,Cherrim,Grass,,Flower,,,FALSE,unavailable,unavailable,unavailable
+421,Shellos,Water,,Sticky, Storm,Sand Force,FALSE,unavailable,unavailable,unavailable
+422,Gastrodon,Water, Ground,Sticky, Storm,Sand Force,FALSE,unavailable,unavailable,unavailable
+423,Ambipom,Normal,,Technician, Pickup,Skill Link,FALSE,unavailable,unavailable,unavailable
+424,Drifloon,Ghost, Flying,Aftermath, Unburden,Flare Boost,FALSE,unavailable,unavailable,unavailable
+425,Drifblim,Ghost, Flying,Aftermath, Unburden,Flare Boost,FALSE,unavailable,unavailable,unavailable
+426,Buneary,Normal,,Run, Klutz,Limber,FALSE,unavailable,unavailable,unavailable
+427,Lopunny,Normal,,Cute, Klutz,Limber,FALSE,unavailable,unavailable,unavailable
+428,Mismagius,Ghost,,Levitate,,,FALSE,unavailable,unavailable,unavailable
+429,Honchkrow,Dark, Flying,Insomnia, Super,Moxie,FALSE,unavailable,unavailable,unavailable
+430,Glameow,Normal,,Limber, Own,Keen Eye,FALSE,unavailable,unavailable,unavailable
+431,Purugly,Normal,,Thick, Own,Defiant,FALSE,unavailable,unavailable,unavailable
+432,Chingling,Psychic,,Levitate,,,FALSE,unavailable,unavailable,unavailable
+433,Stunky,Poison, Dark,Stench, Aftermath,Keen Eye,FALSE,unavailable,unavailable,unavailable
+434,Skuntank,Poison, Dark,Stench, Aftermath,Keen Eye,FALSE,unavailable,unavailable,unavailable
+435,Bronzor,Steel, Psychic,Levitate, Heatproof,Heavy Metal,FALSE,unavailable,unavailable,unavailable
+436,Bronzong,Steel, Psychic,Levitate, Heatproof,Heavy Metal,FALSE,unavailable,unavailable,unavailable
+437,Bonsly,Rock,,Sturdy, Rock,Rattled,FALSE,unavailable,unavailable,unavailable
+438,Mime Jr.,Psychic, Fairy,Soundproof, Filter,Technician,FALSE,unavailable,unavailable,unavailable
+439,Happiny,Normal,,Natural, Serene,Friend Guard,FALSE,unavailable,unavailable,unavailable
+440,Chatot,Normal, Flying,Keen, Tangled,Big Pecks,FALSE,unavailable,unavailable,unavailable
+441,Spiritomb,Ghost, Dark,Pressure,,Infiltrator,FALSE,unavailable,unavailable,unavailable
+442,Gible,Dragon, Ground,Sand,,Rough Skin,FALSE,unavailable,unavailable,unavailable
+443,Gabite,Dragon, Ground,Sand,,Rough Skin,FALSE,unavailable,unavailable,unavailable
+444,Garchomp,Dragon, Ground,Sand,,Rough Skin,FALSE,unavailable,unavailable,unavailable
+445,Munchlax,Normal,,Pickup, Thick,Gluttony,FALSE,unavailable,unavailable,unavailable
+446,Riolu,Fighting,,Steadfast, Inner,Prankster,FALSE,unavailable,unavailable,unavailable
+447,Lucario,Fighting, Steel,Steadfast, Inner,Justified,FALSE,unavailable,unavailable,unavailable
+448,Hippopotas,Ground,,Sand,,Sand Force,FALSE,unavailable,unavailable,unavailable
+449,Hippowdon,Ground,,Sand,,Sand Force,FALSE,unavailable,unavailable,unavailable
+450,Skorupi,Poison, Bug,Battle, Sniper,Keen Eye,FALSE,unavailable,unavailable,unavailable
+451,Drapion,Poison, Dark,Battle, Sniper,Keen Eye,FALSE,unavailable,unavailable,unavailable
+452,Croagunk,Poison, Fighting,Anticipation, Dry,Poison Touch,FALSE,unavailable,unavailable,unavailable
+453,Toxicroak,Poison, Fighting,Anticipation, Dry,Poison Touch,FALSE,unavailable,unavailable,unavailable
+454,Carnivine,Grass,,Levitate,,,FALSE,unavailable,unavailable,unavailable
+455,Finneon,Water,,Swift, Storm,Water Veil,FALSE,unavailable,unavailable,unavailable
+456,Lumineon,Water,,Swift, Storm,Water Veil,FALSE,unavailable,unavailable,unavailable
+457,Mantyke,Water, Flying,Swift, Water,Water Veil,FALSE,unavailable,unavailable,unavailable
+458,Snover,Grass, Ice,Snow,,Soundproof,FALSE,unavailable,unavailable,unavailable
+459,Abomasnow,Grass, Ice,Snow,,Soundproof,FALSE,unavailable,unavailable,unavailable
+460,Weavile,Dark, Ice,Pressure,,Pickpocket,FALSE,unavailable,unavailable,unavailable
+461,Magnezone,Electric, Steel,Magnet, Sturdy,Analytic,FALSE,unavailable,unavailable,unavailable
+462,Lickilicky,Normal,,Own, Oblivious,Cloud Nine,FALSE,unavailable,unavailable,unavailable
+463,Rhyperior,Ground, Rock,Lightning, Solid,Reckless,FALSE,unavailable,unavailable,unavailable
+464,Tangrowth,Grass,,Chlorophyll, Leaf,Regenerator,FALSE,unavailable,unavailable,unavailable
+465,Electivire,Electric,,Motor,,Vital Spirit,FALSE,unavailable,unavailable,unavailable
+466,Magmortar,Fire,,Flame,,Vital Spirit,FALSE,unavailable,unavailable,unavailable
+467,Togekiss,Fairy, Flying,Hustle, Serene,Super Luck,FALSE,unavailable,unavailable,unavailable
+468,Yanmega,Bug, Flying,Speed, Tinted,Frisk,FALSE,unavailable,unavailable,unavailable
+469,Leafeon,Grass,,Leaf,,Chlorophyll,FALSE,unavailable,unavailable,unavailable
+470,Glaceon,Ice,,Snow,,Ice Body,FALSE,unavailable,unavailable,unavailable
+471,Gliscor,Ground, Flying,Hyper, Sand,Poison Heal,FALSE,unavailable,unavailable,unavailable
+472,Mamoswine,Ice, Ground,Oblivious, Snow,Thick Fat,FALSE,unavailable,unavailable,unavailable
+473,Porygon-Z,Normal,,Adaptability, Download,Analytic,FALSE,unavailable,unavailable,unavailable
+474,Gallade,Psychic, Fighting,Steadfast, Sharpness ,Justified,FALSE,unavailable,unavailable,unavailable
+475,Probopass,Rock, Steel,Sturdy, Magnet,Sand Force,FALSE,unavailable,unavailable,unavailable
+476,Dusknoir,Ghost,,Pressure,,Frisk,FALSE,unavailable,unavailable,unavailable
+477,Froslass,Ice, Ghost,Snow,,Cursed Body,FALSE,unavailable,unavailable,unavailable
+478,Rotom,Electric, Ghost,Levitate,,,FALSE,unavailable,unavailable,unavailable
+479,Uxie,Psychic,,Levitate,,,TRUE,unavailable,unavailable,unavailable
+480,Mesprit,Psychic,,Levitate,,,TRUE,unavailable,unavailable,unavailable
+481,Azelf,Psychic,,Levitate,,,TRUE,unavailable,unavailable,unavailable
+482,Dialga,Steel, Dragon,Pressure,,Telepathy,TRUE,unavailable,unavailable,unavailable
+483,Palkia,Water, Dragon,Pressure,,Telepathy,TRUE,unavailable,unavailable,unavailable
+484,Heatran,Fire, Steel,Flash,,Flame Body,TRUE,unavailable,unavailable,unavailable
+485,Regigigas,Normal,,Slow,,,TRUE,unavailable,unavailable,unavailable
+486,Giratina,Ghost, Dragon,Pressure,,Telepathy,TRUE,unavailable,unavailable,unavailable
+487,Cresselia,Psychic,,Levitate,,,TRUE,unavailable,unavailable,unavailable
+488,Phione,Water,,Hydration,,,TRUE,unavailable,unavailable,unavailable
+489,Manaphy,Water,,Hydration,,,TRUE,unavailable,unavailable,unavailable
+490,Darkrai,Dark,,Bad,,,TRUE,unavailable,unavailable,unavailable
+491,Shaymin,Grass,,Natural,,,TRUE,unavailable,unavailable,unavailable
+492,Arceus,Normal,,Multitype,,,TRUE,unavailable,unavailable,unavailable
+493,Victini,Psychic, Fire,Victory,,,TRUE,unavailable,unavailable,unavailable
+494,Snivy,Grass,,Overgrow,,Contrary,FALSE,unavailable,unavailable,unavailable
+495,Servine,Grass,,Overgrow,,Contrary,FALSE,unavailable,unavailable,unavailable
+496,Serperior,Grass,,Overgrow,,Contrary,FALSE,unavailable,unavailable,unavailable
+497,Tepig,Fire,,Blaze,,Thick Fat,FALSE,unavailable,unavailable,unavailable
+498,Pignite,Fire, Fighting,Blaze,,Thick Fat,FALSE,unavailable,unavailable,unavailable
+499,Emboar,Fire, Fighting,Blaze,,Reckless,FALSE,unavailable,unavailable,unavailable
+500,Oshawott,Water,,Torrent,,Shell Armor,FALSE,unavailable,unavailable,unavailable
+501,Dewott,Water,,Torrent,,Shell Armor,FALSE,unavailable,unavailable,unavailable
+502,Samurott,Water,,Torrent,,Shell Armor,FALSE,unavailable,unavailable,unavailable
+503,Patrat,Normal,,Run, Keen,Analytic,FALSE,unavailable,unavailable,unavailable
+504,Watchog,Normal,,Illuminate, Keen,Analytic,FALSE,unavailable,unavailable,unavailable
+505,Lillipup,Normal,,Vital, Pickup,Run Away,FALSE,unavailable,unavailable,unavailable
+506,Herdier,Normal,,Intimidate, Sand,Scrappy,FALSE,unavailable,unavailable,unavailable
+507,Stoutland,Normal,,Intimidate, Sand,Scrappy,FALSE,unavailable,unavailable,unavailable
+508,Purrloin,Dark,,Limber, Unburden,Prankster,FALSE,unavailable,unavailable,unavailable
+509,Liepard,Dark,,Limber, Unburden,Prankster,FALSE,unavailable,unavailable,unavailable
+510,Pansage,Grass,,Gluttony,,Overgrow,FALSE,unavailable,unavailable,unavailable
+511,Simisage,Grass,,Gluttony,,Overgrow,FALSE,unavailable,unavailable,unavailable
+512,Pansear,Fire,,Gluttony,,Blaze,FALSE,unavailable,unavailable,unavailable
+513,Simisear,Fire,,Gluttony,,Blaze,FALSE,unavailable,unavailable,unavailable
+514,Panpour,Water,,Gluttony,,Torrent,FALSE,unavailable,unavailable,unavailable
+515,Simipour,Water,,Gluttony,,Torrent,FALSE,unavailable,unavailable,unavailable
+516,Munna,Psychic,,Forewarn, Synchronize,Telepathy,FALSE,unavailable,unavailable,unavailable
+517,Musharna,Psychic,,Forewarn, Synchronize,Telepathy,FALSE,unavailable,unavailable,unavailable
+518,Pidove,Normal, Flying,Big, Super,Rivalry,FALSE,unavailable,unavailable,unavailable
+519,Tranquill,Normal, Flying,Big, Super,Rivalry,FALSE,unavailable,unavailable,unavailable
+520,Unfezant,Normal, Flying,Big, Super,Rivalry,FALSE,unavailable,unavailable,unavailable
+521,Blitzle,Electric,,Lightning, Motor,Sap Sipper,FALSE,unavailable,unavailable,unavailable
+522,Zebstrika,Electric,,Lightning, Motor,Sap Sipper,FALSE,unavailable,unavailable,unavailable
+523,Roggenrola,Rock,,Sturdy, Weak,Sand Force,FALSE,unavailable,unavailable,unavailable
+524,Boldore,Rock,,Sturdy, Weak,Sand Force,FALSE,unavailable,unavailable,unavailable
+525,Gigalith,Rock,,Sturdy, Sand,Sand Force,FALSE,unavailable,unavailable,unavailable
+526,Woobat,Psychic, Flying,Unaware, Klutz,Simple,FALSE,unavailable,unavailable,unavailable
+527,Swoobat,Psychic, Flying,Unaware, Klutz,Simple,FALSE,unavailable,unavailable,unavailable
+528,Drilbur,Ground,,Sand, Sand,Mold Breaker,FALSE,unavailable,unavailable,unavailable
+529,Excadrill,Ground, Steel,Sand, Sand,Mold Breaker,FALSE,unavailable,unavailable,unavailable
+530,Audino,Normal,,Healer, Regenerator,Klutz,FALSE,unavailable,unavailable,unavailable
+531,Timburr,Fighting,,Guts, Sheer,Iron Fist,FALSE,unavailable,unavailable,unavailable
+532,Gurdurr,Fighting,,Guts, Sheer,Iron Fist,FALSE,unavailable,unavailable,unavailable
+533,Conkeldurr,Fighting,,Guts, Sheer,Iron Fist,FALSE,unavailable,unavailable,unavailable
+534,Tympole,Water,,Swift, Hydration,Water Absorb,FALSE,unavailable,unavailable,unavailable
+535,Palpitoad,Water, Ground,Swift, Hydration,Water Absorb,FALSE,unavailable,unavailable,unavailable
+536,Seismitoad,Water, Ground,Swift, Poison,Water Absorb,FALSE,unavailable,unavailable,unavailable
+537,Throh,Fighting,,Guts, Inner,Mold Breaker,FALSE,unavailable,unavailable,unavailable
+538,Sawk,Fighting,,Sturdy, Inner,Mold Breaker,FALSE,unavailable,unavailable,unavailable
+539,Sewaddle,Bug, Grass,Swarm, Chlorophyll,Overcoat,FALSE,unavailable,unavailable,unavailable
+540,Swadloon,Bug, Grass,Leaf, Chlorophyll,Overcoat,FALSE,unavailable,unavailable,unavailable
+541,Leavanny,Bug, Grass,Swarm, Chlorophyll,Overcoat,FALSE,unavailable,unavailable,unavailable
+542,Venipede,Bug, Poison,Poison, Swarm,Speed Boost,FALSE,unavailable,unavailable,unavailable
+543,Whirlipede,Bug, Poison,Poison, Swarm,Speed Boost,FALSE,unavailable,unavailable,unavailable
+544,Scolipede,Bug, Poison,Poison, Swarm,Speed Boost,FALSE,unavailable,unavailable,unavailable
+545,Cottonee,Grass, Fairy,Prankster, Infiltrator,Chlorophyll,FALSE,unavailable,unavailable,unavailable
+546,Whimsicott,Grass, Fairy,Prankster, Infiltrator,Chlorophyll,FALSE,unavailable,unavailable,unavailable
+547,Petilil,Grass,,Chlorophyll, Own,Leaf Guard,FALSE,unavailable,unavailable,unavailable
+548,Lilligant,Grass,,Chlorophyll, Own,Leaf Guard,FALSE,unavailable,unavailable,unavailable
+549,Basculin,Water,,Reckless , AdaptabilityRed Striped,Mold Breaker,FALSE,unavailable,unavailable,unavailable
+550,Sandile,Ground, Dark,Intimidate, Moxie,Anger Point,FALSE,unavailable,unavailable,unavailable
+551,Krokorok,Ground, Dark,Intimidate, Moxie,Anger Point,FALSE,unavailable,unavailable,unavailable
+552,Krookodile,Ground, Dark,Intimidate, Moxie,Anger Point,FALSE,unavailable,unavailable,unavailable
+553,Darumaka,Fire,,Hustle,,Inner Focus,FALSE,unavailable,unavailable,unavailable
+554,Darmanitan,Fire,,Sheer,,Zen Mode,FALSE,unavailable,unavailable,unavailable
+555,Maractus,Grass,,Water, Chlorophyll,Storm Drain,FALSE,unavailable,unavailable,unavailable
+556,Dwebble,Bug, Rock,Sturdy, Shell,Weak Armor,FALSE,unavailable,unavailable,unavailable
+557,Crustle,Bug, Rock,Sturdy, Shell,Weak Armor,FALSE,unavailable,unavailable,unavailable
+558,Scraggy,Dark, Fighting,Shed, Moxie,Intimidate,FALSE,unavailable,unavailable,unavailable
+559,Scrafty,Dark, Fighting,Shed, Moxie,Intimidate,FALSE,unavailable,unavailable,unavailable
+560,Sigilyph,Psychic, Flying,Wonder, Magic,Tinted Lens,FALSE,unavailable,unavailable,unavailable
+561,Yamask,Ghost,,Mummy,,,FALSE,unavailable,unavailable,unavailable
+562,Cofagrigus,Ghost,,Mummy,,,FALSE,unavailable,unavailable,unavailable
+563,Tirtouga,Water, Rock,Solid, Sturdy,Swift Swim,FALSE,unavailable,unavailable,unavailable
+564,Carracosta,Water, Rock,Solid, Sturdy,Swift Swim,FALSE,unavailable,unavailable,unavailable
+565,Archen,Rock, Flying,Defeatist,,,FALSE,unavailable,unavailable,unavailable
+566,Archeops,Rock, Flying,Defeatist,,,FALSE,unavailable,unavailable,unavailable
+567,Trubbish,Poison,,Stench, Sticky,Aftermath,FALSE,unavailable,unavailable,unavailable
+568,Garbodor,Poison,,Stench, Weak,Aftermath,FALSE,unavailable,unavailable,unavailable
+569,Zorua,Dark,,Illusion,,,FALSE,unavailable,unavailable,unavailable
+570,Zoroark,Dark,,Illusion,,,FALSE,unavailable,unavailable,unavailable
+571,Minccino,Normal,,Cute, Technician,Skill Link,FALSE,unavailable,unavailable,unavailable
+572,Cinccino,Normal,,Cute, Technician,Skill Link,FALSE,unavailable,unavailable,unavailable
+573,Gothita,Psychic,,Frisk, Competitive,Shadow Tag,FALSE,unavailable,unavailable,unavailable
+574,Gothorita,Psychic,,Frisk, Competitive,Shadow Tag,FALSE,unavailable,unavailable,unavailable
+575,Gothitelle,Psychic,,Frisk, Competitive,Shadow Tag,FALSE,unavailable,unavailable,unavailable
+576,Solosis,Psychic,,Overcoat, Magic,Regenerator,FALSE,unavailable,unavailable,unavailable
+577,Duosion,Psychic,,Overcoat, Magic,Regenerator,FALSE,unavailable,unavailable,unavailable
+578,Reuniclus,Psychic,,Overcoat, Magic,Regenerator,FALSE,unavailable,unavailable,unavailable
+579,Ducklett,Water, Flying,Keen, Big,Hydration,FALSE,unavailable,unavailable,unavailable
+580,Swanna,Water, Flying,Keen, Big,Hydration,FALSE,unavailable,unavailable,unavailable
+581,Vanillite,Ice,,Ice, Snow,Weak Armor,FALSE,unavailable,unavailable,unavailable
+582,Vanillish,Ice,,Ice, Snow,Weak Armor,FALSE,unavailable,unavailable,unavailable
+583,Vanilluxe,Ice,,Ice, Snow,Weak Armor,FALSE,unavailable,unavailable,unavailable
+584,Deerling,Normal, Grass,Chlorophyll, Sap,Serene Grace,FALSE,unavailable,unavailable,unavailable
+585,Sawsbuck,Normal, Grass,Chlorophyll, Sap,Serene Grace,FALSE,unavailable,unavailable,unavailable
+586,Emolga,Electric, Flying,Static,,Motor Drive,FALSE,unavailable,unavailable,unavailable
+587,Karrablast,Bug,,Swarm, Shed,No Guard,FALSE,unavailable,unavailable,unavailable
+588,Escavalier,Bug, Steel,Swarm, Shell,Overcoat,FALSE,unavailable,unavailable,unavailable
+589,Foongus,Grass, Poison,Effect,,Regenerator,FALSE,unavailable,unavailable,unavailable
+590,Amoonguss,Grass, Poison,Effect,,Regenerator,FALSE,unavailable,unavailable,unavailable
+591,Frillish,Water, Ghost,Water, Cursed,Damp,FALSE,unavailable,unavailable,unavailable
+592,Jellicent,Water, Ghost,Water, Cursed,Damp,FALSE,unavailable,unavailable,unavailable
+593,Alomomola,Water,,Healer, Hydration,Regenerator,FALSE,unavailable,unavailable,unavailable
+594,Joltik,Bug, Electric,Compound, Unnerve,Swarm,FALSE,unavailable,unavailable,unavailable
+595,Galvantula,Bug, Electric,Compound, Unnerve,Swarm,FALSE,unavailable,unavailable,unavailable
+596,Ferroseed,Grass, Steel,Iron,,,FALSE,unavailable,unavailable,unavailable
+597,Ferrothorn,Grass, Steel,Iron,,Anticipation,FALSE,unavailable,unavailable,unavailable
+598,Klink,Steel,,Plus, Minus,Clear Body,FALSE,unavailable,unavailable,unavailable
+599,Klang,Steel,,Plus, Minus,Clear Body,FALSE,unavailable,unavailable,unavailable
+600,Klinklang,Steel,,Plus, Minus,Clear Body,FALSE,unavailable,unavailable,unavailable
+601,Tynamo,Electric,,Levitate,,,FALSE,unavailable,unavailable,unavailable
+602,Eelektrik,Electric,,Levitate,,,FALSE,unavailable,unavailable,unavailable
+603,Eelektross,Electric,,Levitate,,,FALSE,unavailable,unavailable,unavailable
+604,Elgyem,Psychic,,Telepathy, Synchronize,Analytic,FALSE,unavailable,unavailable,unavailable
+605,Beheeyem,Psychic,,Telepathy, Synchronize,Analytic,FALSE,unavailable,unavailable,unavailable
+606,Litwick,Ghost, Fire,Flash, Flame,Infiltrator,FALSE,unavailable,unavailable,unavailable
+607,Lampent,Ghost, Fire,Flash, Flame,Infiltrator,FALSE,unavailable,unavailable,unavailable
+608,Chandelure,Ghost, Fire,Flash, Flame,Infiltrator,FALSE,unavailable,unavailable,unavailable
+609,Axew,Dragon,,Rivalry, Mold,Unnerve,FALSE,unavailable,unavailable,unavailable
+610,Fraxure,Dragon,,Rivalry, Mold,Unnerve,FALSE,unavailable,unavailable,unavailable
+611,Haxorus,Dragon,,Rivalry, Mold,Unnerve,FALSE,unavailable,unavailable,unavailable
+612,Cubchoo,Ice,,Snow, Slush,Rattled,FALSE,unavailable,unavailable,unavailable
+613,Beartic,Ice,,Snow, Slush,Swift Swim,FALSE,unavailable,unavailable,unavailable
+614,Cryogonal,Ice,,Levitate,,,FALSE,unavailable,unavailable,unavailable
+615,Shelmet,Bug,,Hydration, Shell,Overcoat,FALSE,unavailable,unavailable,unavailable
+616,Accelgor,Bug,,Hydration, Sticky,Unburden,FALSE,unavailable,unavailable,unavailable
+617,Stunfisk,Ground, Electric,Static, Limber,Sand Veil,FALSE,unavailable,unavailable,unavailable
+618,Mienfoo,Fighting,,Inner, Regenerator,Reckless,FALSE,unavailable,unavailable,unavailable
+619,Mienshao,Fighting,,Inner, Regenerator,Reckless,FALSE,unavailable,unavailable,unavailable
+620,Druddigon,Dragon,,Rough, Sheer,Mold Breaker,FALSE,unavailable,unavailable,unavailable
+621,Golett,Ground, Ghost,Iron, Klutz,No Guard,FALSE,unavailable,unavailable,unavailable
+622,Golurk,Ground, Ghost,Iron, Klutz,No Guard,FALSE,unavailable,unavailable,unavailable
+623,Pawniard,Dark, Steel,Defiant, Inner,Pressure,FALSE,unavailable,unavailable,unavailable
+624,Bisharp,Dark, Steel,Defiant, Inner,Pressure,FALSE,unavailable,unavailable,unavailable
+625,Bouffalant,Normal,,Reckless, Sap,Soundproof,FALSE,unavailable,unavailable,unavailable
+626,Rufflet,Normal, Flying,Keen, Sheer,Hustle,FALSE,unavailable,unavailable,unavailable
+627,Braviary,Normal, Flying,Keen, Sheer,Defiant,FALSE,unavailable,unavailable,unavailable
+628,Vullaby,Dark, Flying,Big, Overcoat,Weak Armor,FALSE,unavailable,unavailable,unavailable
+629,Mandibuzz,Dark, Flying,Big, Overcoat,Weak Armor,FALSE,unavailable,unavailable,unavailable
+630,Heatmor,Fire,,Gluttony, Flash,White Smoke,FALSE,unavailable,unavailable,unavailable
+631,Durant,Bug, Steel,Swarm, Hustle,Truant,FALSE,unavailable,unavailable,unavailable
+632,Deino,Dark, Dragon,Hustle,,,FALSE,unavailable,unavailable,unavailable
+633,Zweilous,Dark, Dragon,Hustle,,,FALSE,unavailable,unavailable,unavailable
+634,Hydreigon,Dark, Dragon,Levitate,,,FALSE,unavailable,unavailable,unavailable
+635,Larvesta,Bug, Fire,Flame,,Swarm,FALSE,unavailable,unavailable,unavailable
+636,Volcarona,Bug, Fire,Flame,,Swarm,FALSE,unavailable,unavailable,unavailable
+637,Cobalion,Steel, Fighting,Justified,,,TRUE,unavailable,unavailable,unavailable
+638,Terrakion,Rock, Fighting,Justified,,,TRUE,unavailable,unavailable,unavailable
+639,Virizion,Grass, Fighting,Justified,,,TRUE,unavailable,unavailable,unavailable
+640,Tornadus,Flying,,Prankster,,Defiant,TRUE,unavailable,unavailable,unavailable
+641,Thundurus,Electric, Flying,Prankster,,Defiant,TRUE,unavailable,unavailable,unavailable
+642,Reshiram,Dragon, Fire,Turboblaze,,,TRUE,unavailable,unavailable,unavailable
+643,Zekrom,Dragon, Electric,Teravolt,,,TRUE,unavailable,unavailable,unavailable
+644,Landorus,Ground, Flying,Sand,,Sheer Force,TRUE,unavailable,unavailable,unavailable
+645,Kyurem,Dragon, Ice,Pressure,,,TRUE,unavailable,unavailable,unavailable
+646,Keldeo,Water, Fighting,Justified,,,TRUE,unavailable,unavailable,unavailable
+647,Meloetta,Normal, Psychic,Serene,,,TRUE,unavailable,unavailable,unavailable
+648,Genesect,Bug, Steel,Download,,,TRUE,unavailable,unavailable,unavailable
+649,Chespin,Grass,,Overgrow,,Bulletproof,FALSE,unavailable,unavailable,unavailable
+650,Quilladin,Grass,,Overgrow,,Bulletproof,FALSE,unavailable,unavailable,unavailable
+651,Chesnaught,Grass, Fighting,Overgrow,,Bulletproof,FALSE,unavailable,unavailable,unavailable
+652,Fennekin,Fire,,Blaze,,Magician,FALSE,unavailable,unavailable,unavailable
+653,Braixen,Fire,,Blaze,,Magician,FALSE,unavailable,unavailable,unavailable
+654,Delphox,Fire, Psychic,Blaze,,Magician,FALSE,unavailable,unavailable,unavailable
+655,Froakie,Water,,Torrent,,Protean,FALSE,unavailable,unavailable,unavailable
+656,Frogadier,Water,,Torrent,,Protean,FALSE,unavailable,unavailable,unavailable
+657,Greninja,Water, Dark,Torrent,,Protean,FALSE,unavailable,unavailable,unavailable
+658,Bunnelby,Normal,,Pickup, Cheek,Huge Power,FALSE,unavailable,unavailable,unavailable
+659,Diggersby,Normal, Ground,Pickup, Cheek,Huge Power,FALSE,unavailable,unavailable,unavailable
+660,Fletchling,Normal, Flying,Big,,Gale Wings,FALSE,unavailable,unavailable,unavailable
+661,Fletchinder,Fire, Flying,Flame,,Gale Wings,FALSE,unavailable,unavailable,unavailable
+662,Talonflame,Fire, Flying,Flame,,Gale Wings,FALSE,unavailable,unavailable,unavailable
+663,Scatterbug,Bug,,Shield, Compound,Friend Guard,FALSE,unavailable,unavailable,unavailable
+664,Spewpa,Bug,,Shed,,Friend Guard,FALSE,unavailable,unavailable,unavailable
+665,Vivillon,Bug, Flying,Shield, Compound,Friend Guard,FALSE,unavailable,unavailable,unavailable
+666,Litleo,Fire, Normal,Rivalry, Unnerve,Moxie,FALSE,unavailable,unavailable,unavailable
+667,Pyroar,Fire, Normal,Rivalry, Unnerve,Moxie,FALSE,unavailable,unavailable,unavailable
+668,Flabébé,Fairy,,Flower,,Symbiosis,FALSE,unavailable,unavailable,unavailable
+669,Floette,Fairy,,Flower,,Symbiosis,FALSE,unavailable,unavailable,unavailable
+670,Florges,Fairy,,Flower,,Symbiosis,FALSE,unavailable,unavailable,unavailable
+671,Skiddo,Grass,,Sap,,Grass Pelt,FALSE,unavailable,unavailable,unavailable
+672,Gogoat,Grass,,Sap,,Grass Pelt,FALSE,unavailable,unavailable,unavailable
+673,Pancham,Fighting,,Iron, Mold,Scrappy,FALSE,unavailable,unavailable,unavailable
+674,Pangoro,Fighting, Dark,Iron, Mold,Scrappy,FALSE,unavailable,unavailable,unavailable
+675,Furfrou,Normal,,Fur,,,FALSE,unavailable,unavailable,unavailable
+676,Espurr,Psychic,,Keen, Infiltrator,Own Tempo,FALSE,unavailable,unavailable,unavailable
+677,Meowstic,Psychic,,Keen, Infiltrator,Prankster,FALSE,unavailable,unavailable,unavailable
+678,Honedge,Steel, Ghost,No,,,FALSE,unavailable,unavailable,unavailable
+679,Doublade,Steel, Ghost,No,,,FALSE,unavailable,unavailable,unavailable
+680,Aegislash,Steel, Ghost,Stance,,,FALSE,unavailable,unavailable,unavailable
+681,Spritzee,Fairy,,Healer,,Aroma Veil,FALSE,unavailable,unavailable,unavailable
+682,Aromatisse,Fairy,,Healer,,Aroma Veil,FALSE,unavailable,unavailable,unavailable
+683,Swirlix,Fairy,,Sweet,,Unburden,FALSE,unavailable,unavailable,unavailable
+684,Slurpuff,Fairy,,Sweet,,Unburden,FALSE,unavailable,unavailable,unavailable
+685,Inkay,Dark, Psychic,Contrary, Suction,Infiltrator,FALSE,unavailable,unavailable,unavailable
+686,Malamar,Dark, Psychic,Contrary, Suction,Infiltrator,FALSE,unavailable,unavailable,unavailable
+687,Binacle,Rock, Water,Tough, Sniper,Pickpocket,FALSE,unavailable,unavailable,unavailable
+688,Barbaracle,Rock, Water,Tough, Sniper,Pickpocket,FALSE,unavailable,unavailable,unavailable
+689,Skrelp,Poison, Water,Poison, Poison,Adaptability,FALSE,unavailable,unavailable,unavailable
+690,Dragalge,Poison, Dragon,Poison, Poison,Adaptability,FALSE,unavailable,unavailable,unavailable
+691,Clauncher,Water,,Launcher,,,FALSE,unavailable,unavailable,unavailable
+692,Clawitzer,Water,,Launcher,,,FALSE,unavailable,unavailable,unavailable
+693,Helioptile,Electric, Normal,Dry, Sand,Solar Power,FALSE,unavailable,unavailable,unavailable
+694,Heliolisk,Electric, Normal,Dry, Sand,Solar Power,FALSE,unavailable,unavailable,unavailable
+695,Tyrunt,Rock, Dragon,Strong,,Sturdy,FALSE,unavailable,unavailable,unavailable
+696,Tyrantrum,Rock, Dragon,Strong,,Rock Head,FALSE,unavailable,unavailable,unavailable
+697,Amaura,Rock, Ice,Refrigerate,,Snow Warning,FALSE,unavailable,unavailable,unavailable
+698,Aurorus,Rock, Ice,Refrigerate,,Snow Warning,FALSE,unavailable,unavailable,unavailable
+699,Sylveon,Fairy,,Cute,,Pixilate,FALSE,unavailable,unavailable,unavailable
+700,Hawlucha,Fighting, Flying,Limber, Unburden,Mold Breaker,FALSE,unavailable,unavailable,unavailable
+701,Dedenne,Electric, Fairy,Cheek, Pickup,Plus,FALSE,unavailable,unavailable,unavailable
+702,Carbink,Rock, Fairy,Clear,,Sturdy,FALSE,unavailable,unavailable,unavailable
+703,Goomy,Dragon,,Sap, Hydration,Gooey,FALSE,unavailable,unavailable,unavailable
+704,Sliggoo,Dragon,,Sap, Hydration,Gooey,FALSE,unavailable,unavailable,unavailable
+705,Goodra,Dragon,,Sap, Hydration,Gooey,FALSE,unavailable,unavailable,unavailable
+706,Klefki,Steel, Fairy,Prankster,,Magician,FALSE,unavailable,unavailable,unavailable
+707,Phantump,Ghost, Grass,Natural, Frisk,Harvest,FALSE,unavailable,unavailable,unavailable
+708,Trevenant,Ghost, Grass,Natural, Frisk,Harvest,FALSE,unavailable,unavailable,unavailable
+709,Pumpkaboo,Ghost, Grass,Pickup, Frisk,Insomnia,FALSE,unavailable,unavailable,unavailable
+710,Gourgeist,Ghost, Grass,Pickup, Frisk,Insomnia,FALSE,unavailable,unavailable,unavailable
+711,Bergmite,Ice,,Own, Ice,Sturdy,FALSE,unavailable,unavailable,unavailable
+712,Avalugg,Ice,,Own, Ice,Sturdy,FALSE,unavailable,unavailable,unavailable
+713,Noibat,Flying, Dragon,Frisk, Infiltrator,Telepathy,FALSE,unavailable,unavailable,unavailable
+714,Noivern,Flying, Dragon,Frisk, Infiltrator,Telepathy,FALSE,unavailable,unavailable,unavailable
+715,Xerneas,Fairy,,Fairy,,,TRUE,unavailable,unavailable,unavailable
+716,Yveltal,Dark, Flying,Dark,,,TRUE,unavailable,unavailable,unavailable
+717,Zygarde,Dragon, Ground,Aura,,,TRUE,unavailable,unavailable,unavailable
+718,Diancie,Rock, Fairy,Clear,,,TRUE,unavailable,unavailable,unavailable
+719,Hoopa,Psychic, Ghost,Magician,,,TRUE,unavailable,unavailable,unavailable
+720,Volcanion,Fire, Water,Water,,,TRUE,unavailable,unavailable,unavailable
+721,Rowlet,Grass, Flying,Overgrow,,Long Reach,FALSE,unavailable,unavailable,unavailable
+722,Dartrix,Grass, Flying,Overgrow,,Long Reach,FALSE,unavailable,unavailable,unavailable
+723,Decidueye,Grass, Ghost,Overgrow,,Long Reach,FALSE,unavailable,unavailable,unavailable
+724,Litten,Fire,,Blaze,,Intimidate,FALSE,unavailable,unavailable,unavailable
+725,Torracat,Fire,,Blaze,,Intimidate,FALSE,unavailable,unavailable,unavailable
+726,Incineroar,Fire, Dark,Blaze,,Intimidate,FALSE,unavailable,unavailable,unavailable
+727,Popplio,Water,,Torrent,,Liquid Voice,FALSE,unavailable,unavailable,unavailable
+728,Brionne,Water,,Torrent,,Liquid Voice,FALSE,unavailable,unavailable,unavailable
+729,Primarina,Water, Fairy,Torrent,,Liquid Voice,FALSE,unavailable,unavailable,unavailable
+730,Pikipek,Normal, Flying,Keen, Skill,Pickup,FALSE,unavailable,unavailable,unavailable
+731,Trumbeak,Normal, Flying,Keen, Skill,Pickup,FALSE,unavailable,unavailable,unavailable
+732,Toucannon,Normal, Flying,Keen, Skill,Sheer Force,FALSE,unavailable,unavailable,unavailable
+733,Yungoos,Normal,,Stakeout, Strong,Adaptability,FALSE,unavailable,unavailable,unavailable
+734,Gumshoos,Normal,,Stakeout, Strong,Adaptability,FALSE,unavailable,unavailable,unavailable
+735,Grubbin,Bug,,Swarm,,,FALSE,unavailable,unavailable,unavailable
+736,Charjabug,Bug, Electric,Battery,,,FALSE,unavailable,unavailable,unavailable
+737,Vikavolt,Bug, Electric,Levitate,,,FALSE,unavailable,unavailable,unavailable
+738,Crabrawler,Fighting,,Hyper, Iron,Anger Point,FALSE,unavailable,unavailable,unavailable
+739,Crabominable,Fighting, Ice,Hyper, Iron,Anger Point,FALSE,unavailable,unavailable,unavailable
+740,Oricorio,Fire, Flying,Dancer,,,FALSE,unavailable,unavailable,unavailable
+741,Cutiefly,Bug, Fairy,Honey, Shield,Sweet Veil,FALSE,unavailable,unavailable,unavailable
+742,Ribombee,Bug, Fairy,Honey, Shield,Sweet Veil,FALSE,unavailable,unavailable,unavailable
+743,Rockruff,Rock,,Keen, Vital,Steadfast,FALSE,unavailable,unavailable,unavailable
+744,Lycanroc,Rock,,Keen, Sand,Steadfast,FALSE,unavailable,unavailable,unavailable
+745,Wishiwashi,Water,,Schooling,,,FALSE,unavailable,unavailable,unavailable
+746,Mareanie,Poison, Water,Merciless, Limber,Regenerator,FALSE,unavailable,unavailable,unavailable
+747,Toxapex,Poison, Water,Merciless, Limber,Regenerator,FALSE,unavailable,unavailable,unavailable
+748,Mudbray,Ground,,Own, Stamina,Inner Focus,FALSE,unavailable,unavailable,unavailable
+749,Mudsdale,Ground,,Own, Stamina,Inner Focus,FALSE,unavailable,unavailable,unavailable
+750,Dewpider,Water, Bug,Water,,Water Absorb,FALSE,unavailable,unavailable,unavailable
+751,Araquanid,Water, Bug,Water,,Water Absorb,FALSE,unavailable,unavailable,unavailable
+752,Fomantis,Grass,,Leaf,,Contrary,FALSE,unavailable,unavailable,unavailable
+753,Lurantis,Grass,,Leaf,,Contrary,FALSE,unavailable,unavailable,unavailable
+754,Morelull,Grass, Fairy,Illuminate, Effect,Rain Dish,FALSE,unavailable,unavailable,unavailable
+755,Shiinotic,Grass, Fairy,Illuminate, Effect,Rain Dish,FALSE,unavailable,unavailable,unavailable
+756,Salandit,Poison, Fire,Corrosion,,Oblivious,FALSE,unavailable,unavailable,unavailable
+757,Salazzle,Poison, Fire,Corrosion,,Oblivious,FALSE,unavailable,unavailable,unavailable
+758,Stufful,Normal, Fighting,Fluffy, Klutz,Cute Charm,FALSE,unavailable,unavailable,unavailable
+759,Bewear,Normal, Fighting,Fluffy, Klutz,Unnerve,FALSE,unavailable,unavailable,unavailable
+760,Bounsweet,Grass,,Leaf, Oblivious,Sweet Veil,FALSE,unavailable,unavailable,unavailable
+761,Steenee,Grass,,Leaf, Oblivious,Sweet Veil,FALSE,unavailable,unavailable,unavailable
+762,Tsareena,Grass,,Leaf, Queenly,Sweet Veil,FALSE,unavailable,unavailable,unavailable
+763,Comfey,Fairy,,Flower, Triage,Natural Cure,FALSE,unavailable,unavailable,unavailable
+764,Oranguru,Normal, Psychic,Inner, Telepathy,Symbiosis,FALSE,unavailable,unavailable,unavailable
+765,Passimian,Fighting,,Receiver,,Defiant,FALSE,unavailable,unavailable,unavailable
+766,Wimpod,Bug, Water,Wimp,,,FALSE,unavailable,unavailable,unavailable
+767,Golisopod,Bug, Water,Emergency,,,FALSE,unavailable,unavailable,unavailable
+768,Sandygast,Ghost, Ground,Water,,Sand Veil,FALSE,unavailable,unavailable,unavailable
+769,Palossand,Ghost, Ground,Water,,Sand Veil,FALSE,unavailable,unavailable,unavailable
+770,Pyukumuku,Water,,Innards,,Unaware,FALSE,unavailable,unavailable,unavailable
+771,Type; Null,Normal,,Battle,,,TRUE,unavailable,unavailable,unavailable
+772,Silvally,Normal,,RKS,,,TRUE,unavailable,unavailable,unavailable
+773,Minior,Rock, Flying,Shields,,,FALSE,unavailable,unavailable,unavailable
+774,Komala,Normal,,Comatose,,,FALSE,unavailable,unavailable,unavailable
+775,Turtonator,Fire, Dragon,Shell,,,FALSE,unavailable,unavailable,unavailable
+776,Togedemaru,Electric, Steel,Iron, Lightning,Sturdy,FALSE,unavailable,unavailable,unavailable
+777,Mimikyu,Ghost, Fairy,Disguise,,,FALSE,unavailable,unavailable,unavailable
+778,Bruxish,Water, Psychic,Dazzling, Strong,Wonder Skin,FALSE,unavailable,unavailable,unavailable
+779,Drampa,Normal, Dragon,Berserk, Sap,Cloud Nine,FALSE,unavailable,unavailable,unavailable
+780,Dhelmise,Ghost, Grass,Steelworker,,,FALSE,unavailable,unavailable,unavailable
+781,Jangmo-o,Dragon,,Bulletproof, Soundproof,Overcoat,FALSE,unavailable,unavailable,unavailable
+782,Hakamo-o,Dragon, Fighting,Bulletproof, Soundproof,Overcoat,FALSE,unavailable,unavailable,unavailable
+783,Kommo-o,Dragon, Fighting,Bulletproof, Soundproof,Overcoat,FALSE,unavailable,unavailable,unavailable
+784,Tapu Koko,Electric, Fairy,Electric,,Telepathy,TRUE,unavailable,unavailable,unavailable
+785,Tapu Lele,Psychic, Fairy,Psychic,,Telepathy,TRUE,unavailable,unavailable,unavailable
+786,Tapu Bulu,Grass, Fairy,Grassy,,Telepathy,TRUE,unavailable,unavailable,unavailable
+787,Tapu Fini,Water, Fairy,Misty,,Telepathy,TRUE,unavailable,unavailable,unavailable
+788,Cosmog,Psychic,,Unaware,,,TRUE,unavailable,unavailable,unavailable
+789,Cosmoem,Psychic,,Sturdy,,,TRUE,unavailable,unavailable,unavailable
+790,Solgaleo,Psychic, Steel,Full,,,TRUE,unavailable,unavailable,unavailable
+791,Lunala,Psychic, Ghost,Shadow,,,TRUE,unavailable,unavailable,unavailable
+792,Nihilego,Rock, Poison,Beast,,,FALSE,unavailable,unavailable,unavailable
+793,Buzzwole,Bug, Fighting,Beast,,,FALSE,unavailable,unavailable,unavailable
+794,Pheromosa,Bug, Fighting,Beast,,,FALSE,unavailable,unavailable,unavailable
+795,Xurkitree,Electric,,Beast,,,FALSE,unavailable,unavailable,unavailable
+796,Celesteela,Steel, Flying,Beast,,,FALSE,unavailable,unavailable,unavailable
+797,Kartana,Grass, Steel,Beast,,,FALSE,unavailable,unavailable,unavailable
+798,Guzzlord,Dark, Dragon,Beast,,,FALSE,unavailable,unavailable,unavailable
+799,Necrozma,Psychic,,Prism,,,TRUE,unavailable,unavailable,unavailable
+800,Magearna,Steel, Fairy,Soul Heart,,,TRUE,unavailable,unavailable,unavailable
+801,Marshadow,Fighting, Ghost,Technician,,,TRUE,unavailable,unavailable,unavailable
+802,Poipole,Poison,,Beast,,,FALSE,unavailable,unavailable,unavailable
+803,Naganadel,Poison, Dragon,Beast,,,FALSE,unavailable,unavailable,unavailable
+804,Stakataka,Rock, Steel,Beast,,,FALSE,unavailable,unavailable,unavailable
+805,Blacephalon,Fire, Ghost,Beast,,,FALSE,unavailable,unavailable,unavailable
+806,Zeraora,Electric,,Volt,,,TRUE,unavailable,unavailable,unavailable
+807,Meltan,Steel,,Magnet,,,TRUE,unavailable,unavailable,unavailable
+808,Melmetal,Steel,,Iron,,,TRUE,unavailable,unavailable,unavailable
+809,Grookey,Grass,,Overgrow,,Grassy Surge,FALSE,unavailable,unavailable,unavailable
+810,Thwackey,Grass,,Overgrow,,Grassy Surge,FALSE,unavailable,unavailable,unavailable
+811,Rillaboom,Grass,,Overgrow,,Grassy Surge,FALSE,unavailable,unavailable,unavailable
+812,Scorbunny,Fire,,Blaze,,Libero,FALSE,unavailable,unavailable,unavailable
+813,Raboot,Fire,,Blaze,,Libero,FALSE,unavailable,unavailable,unavailable
+814,Cinderace,Fire,,Blaze,,Libero,FALSE,unavailable,unavailable,unavailable
+815,Sobble,Water,,Torrent,,Sniper,FALSE,unavailable,unavailable,unavailable
+816,Drizzile,Water,,Torrent,,Sniper,FALSE,unavailable,unavailable,unavailable
+817,Inteleon,Water,,Torrent,,Sniper,FALSE,unavailable,unavailable,unavailable
+818,Skwovet,Normal,,Cheek,,Gluttony,FALSE,unavailable,unavailable,unavailable
+819,Greedent,Normal,,Cheek,,Gluttony,FALSE,unavailable,unavailable,unavailable
+820,Rookidee,Flying,,Keen, Unnerve,Big Pecks,FALSE,unavailable,unavailable,unavailable
+821,Corvisquire,Flying,,Keen, Unnerve,Big Pecks,FALSE,unavailable,unavailable,unavailable
+822,Corviknight,Flying, Steel,Pressure, Unnerve,Mirror Armor,FALSE,unavailable,unavailable,unavailable
+823,Blipbug,Bug,,Swarm, Compound,Telepathy,FALSE,unavailable,unavailable,unavailable
+824,Dottler,Bug, Psychic,Swarm, Compound,Telepathy,FALSE,unavailable,unavailable,unavailable
+825,Orbeetle,Bug, Psychic,Swarm, Frisk,Telepathy,FALSE,unavailable,unavailable,unavailable
+826,Nickit,Dark,,Run, Unburden,Stakeout,FALSE,unavailable,unavailable,unavailable
+827,Thievul,Dark,,Run, Unburden,Stakeout,FALSE,unavailable,unavailable,unavailable
+828,Gossifleur,Grass,,Cotton, Regenerator,Effect Spore,FALSE,unavailable,unavailable,unavailable
+829,Eldegoss,Grass,,Cotton, Regenerator,Effect Spore,FALSE,unavailable,unavailable,unavailable
+830,Wooloo,Normal,,Fluffy, Run,Bulletproof,FALSE,unavailable,unavailable,unavailable
+831,Dubwool,Normal,,Fluffy, Steadfast,Bulletproof,FALSE,unavailable,unavailable,unavailable
+832,Chewtle,Water,,Strong, Shell,Swift Swim,FALSE,unavailable,unavailable,unavailable
+833,Drednaw,Water, Rock,Strong, Shell,Swift Swim,FALSE,unavailable,unavailable,unavailable
+834,Yamper,Electric,,Ball,,Rattled,FALSE,unavailable,unavailable,unavailable
+835,Boltund,Electric,,Strong,,Competitive,FALSE,unavailable,unavailable,unavailable
+836,Rolycoly,Rock,,Steam, Heatproof,Flash Fire,FALSE,unavailable,unavailable,unavailable
+837,Carkol,Rock, Fire,Steam, Flame,Flash Fire,FALSE,unavailable,unavailable,unavailable
+838,Coalossal,Rock, Fire,Steam, Flame,Flash Fire,FALSE,unavailable,unavailable,unavailable
+839,Applin,Grass, Dragon,Ripen, Gluttony,Bulletproof,FALSE,unavailable,unavailable,unavailable
+840,Flapple,Grass, Dragon,Ripen, Gluttony,Hustle,FALSE,unavailable,unavailable,unavailable
+841,Appletun,Grass, Dragon,Ripen, Gluttony,Thick Fat,FALSE,unavailable,unavailable,unavailable
+842,Silicobra,Ground,,Sand, Shed,Sand Veil,FALSE,unavailable,unavailable,unavailable
+843,Sandaconda,Ground,,Sand, Shed,Sand Veil,FALSE,unavailable,unavailable,unavailable
+844,Cramorant,Flying, Water,Gulp,,,FALSE,unavailable,unavailable,unavailable
+845,Arrokuda,Water,,Swift,,Propeller Tail,FALSE,unavailable,unavailable,unavailable
+846,Barraskewda,Water,,Swift,,Propeller Tail,FALSE,unavailable,unavailable,unavailable
+847,Toxel,Electric, Poison,Rattled, Static,Klutz,FALSE,unavailable,unavailable,unavailable
+848,Toxtricity,Electric, Poison,Punk, PlusAmped,Technician,FALSE,unavailable,unavailable,unavailable
+849,Sizzlipede,Fire, Bug,Flash, White,Flame Body,FALSE,unavailable,unavailable,unavailable
+850,Centiskorch,Fire, Bug,Flash, White,Flame Body,FALSE,unavailable,unavailable,unavailable
+851,Clobbopus,Fighting,,Limber,,Technician,FALSE,unavailable,unavailable,unavailable
+852,Grapploct,Fighting,,Limber,,Technician,FALSE,unavailable,unavailable,unavailable
+853,Sinistea,Ghost,,Weak,,Cursed Body,FALSE,unavailable,unavailable,unavailable
+854,Polteageist,Ghost,,Weak,,Cursed Body,FALSE,unavailable,unavailable,unavailable
+855,Hatenna,Psychic,,Healer, Anticipation,Magic Bounce,FALSE,unavailable,unavailable,unavailable
+856,Hattrem,Psychic,,Healer, Anticipation,Magic Bounce,FALSE,unavailable,unavailable,unavailable
+857,Hatterene,Psychic, Fairy,Healer, Anticipation,Magic Bounce,FALSE,unavailable,unavailable,unavailable
+858,Impidimp,Dark, Fairy,Prankster, Frisk,Pickpocket,FALSE,unavailable,unavailable,unavailable
+859,Morgrem,Dark, Fairy,Prankster, Frisk,Pickpocket,FALSE,unavailable,unavailable,unavailable
+860,Grimmsnarl,Dark, Fairy,Prankster, Frisk,Pickpocket,FALSE,unavailable,unavailable,unavailable
+861,Obstagoon,Dark, Normal,Reckless, Guts,Defiant,FALSE,unavailable,unavailable,unavailable
+862,Perrserker,Steel,,Battle, Tough,Steely Spirit,FALSE,unavailable,unavailable,unavailable
+863,Cursola,Ghost,,Weak,,Perish Body,FALSE,unavailable,unavailable,unavailable
+864,Sirfetch'd,Fighting,,Steadfast,,Scrappy,FALSE,unavailable,unavailable,unavailable
+865,Mr. Rime,Ice, Psychic,Tangled, Screen,Ice Body,FALSE,unavailable,unavailable,unavailable
+866,Runerigus,Ground, Ghost,Wandering,,,FALSE,unavailable,unavailable,unavailable
+867,Milcery,Fairy,,Sweet,,Aroma Veil,FALSE,unavailable,unavailable,unavailable
+868,Alcremie,Fairy,,Sweet,,Aroma Veil,FALSE,unavailable,unavailable,unavailable
+869,Falinks,Fighting,,Battle,,Defiant,FALSE,unavailable,unavailable,unavailable
+870,Pincurchin,Electric,,Lightning,,Electric Surge,FALSE,unavailable,unavailable,unavailable
+871,Snom,Ice, Bug,Shield,,Ice Scales,FALSE,unavailable,unavailable,unavailable
+872,Frosmoth,Ice, Bug,Shield,,Ice Scales,FALSE,unavailable,unavailable,unavailable
+873,Stonjourner,Rock,,Power,,,FALSE,unavailable,unavailable,unavailable
+874,Eiscue,Ice,,Ice,,,FALSE,unavailable,unavailable,unavailable
+875,Indeedee,Psychic, Normal,Inner, SynchronizeMale,Psychic Surge,FALSE,unavailable,unavailable,unavailable
+876,Morpeko,Electric, Dark,Hunger,,,FALSE,unavailable,unavailable,unavailable
+877,Cufant,Steel,,Sheer,,Heavy Metal,FALSE,unavailable,unavailable,unavailable
+878,Copperajah,Steel,,Sheer,,Heavy Metal,FALSE,unavailable,unavailable,unavailable
+879,Dracozolt,Electric, Dragon,Volt, Hustle,Sand Rush,FALSE,unavailable,unavailable,unavailable
+880,Arctozolt,Electric, Ice,Volt, Static,Slush Rush,FALSE,unavailable,unavailable,unavailable
+881,Dracovish,Water, Dragon,Water, Strong,Sand Rush,FALSE,unavailable,unavailable,unavailable
+882,Arctovish,Water, Ice,Water, Ice,Slush Rush,FALSE,unavailable,unavailable,unavailable
+883,Duraludon,Steel, Dragon,Light, Heavy,Stalwart,FALSE,unavailable,unavailable,unavailable
+884,Dreepy,Dragon, Ghost,Clear, Infiltrator,Cursed Body,FALSE,unavailable,unavailable,unavailable
+885,Drakloak,Dragon, Ghost,Clear, Infiltrator,Cursed Body,FALSE,unavailable,unavailable,unavailable
+886,Dragapult,Dragon, Ghost,Clear, Infiltrator,Cursed Body,FALSE,unavailable,unavailable,unavailable
+887,Zacian,Fairy,,Intrepid,,,TRUE,unavailable,unavailable,unavailable
+888,Zamazenta,Fighting,,Dauntless,,,TRUE,unavailable,unavailable,unavailable
+889,Eternatus,Poison, Dragon,Pressure,,,TRUE,unavailable,unavailable,unavailable
+890,Kubfu,Fighting,,Inner,,,TRUE,unavailable,unavailable,unavailable
+891,Urshifu,Fighting, Dark,Unseen,,,TRUE,unavailable,unavailable,unavailable
+892,Zarude,Dark, Grass,Leaf,,,TRUE,unavailable,unavailable,unavailable
+893,Regieleki,Electric,,Transistor,,,TRUE,unavailable,unavailable,unavailable
+894,Regidrago,Dragon,,Dragon s,,,TRUE,unavailable,unavailable,unavailable
+895,Glastrier,Ice,,Chilling,,,TRUE,unavailable,unavailable,unavailable
+896,Spectrier,Ghost,,Grim,,,TRUE,unavailable,unavailable,unavailable
+897,Calyrex,Psychic, Grass,Unnerve,,,TRUE,unavailable,unavailable,unavailable
+898,Wyrdeer,Normal, Psychic,Intimidate, Frisk,Sap Sipper,FALSE,unavailable,unavailable,unavailable
+899,Kleavor,Bug, Rock,Swarm, Sheer,Sharpness,FALSE,unavailable,unavailable,unavailable
+900,Ursaluna,Ground, Normal,Guts, Bulletproof,Unnerve,FALSE,unavailable,unavailable,unavailable
+901,Basculegion,Water, Ghost,Swift, Adaptability,Mold Breaker,FALSE,unavailable,unavailable,unavailable
+902,Sneasler,Fighting, Poison,Pressure, Unburden ,Poison Touch,FALSE,unavailable,unavailable,unavailable
+903,Overqwil,Dark, Poison,Poison, Swift,Intimidate,FALSE,unavailable,unavailable,unavailable
+904,Enamorus,Fairy, Flying,Cute,,Contrary,TRUE,unavailable,unavailable,unavailable
+905,Sprigatito,Grass,,Overgrow,,Protean,FALSE,unavailable,unavailable,unavailable
+906,Floragato,Grass,,Overgrow,,Protean,FALSE,unavailable,unavailable,unavailable
+907,Meowscarada,Grass, Dark,Overgrow,,Protean,FALSE,unavailable,unavailable,unavailable
+908,Fuecoco,Fire,,Blaze,,Unaware,FALSE,unavailable,unavailable,unavailable
+909,Crocalor,Fire,,Blaze,,Unaware,FALSE,unavailable,unavailable,unavailable
+910,Skeledirge,Fire, Ghost,Blaze,,Unaware,FALSE,unavailable,unavailable,unavailable
+911,Quaxly,Water,,Torrent,,Moxie,FALSE,unavailable,unavailable,unavailable
+912,Quaxwell,Water,,Torrent,,Moxie,FALSE,unavailable,unavailable,unavailable
+913,Quaquaval,Water, Fighting,Torrent,,Moxie,FALSE,unavailable,unavailable,unavailable
+914,Lechonk,Normal,,Aroma, Gluttony,Thick Fat,FALSE,unavailable,unavailable,unavailable
+915,Oinkologne,Normal,,Lingering, GluttonyMale,Thick Fat,FALSE,unavailable,unavailable,unavailable
+916,Tarountula,Bug,,Insomnia,,Stakeout,FALSE,unavailable,unavailable,unavailable
+917,Spidops,Bug,,Insomnia,,Stakeout,FALSE,unavailable,unavailable,unavailable
+918,Nymble,Bug,,Swarm,,Tinted Lens,FALSE,unavailable,unavailable,unavailable
+919,Lokix,Bug, Dark,Swarm,,Tinted Lens,FALSE,unavailable,unavailable,unavailable
+920,Pawmi,Electric,,Static, Natural,Iron Fist,FALSE,unavailable,unavailable,unavailable
+921,Pawmo,Electric, Fighting,Volt, Natural,Iron Fist,FALSE,unavailable,unavailable,unavailable
+922,Pawmot,Electric, Fighting,Volt, Natural,Iron Fist,FALSE,unavailable,unavailable,unavailable
+923,Tandemaus,Normal,,Run, Pickup,Own Tempo,FALSE,unavailable,unavailable,unavailable
+924,Maushold,Normal,,Friend, Cheek,Technician,FALSE,unavailable,unavailable,unavailable
+925,Fidough,Fairy,,Own,,Klutz,FALSE,unavailable,unavailable,unavailable
+926,Dachsbun,Fairy,,Well Baked,,Aroma Veil,FALSE,unavailable,unavailable,unavailable
+927,Smoliv,Grass, Normal,Early,,Harvest,FALSE,unavailable,unavailable,unavailable
+928,Dolliv,Grass, Normal,Early,,Harvest,FALSE,unavailable,unavailable,unavailable
+929,Arboliva,Grass, Normal,Seed,,Harvest,FALSE,unavailable,unavailable,unavailable
+930,Squawkabilly,Normal, Flying,Intimidate, Hustle,Guts,FALSE,unavailable,unavailable,unavailable
+931,Nacli,Rock,,Purifying, Sturdy,Clear Body,FALSE,unavailable,unavailable,unavailable
+932,Naclstack,Rock,,Purifying, Sturdy,Clear Body,FALSE,unavailable,unavailable,unavailable
+933,Garganacl,Rock,,Purifying, Sturdy,Clear Body,FALSE,unavailable,unavailable,unavailable
+934,Charcadet,Fire,,Flash,,Flame Body,FALSE,unavailable,unavailable,unavailable
+935,Armarouge,Fire, Psychic,Flash,,Weak Armor,FALSE,unavailable,unavailable,unavailable
+936,Ceruledge,Fire, Ghost,Flash,,Weak Armor,FALSE,unavailable,unavailable,unavailable
+937,Tadbulb,Electric,,Own, Static,Damp,FALSE,unavailable,unavailable,unavailable
+938,Bellibolt,Electric,,Electromorphosis, Static,Damp,FALSE,unavailable,unavailable,unavailable
+939,Wattrel,Electric, Flying,Wind, Volt,Competitive,FALSE,unavailable,unavailable,unavailable
+940,Kilowattrel,Electric, Flying,Wind, Volt,Competitive,FALSE,unavailable,unavailable,unavailable
+941,Maschiff,Dark,,Intimidate, Run,Stakeout,FALSE,unavailable,unavailable,unavailable
+942,Mabosstiff,Dark,,Intimidate, Guard,Stakeout,FALSE,unavailable,unavailable,unavailable
+943,Shroodle,Poison, Normal,Unburden, Pickpocket,Prankster,FALSE,unavailable,unavailable,unavailable
+944,Grafaiai,Poison, Normal,Unburden, Poison,Prankster,FALSE,unavailable,unavailable,unavailable
+945,Bramblin,Grass, Ghost,Wind,,Infiltrator,FALSE,unavailable,unavailable,unavailable
+946,Brambleghast,Grass, Ghost,Wind,,Infiltrator,FALSE,unavailable,unavailable,unavailable
+947,Toedscool,Ground, Grass,Mycelium,,,FALSE,unavailable,unavailable,unavailable
+948,Toedscruel,Ground, Grass,Mycelium,,,FALSE,unavailable,unavailable,unavailable
+949,Klawf,Rock,,Anger, Shell,Regenerator,FALSE,unavailable,unavailable,unavailable
+950,Capsakid,Grass,,Chlorophyll, Insomnia,Klutz,FALSE,unavailable,unavailable,unavailable
+951,Scovillain,Grass, Fire,Chlorophyll, Insomnia,Moody,FALSE,unavailable,unavailable,unavailable
+952,Rellor,Bug,,Compound,,Shed Skin,FALSE,unavailable,unavailable,unavailable
+953,Rabsca,Bug, Psychic,Synchronize,,Telepathy,FALSE,unavailable,unavailable,unavailable
+954,Flittle,Psychic,,Anticipation, Frisk,Speed Boost,FALSE,unavailable,unavailable,unavailable
+955,Espathra,Psychic,,Opportunist, Frisk,Speed Boost,FALSE,unavailable,unavailable,unavailable
+956,Tinkatink,Fairy, Steel,Mold, Own,Pickpocket,FALSE,unavailable,unavailable,unavailable
+957,Tinkatuff,Fairy, Steel,Mold, Own,Pickpocket,FALSE,unavailable,unavailable,unavailable
+958,Tinkaton,Fairy, Steel,Mold, Own,Pickpocket,FALSE,unavailable,unavailable,unavailable
+959,Wiglett,Water,,Gooey, Rattled,Sand Veil,FALSE,unavailable,unavailable,unavailable
+960,Wugtrio,Water,,Gooey, Rattled,Sand Veil,FALSE,unavailable,unavailable,unavailable
+961,Bombirdier,Flying, Dark,Big, Keen,Rocky Payload,FALSE,unavailable,unavailable,unavailable
+962,Finizen,Water,,Water,,,FALSE,unavailable,unavailable,unavailable
+963,Palafin,Water,,Zero,,,FALSE,unavailable,unavailable,unavailable
+964,Varoom,Poison, Steel,Overcoat,,Slow Start,FALSE,unavailable,unavailable,unavailable
+965,Revavroom,Poison, Steel,Overcoat,,Filter,FALSE,unavailable,unavailable,unavailable
+966,Cyclizar,Dragon, Normal,Shed,,Regenerator,FALSE,unavailable,unavailable,unavailable
+967,Orthworm,Steel,,Earth,,Sand Veil,FALSE,unavailable,unavailable,unavailable
+968,Glimmet,Rock, Poison,Toxic,,Corrosion,FALSE,unavailable,unavailable,unavailable
+969,Glimmora,Rock, Poison,Toxic,,Corrosion,FALSE,unavailable,unavailable,unavailable
+970,Greavard,Ghost,,Pickup,,Fluffy,FALSE,unavailable,unavailable,unavailable
+971,Houndstone,Ghost,,Sand,,Fluffy,FALSE,unavailable,unavailable,unavailable
+972,Flamigo,Flying, Fighting,Scrappy, Tangled,Costar,FALSE,unavailable,unavailable,unavailable
+973,Cetoddle,Ice,,Thick, Snow,Sheer Force,FALSE,unavailable,unavailable,unavailable
+974,Cetitan,Ice,,Thick, Slush,Sheer Force,FALSE,unavailable,unavailable,unavailable
+975,Veluza,Water, Psychic,Mold,,Sharpness,FALSE,unavailable,unavailable,unavailable
+976,Dondozo,Water,,Unaware, Oblivious,Water Veil,FALSE,unavailable,unavailable,unavailable
+977,Tatsugiri,Dragon, Water,Commander,,Storm Drain,FALSE,unavailable,unavailable,unavailable
+978,Annihilape,Fighting, Ghost,Vital, Inner,Defiant,FALSE,unavailable,unavailable,unavailable
+979,Clodsire,Poison, Ground,Poison, Water,Unaware,FALSE,unavailable,unavailable,unavailable
+980,Farigiraf,Normal, Psychic,Cud, Armor,Sap Sipper,FALSE,unavailable,unavailable,unavailable
+981,Dudunsparce,Normal,,Serene, Run,Rattled,FALSE,unavailable,unavailable,unavailable
+982,Kingambit,Dark, Steel,Defiant, Supreme,Pressure,FALSE,unavailable,unavailable,unavailable
+983,Great Tusk,Ground, Fighting,Protosynthesis,,,FALSE,unavailable,unavailable,unavailable
+984,Scream Tail,Fairy, Psychic,Protosynthesis,,,FALSE,unavailable,unavailable,unavailable
+985,Brute Bonnet,Grass, Dark,Protosynthesis,,,FALSE,unavailable,unavailable,unavailable
+986,Flutter Mane,Ghost, Fairy,Protosynthesis,,,FALSE,unavailable,unavailable,unavailable
+987,Slither Wing,Bug, Fighting,Protosynthesis,,,FALSE,unavailable,unavailable,unavailable
+988,Sandy Shocks,Electric, Ground,Protosynthesis,,,FALSE,unavailable,unavailable,unavailable
+989,Iron Treads,Ground, Steel,Quark,,,FALSE,unavailable,unavailable,unavailable
+990,Iron Bundle,Ice, Water,Quark,,,FALSE,unavailable,unavailable,unavailable
+991,Iron Hands,Fighting, Electric,Quark,,,FALSE,unavailable,unavailable,unavailable
+992,Iron Jugulis,Dark, Flying,Quark,,,FALSE,unavailable,unavailable,unavailable
+993,Iron Moth,Fire, Poison,Quark,,,FALSE,unavailable,unavailable,unavailable
+994,Iron Thorns,Rock, Electric,Quark,,,FALSE,unavailable,unavailable,unavailable
+995,Frigibax,Dragon, Ice,Thermal,,Ice Body,FALSE,unavailable,unavailable,unavailable
+996,Arctibax,Dragon, Ice,Thermal,,Ice Body,FALSE,unavailable,unavailable,unavailable
+997,Baxcalibur,Dragon, Ice,Thermal,,Ice Body,FALSE,unavailable,unavailable,unavailable
+998,Gimmighoul,Ghost,,RattledChest,,,FALSE,unavailable,unavailable,unavailable
+999,Gholdengo,Steel, Ghost,Good,,,FALSE,unavailable,unavailable,unavailable
+1000,Wo-Chien,Dark, Grass,Tablets,,,TRUE,unavailable,unavailable,unavailable
+1001,Chien-Pao,Dark, Ice,Sword,,,TRUE,unavailable,unavailable,unavailable
+1002,Ting-Lu,Dark, Ground,Vessel,,,TRUE,unavailable,unavailable,unavailable
+1003,Chi-Yu,Dark, Fire,Beads,,,TRUE,unavailable,unavailable,unavailable
+1004,Roaring Moon,Dragon, Dark,Protosynthesis,,,FALSE,unavailable,unavailable,unavailable
+1005,Iron Valiant,Fairy, Fighting,Quark,,,FALSE,unavailable,unavailable,unavailable
+1006,Koraidon,Fighting, Dragon,Orichalcum,,,TRUE,unavailable,unavailable,unavailable
+1007,Miraidon,Electric, Dragon,Hadron,,,TRUE,unavailable,unavailable,unavailable
+1008,Walking Wake,Water, Dragon,Protosynthesis,,,TRUE,unavailable,unavailable,unavailable
+1009,Iron Leaves,Grass, Psychic,Quark,,,TRUE,unavailable,unavailable,unavailable
+1010,Dipplin,Grass, Dragon,Supersweet, Gluttony,Sticky Hold,FALSE,unavailable,unavailable,unavailable
+1011,Poltchageist,Grass, Ghost,Hospitality,,Heatproof,FALSE,unavailable,unavailable,unavailable
+1012,Sinistcha,Grass, Ghost,Hospitality,,Heatproof,FALSE,unavailable,unavailable,unavailable
+1013,Okidogi,Poison, Fighting,Toxic,,Guard Dog,TRUE,unavailable,unavailable,unavailable
+1014,Munkidori,Poison, Psychic,Toxic,,Frisk,TRUE,unavailable,unavailable,unavailable
+1015,Fezandipiti,Poison, Fairy,Toxic,,Technician,TRUE,unavailable,unavailable,unavailable
+1016,Ogerpon,Grass,,Defiant,,,TRUE,unavailable,unavailable,unavailable
+1017,Archaludon,Steel, Dragon,Stamina, Sturdy,Stalwart,FALSE,unavailable,unavailable,unavailable
+1018,Hydrapple,Grass, Dragon,Supersweet, Regenerator,Sticky Hold,FALSE,unavailable,unavailable,unavailable
+1019,Gouging Fire,Fire, Dragon,Protosynthesis,,,TRUE,unavailable,unavailable,unavailable
+1020,Raging Bolt,Electric, Dragon,Protosynthesis,,,TRUE,unavailable,unavailable,unavailable
+1021,Iron Boulder,Rock, Psychic,Quark,,,TRUE,unavailable,unavailable,unavailable
+1022,Iron Crown,Steel, Psychic,Quark,,,TRUE,unavailable,unavailable,unavailable
+1023,Terapagos,Normal,,Tera,,,TRUE,unavailable,unavailable,unavailable
+1024,Pecharunt,Poison, Ghost,Poison,,,TRUE,unavailable,unavailable,unavailable

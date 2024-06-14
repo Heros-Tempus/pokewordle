@@ -1,0 +1,67 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pokewordle"
+        xmlns:System="clr-namespace:System;assembly=System.Runtime" x:Class="pokewordle.MainWindow"
+        mc:Ignorable="d"
+        Title="PokeWordle" Height="361" Width="584" Initialized="Window_Initialized">
+    <Grid Background="#FF1F1F1F">
+        <ComboBox x:Name="cb_game"  
+        IsTextSearchEnabled="True"    
+        IsEditable="True" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="40,36,0,0" />
+        <Label x:Name="Label" Content="Game" HorizontalAlignment="Left" Margin="40,10,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Button x:Name="btn_generate" Content="Generate Party" HorizontalAlignment="Left" Margin="145,37,0,0" VerticalAlignment="Top" Click="btn_generate_Click"/>
+        <CheckBox x:Name="ck_legendries" Content="Allow Legendries during party generation?" HorizontalAlignment="Left" Margin="254,42,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Button x:Name="btn_CheckParty" Content="Check Party" HorizontalAlignment="Left" Margin="484,286,0,0" VerticalAlignment="Top" Click="btn_CheckParty_Click"/>
+        <GroupBox x:Name="gb_Slot1" Header="Slot 1" Margin="10,60,0,0" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Left" Width="153" Background="#00000000">
+            <StackPanel>
+                <ComboBox x:Name="cb_Slot1" Width="120"/>
+                <Label x:Name="lbl_Name_Slot1" Content="Name" Foreground="White" Background="#801F1F1F" />
+                <Label x:Name="lbl_TypeA_Slot1" Content="Type A" Foreground="White" Background="#801F1F1F"/>
+                <Label x:Name="lbl_TypeB_Slot1" Content="Type B" Foreground="White" Background="#801F1F1F"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox x:Name="gb_Slot2" Header="Slot 2" Margin="168,60,0,0" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Left" Width="153">
+            <StackPanel>
+                <ComboBox x:Name="cb_Slot2" Width="120"/>
+                <Label x:Name="lbl_Name_Slot2" Content="Name" Foreground="White" Background="#801F1F1F" />
+                <Label x:Name="lbl_TypeA_Slot2" Content="Type A" Foreground="White" Background="#801F1F1F"/>
+                <Label x:Name="lbl_TypeB_Slot2" Content="Type B" Foreground="White" Background="#801F1F1F"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox x:Name="gb_Slot3" Header="Slot 3" Margin="326,60,0,0" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Left" Width="153">
+            <StackPanel>
+                <ComboBox x:Name="cb_Slot3" Width="120"/>
+                <Label x:Name="lbl_Name_Slot3" Content="Name" Foreground="White" Background="#801F1F1F" />
+                <Label x:Name="lbl_TypeA_Slot3" Content="Type A" Foreground="White" Background="#801F1F1F"/>
+                <Label x:Name="lbl_TypeB_Slot3" Content="Type B" Foreground="White" Background="#801F1F1F"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox x:Name="gb_Slot4" Header="Slot 4" Margin="10,183,0,0" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Left" Width="153">
+            <StackPanel>
+                <ComboBox x:Name="cb_Slot4" Width="120"/>
+                <Label x:Name="lbl_Name_Slot4" Content="Name" Foreground="White" Background="#801F1F1F" />
+                <Label x:Name="lbl_TypeA_Slot4" Content="Type A" Foreground="White" Background="#801F1F1F"/>
+                <Label x:Name="lbl_TypeB_Slot4" Content="Type B" Foreground="White" Background="#801F1F1F"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox x:Name="gb_Slot5" Header="Slot 5" Margin="168,183,0,0" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Left" Width="153">
+            <StackPanel>
+                <ComboBox x:Name="cb_Slot5" Width="120"/>
+                <Label x:Name="lbl_Name_Slot5" Content="Name" Foreground="White" Background="#801F1F1F" />
+                <Label x:Name="lbl_TypeA_Slot5" Content="Type A" Foreground="White" Background="#801F1F1F"/>
+                <Label x:Name="lbl_TypeB_Slot5" Content="Type B" Foreground="White" Background="#801F1F1F"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox x:Name="gb_Slot6" Header="Slot 6" Margin="326,183,0,0" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Left" Width="153">
+            <StackPanel>
+                <ComboBox x:Name="cb_Slot6" Width="120"/>
+                <Label x:Name="lbl_Name_Slot6" Content="Name" Foreground="White" Background="#801F1F1F" />
+                <Label x:Name="lbl_TypeA_Slot6" Content="Type A" Foreground="White" Background="#801F1F1F"/>
+                <Label x:Name="lbl_TypeB_Slot6" Content="Type B" Foreground="White" Background="#801F1F1F"/>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</Window>
