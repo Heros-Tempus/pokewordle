@@ -166,31 +166,95 @@ namespace pokewordle
                 {
                     //Process row
                     string[] fields = parser.ReadFields();
-                    int d = Convert.ToInt32(fields[0]);
-                    string species = fields[1];
-                    string firstType = fields[2];
-                    string secondType = fields[3];
-                    string firstAbil = fields[4];
-                    string secondAbil = fields[5];
-                    string hiddenAbil = fields[6];
-                    bool legend = Convert.ToBoolean(fields[7]);
-                    List<int> alts = new List<int>();
+                    Pokemon mon = new Pokemon();
+                    mon.dex_number = Convert.ToInt32(fields[0]);
+                    mon.name = fields[1];
+                    mon.type_01 = fields[2];
+                    mon.type_02 = fields[3];
+                    mon.region = fields[4];
+                    mon.generation = Convert.ToInt32(fields[5]);
+                    mon.evo_method = fields[6];
+                    mon.evo_family = fields[7].Split(';').Select(Int32.Parse).ToList();
+                    mon.is_legendry = Convert.ToBoolean(fields[8]);
+                    mon.is_mythical = Convert.ToBoolean(fields[9]);
 
-                    //fields[8 + game] is the column denoting the restrictions for the selected region's 
-                    if (fields[10 + cb_game.SelectedIndex].Contains("unavailable"))
-                    {//if marked unavailable then skip adding the mon
-                        continue;
+                    Dictionary<string, string> gameFieldParser = fields[10 + cb_game.SelectedIndex].Split('~').Select(part => part.Split('=')).Where(part => part.Length == 2).ToDictionary(sp => sp[0], sp => sp[1]);
+
+                    if (gameFieldParser.ContainsKey("Available"))
+                    {
+                        if (Convert.ToBoolean(gameFieldParser["Available"]) == false)
+                        {
+                            continue;
+                        }
                     }
-                    else if (fields[10 + cb_game.SelectedIndex] == "")
-                    {//if no note is added then this species requires strict equality
-                        alts.Add(d);
+                    if (gameFieldParser.ContainsKey("Override")) 
+                    {
+                        Dictionary<string, string> overrideParser = gameFieldParser["Override"].Split('&').Select(part => part.Split('-')).Where(part => part.Length == 2).ToDictionary(sp => sp[0], sp => sp[1]);
+
+                        if (overrideParser.ContainsKey("dex_number"))
+                        {
+                            mon.dex_number = Convert.ToInt32(overrideParser["dex_number"]);
+                        }
+                        if (overrideParser.ContainsKey("name"))
+                        {
+                            mon.name = overrideParser["name"];
+                        }
+                        if (overrideParser.ContainsKey("type_01"))
+                        {
+                            mon.type_01 = overrideParser["type_01"];
+                        }
+                        if (overrideParser.ContainsKey("type_02"))
+                        {
+                            if (overrideParser["type_02"] == "none")
+                            {
+                                mon.type_02 = "";
+                            }
+                            else
+                            {
+                                mon.type_02 = overrideParser["type_02"];
+                            }
+                        }
+                        if (overrideParser.ContainsKey("region"))
+                        {
+                            mon.region = overrideParser["region"];
+                        }
+                        if (overrideParser.ContainsKey("generation"))
+                        {
+                            mon.generation = Convert.ToInt32(overrideParser["generation"]);
+                        }
+                        if (overrideParser.ContainsKey("evo_method"))
+                        {
+                            mon.evo_method = overrideParser["evo_method"];
+                        }
+                        if (overrideParser.ContainsKey("evo_family"))
+                        {
+                            mon.evo_family = overrideParser["evo_family"].Split(';').Select(Int32.Parse).ToList();
+                        }
+                        if (overrideParser.ContainsKey("is_legendry"))
+                        {
+                            mon.is_legendry = Convert.ToBoolean(overrideParser["is_legendry"]);
+                        }
+                        if (overrideParser.ContainsKey("is_mythical"))
+                        {
+                            mon.is_mythical = Convert.ToBoolean(overrideParser["is_mythical"]);
+                        }
+                    }
+                    if (gameFieldParser.ContainsKey("Alt Forms"))
+                    {
+
+                    }
+                    if (gameFieldParser.ContainsKey("Mutually Exclusive"))
+                    {
+                        mon.mutuallyExclusiveDexValues = gameFieldParser["Mutually Exclusive"].Split(';').Select(Int32.Parse).ToList();
                     }
                     else
-                    {//if a list is given then it is because that species is mutually exclusive to others in that gen
-                        //the list denotes what other dex values will be considered equivalent
-                        alts = fields[10 + cb_game.SelectedIndex].Split(';').Select(Int32.Parse).ToList();
+                    {
+                        List<int> list = new List<int>();
+                        list.Add(mon.dex_number);
+                        mon.mutuallyExclusiveDexValues = list;
                     }
-                    Pokemon mon = new Pokemon(d, species, firstType, secondType, firstAbil, secondAbil, hiddenAbil, legend, alts, cb_game.SelectedIndex);
+
+                    mon.game = cb_game.SelectedIndex;
                     pokedex.Add(mon);
                 }
             }
@@ -229,7 +293,7 @@ namespace pokewordle
                 var random = new Random();
                 int index = random.Next(pokedex.Count());
                 Pokemon randoMon = pokedex[index];
-                while (randoParty.Count != 0 && (randoParty.Contains(randoMon) || randoParty.All(x => x.acceptableAlts.Contains(randoMon.dex)) || (randoMon.legendary && ck_legendries.IsChecked == false)))
+                while (randoParty.Count != 0 && (randoParty.Contains(randoMon) || randoParty.All(x => x.mutuallyExclusiveDexValues.Contains(randoMon.dex_number)) || (randoMon.is_legendry && ck_legendries.IsChecked == false)))
                 {//roll again if the mon is already in the party, or if the mon is considered an acceptable alt to a mon in the party, or is legendary
                     index = random.Next(pokedex.Count());
                     randoMon = pokedex[index];
@@ -282,62 +346,62 @@ namespace pokewordle
                 foreach (var mon in temp)
                 {
                     //check slot1
-                    if (mon.acceptableAlts.Contains(pokedex[cb_Slot1.SelectedIndex].dex) && gb_Slot1.Background != Brushes.Green)
+                    if (mon.mutuallyExclusiveDexValues.Contains(pokedex[cb_Slot1.SelectedIndex].dex_number) && gb_Slot1.Background != Brushes.Green)
                     {//found a match
                         cb_Slot1.SelectedItem = cb_Slot1.Items.IndexOf(mon.name);
                         lbl_Name_Slot1.Content = mon.name;
-                        lbl_TypeA_Slot1.Content = mon.type_a;
-                        lbl_TypeB_Slot1.Content = mon.type_b;
+                        lbl_TypeA_Slot1.Content = mon.type_01;
+                        lbl_TypeB_Slot1.Content = mon.type_02;
                         gb_Slot1.Background = Brushes.Green;
                         continue;
                     }
                     //check slot2
-                    if (mon.acceptableAlts.Contains(pokedex[cb_Slot2.SelectedIndex].dex) && gb_Slot2.Background != Brushes.Green)
+                    if (mon.mutuallyExclusiveDexValues.Contains(pokedex[cb_Slot2.SelectedIndex].dex_number) && gb_Slot2.Background != Brushes.Green)
                     {//found a match
                         cb_Slot2.SelectedIndex = cb_Slot2.Items.IndexOf(mon.name);
                         lbl_Name_Slot2.Content = mon.name;
-                        lbl_TypeA_Slot2.Content = mon.type_a;
-                        lbl_TypeB_Slot2.Content = mon.type_b;
+                        lbl_TypeA_Slot2.Content = mon.type_01;
+                        lbl_TypeB_Slot2.Content = mon.type_02;
                         gb_Slot2.Background = Brushes.Green;
                         continue;
                     }
                     //check slot3
-                    if (mon.acceptableAlts.Contains(pokedex[cb_Slot3.SelectedIndex].dex) && gb_Slot3.Background != Brushes.Green)
+                    if (mon.mutuallyExclusiveDexValues.Contains(pokedex[cb_Slot3.SelectedIndex].dex_number) && gb_Slot3.Background != Brushes.Green)
                     {//found a match
                         cb_Slot3.SelectedIndex = cb_Slot3.Items.IndexOf(mon.name);
                         lbl_Name_Slot3.Content = mon.name;
-                        lbl_TypeA_Slot3.Content = mon.type_a;
-                        lbl_TypeB_Slot3.Content = mon.type_b;
+                        lbl_TypeA_Slot3.Content = mon.type_01;
+                        lbl_TypeB_Slot3.Content = mon.type_02;
                         gb_Slot3.Background = Brushes.Green;
                         continue;
                     }
                     //check slot4
-                    if (mon.acceptableAlts.Contains(pokedex[cb_Slot4.SelectedIndex].dex) && gb_Slot4.Background != Brushes.Green)
+                    if (mon.mutuallyExclusiveDexValues.Contains(pokedex[cb_Slot4.SelectedIndex].dex_number) && gb_Slot4.Background != Brushes.Green)
                     {//found a match
                         cb_Slot4.SelectedIndex = cb_Slot4.Items.IndexOf(mon.name);
                         lbl_Name_Slot4.Content = mon.name;
-                        lbl_TypeA_Slot4.Content = mon.type_a;
-                        lbl_TypeB_Slot4.Content = mon.type_b;
+                        lbl_TypeA_Slot4.Content = mon.type_01;
+                        lbl_TypeB_Slot4.Content = mon.type_02;
                         gb_Slot4.Background = Brushes.Green;
                         continue;
                     }
                     //check slot5
-                    if (mon.acceptableAlts.Contains(pokedex[cb_Slot5.SelectedIndex].dex) && gb_Slot5.Background != Brushes.Green)
+                    if (mon.mutuallyExclusiveDexValues.Contains(pokedex[cb_Slot5.SelectedIndex].dex_number) && gb_Slot5.Background != Brushes.Green)
                     {//found a match
                         cb_Slot5.SelectedIndex = cb_Slot5.Items.IndexOf(mon.name);
                         lbl_Name_Slot5.Content = mon.name;
-                        lbl_TypeA_Slot5.Content = mon.type_a;
-                        lbl_TypeB_Slot5.Content = mon.type_b;
+                        lbl_TypeA_Slot5.Content = mon.type_01;
+                        lbl_TypeB_Slot5.Content = mon.type_02;
                         gb_Slot5.Background = Brushes.Green;
                         continue;
                     }
                     //check slot6
-                    if (mon.acceptableAlts.Contains(pokedex[cb_Slot6.SelectedIndex].dex) && gb_Slot6.Background != Brushes.Green)
+                    if (mon.mutuallyExclusiveDexValues.Contains(pokedex[cb_Slot6.SelectedIndex].dex_number) && gb_Slot6.Background != Brushes.Green)
                     {//found a match
                         cb_Slot6.SelectedIndex = cb_Slot6.Items.IndexOf(mon.name);
                         lbl_Name_Slot6.Content = mon.name;
-                        lbl_TypeA_Slot6.Content = mon.type_a;
-                        lbl_TypeB_Slot6.Content = mon.type_b;
+                        lbl_TypeA_Slot6.Content = mon.type_01;
+                        lbl_TypeB_Slot6.Content = mon.type_02;
                         gb_Slot6.Background = Brushes.Green;
                         continue;
                     }
@@ -373,11 +437,11 @@ namespace pokewordle
 
                     if (gb_Slot1.Background != Brushes.Green)
                     {//count a match
-                        if (pokedex[cb_Slot1.SelectedIndex].type_a == mon.type_a || pokedex[cb_Slot1.SelectedIndex].type_a == mon.type_b)
+                        if (pokedex[cb_Slot1.SelectedIndex].type_01 == mon.type_01 || pokedex[cb_Slot1.SelectedIndex].type_01 == mon.type_02)
                         {
                             slot1_typeA_Match++;
                         }
-                        if (pokedex[cb_Slot1.SelectedIndex].type_b == mon.type_a || pokedex[cb_Slot1.SelectedIndex].type_b == mon.type_b)
+                        if (pokedex[cb_Slot1.SelectedIndex].type_02 == mon.type_01 || pokedex[cb_Slot1.SelectedIndex].type_02 == mon.type_02)
                         {
                             slot1_typeB_Match++;
                         }
@@ -385,11 +449,11 @@ namespace pokewordle
 
                     if (gb_Slot2.Background != Brushes.Green)
                     {//count a match
-                        if (pokedex[cb_Slot2.SelectedIndex].type_a == mon.type_a || pokedex[cb_Slot2.SelectedIndex].type_a == mon.type_b)
+                        if (pokedex[cb_Slot2.SelectedIndex].type_01 == mon.type_01 || pokedex[cb_Slot2.SelectedIndex].type_01 == mon.type_02)
                         {
                             slot2_typeA_Match++;
                         }
-                        if (pokedex[cb_Slot2.SelectedIndex].type_b == mon.type_a || pokedex[cb_Slot2.SelectedIndex].type_b == mon.type_b)
+                        if (pokedex[cb_Slot2.SelectedIndex].type_02 == mon.type_01 || pokedex[cb_Slot2.SelectedIndex].type_02 == mon.type_02)
                         {
                             slot2_typeB_Match++;
                         }
@@ -397,11 +461,11 @@ namespace pokewordle
 
                     if (gb_Slot3.Background != Brushes.Green)
                     {//count a match
-                        if (mon.type_a == pokedex[cb_Slot3.SelectedIndex].type_a || mon.type_b == pokedex[cb_Slot3.SelectedIndex].type_a)
+                        if (mon.type_01 == pokedex[cb_Slot3.SelectedIndex].type_01 || mon.type_02 == pokedex[cb_Slot3.SelectedIndex].type_01)
                         {
                             slot3_typeA_Match++;
                         }
-                        if (mon.type_a == pokedex[cb_Slot3.SelectedIndex].type_b || mon.type_b == pokedex[cb_Slot3.SelectedIndex].type_b)
+                        if (mon.type_01 == pokedex[cb_Slot3.SelectedIndex].type_02 || mon.type_02 == pokedex[cb_Slot3.SelectedIndex].type_02)
                         {
                             slot3_typeB_Match++;
                         }
@@ -409,11 +473,11 @@ namespace pokewordle
 
                     if (gb_Slot4.Background != Brushes.Green)
                     {//count a match
-                        if (mon.type_a == pokedex[cb_Slot4.SelectedIndex].type_a || mon.type_b == pokedex[cb_Slot4.SelectedIndex].type_a)
+                        if (mon.type_01 == pokedex[cb_Slot4.SelectedIndex].type_01 || mon.type_02 == pokedex[cb_Slot4.SelectedIndex].type_01)
                         {
                             slot4_typeA_Match++;
                         }
-                        if (mon.type_a == pokedex[cb_Slot4.SelectedIndex].type_b || mon.type_b == pokedex[cb_Slot4.SelectedIndex].type_b)
+                        if (mon.type_01 == pokedex[cb_Slot4.SelectedIndex].type_02 || mon.type_02 == pokedex[cb_Slot4.SelectedIndex].type_02)
                         {
                             slot4_typeB_Match++;
                         }
@@ -421,11 +485,11 @@ namespace pokewordle
 
                     if (gb_Slot5.Background != Brushes.Green)
                     {//count a match
-                        if (mon.type_a == pokedex[cb_Slot5.SelectedIndex].type_a || mon.type_b == pokedex[cb_Slot5.SelectedIndex].type_a)
+                        if (mon.type_01 == pokedex[cb_Slot5.SelectedIndex].type_01 || mon.type_02 == pokedex[cb_Slot5.SelectedIndex].type_01)
                         {
                             slot5_typeA_Match++;
                         }
-                        if (mon.type_a == pokedex[cb_Slot5.SelectedIndex].type_b || mon.type_b == pokedex[cb_Slot5.SelectedIndex].type_b)
+                        if (mon.type_01 == pokedex[cb_Slot5.SelectedIndex].type_02 || mon.type_02 == pokedex[cb_Slot5.SelectedIndex].type_02)
                         {
                             slot5_typeB_Match++;
                         }
@@ -433,11 +497,11 @@ namespace pokewordle
 
                     if (gb_Slot6.Background != Brushes.Green)
                     {//count a match
-                        if (mon.type_a == pokedex[cb_Slot6.SelectedIndex].type_a || mon.type_b == pokedex[cb_Slot6.SelectedIndex].type_a)
+                        if (mon.type_01 == pokedex[cb_Slot6.SelectedIndex].type_01 || mon.type_02 == pokedex[cb_Slot6.SelectedIndex].type_01)
                         {
                             slot6_typeA_Match++;
                         }
-                        if (mon.type_a == pokedex[cb_Slot6.SelectedIndex].type_b || mon.type_b == pokedex[cb_Slot6.SelectedIndex].type_b)
+                        if (mon.type_01 == pokedex[cb_Slot6.SelectedIndex].type_02 || mon.type_02 == pokedex[cb_Slot6.SelectedIndex].type_02)
                         {
                             slot6_typeB_Match++;
                         }
@@ -503,9 +567,9 @@ namespace pokewordle
                 if (gb_Slot1.Background != Brushes.Green)
                 {
                     lbl_Name_Slot1.Content = pokedex[cb_Slot1.SelectedIndex].name;
-                    lbl_TypeA_Slot1.Content = pokedex[cb_Slot1.SelectedIndex].type_a + " - " + slot1_typeA_Match + " matches";
-                    if (pokedex[cb_Slot1.SelectedIndex].type_b != "")
-                        lbl_TypeB_Slot1.Content = pokedex[cb_Slot1.SelectedIndex].type_b + " - " + slot1_typeB_Match + " matches";
+                    lbl_TypeA_Slot1.Content = pokedex[cb_Slot1.SelectedIndex].type_01 + " - " + slot1_typeA_Match + " matches";
+                    if (pokedex[cb_Slot1.SelectedIndex].type_02 != "")
+                        lbl_TypeB_Slot1.Content = pokedex[cb_Slot1.SelectedIndex].type_02 + " - " + slot1_typeB_Match + " matches";
                     else
                         lbl_TypeB_Slot1.Content = "Single type - " + slot1_typeB_Match + " matches";
 
@@ -513,45 +577,45 @@ namespace pokewordle
                 if (gb_Slot2.Background != Brushes.Green)
                 {
                     lbl_Name_Slot2.Content = pokedex[cb_Slot2.SelectedIndex].name;
-                    lbl_TypeA_Slot2.Content = pokedex[cb_Slot2.SelectedIndex].type_a + " - " + slot2_typeA_Match + " matches";
-                    if (pokedex[cb_Slot2.SelectedIndex].type_b != "")
-                        lbl_TypeB_Slot2.Content = pokedex[cb_Slot2.SelectedIndex].type_b + " - " + slot2_typeB_Match + " matches";
+                    lbl_TypeA_Slot2.Content = pokedex[cb_Slot2.SelectedIndex].type_01 + " - " + slot2_typeA_Match + " matches";
+                    if (pokedex[cb_Slot2.SelectedIndex].type_02 != "")
+                        lbl_TypeB_Slot2.Content = pokedex[cb_Slot2.SelectedIndex].type_02 + " - " + slot2_typeB_Match + " matches";
                     else
                         lbl_TypeB_Slot2.Content = "Single type - " + slot2_typeB_Match + " matches";
                 }
                 if (gb_Slot3.Background != Brushes.Green)
                 {
                     lbl_Name_Slot3.Content = pokedex[cb_Slot3.SelectedIndex].name;
-                    lbl_TypeA_Slot3.Content = pokedex[cb_Slot3.SelectedIndex].type_a + " - " + slot3_typeA_Match + " matches";
-                    if (pokedex[cb_Slot3.SelectedIndex].type_b != "")
-                        lbl_TypeB_Slot3.Content = pokedex[cb_Slot3.SelectedIndex].type_b + " - " + slot3_typeB_Match + " matches";
+                    lbl_TypeA_Slot3.Content = pokedex[cb_Slot3.SelectedIndex].type_01 + " - " + slot3_typeA_Match + " matches";
+                    if (pokedex[cb_Slot3.SelectedIndex].type_02 != "")
+                        lbl_TypeB_Slot3.Content = pokedex[cb_Slot3.SelectedIndex].type_02 + " - " + slot3_typeB_Match + " matches";
                     else
                         lbl_TypeB_Slot3.Content = "Single type - " + slot3_typeB_Match + " matches";
                 }
                 if (gb_Slot4.Background != Brushes.Green)
                 {
                     lbl_Name_Slot4.Content = pokedex[cb_Slot4.SelectedIndex].name;
-                    lbl_TypeA_Slot4.Content = pokedex[cb_Slot4.SelectedIndex].type_a + " - " + slot4_typeA_Match + " matches";
-                    if (pokedex[cb_Slot4.SelectedIndex].type_b != "")
-                        lbl_TypeB_Slot4.Content = pokedex[cb_Slot4.SelectedIndex].type_b + " - " + slot4_typeB_Match + " matches";
+                    lbl_TypeA_Slot4.Content = pokedex[cb_Slot4.SelectedIndex].type_01 + " - " + slot4_typeA_Match + " matches";
+                    if (pokedex[cb_Slot4.SelectedIndex].type_02 != "")
+                        lbl_TypeB_Slot4.Content = pokedex[cb_Slot4.SelectedIndex].type_02 + " - " + slot4_typeB_Match + " matches";
                     else
                         lbl_TypeB_Slot4.Content = "Single type - " + slot4_typeB_Match + " matches";
                 }
                 if (gb_Slot5.Background != Brushes.Green)
                 {
                     lbl_Name_Slot5.Content = pokedex[cb_Slot5.SelectedIndex].name;
-                    lbl_TypeA_Slot5.Content = pokedex[cb_Slot5.SelectedIndex].type_a + " - " + slot5_typeA_Match + " matches";
-                    if (pokedex[cb_Slot5.SelectedIndex].type_b != "")
-                        lbl_TypeB_Slot5.Content = pokedex[cb_Slot5.SelectedIndex].type_b + " - " + slot5_typeB_Match + " matches";
+                    lbl_TypeA_Slot5.Content = pokedex[cb_Slot5.SelectedIndex].type_01 + " - " + slot5_typeA_Match + " matches";
+                    if (pokedex[cb_Slot5.SelectedIndex].type_02 != "")
+                        lbl_TypeB_Slot5.Content = pokedex[cb_Slot5.SelectedIndex].type_02 + " - " + slot5_typeB_Match + " matches";
                     else
                         lbl_TypeB_Slot5.Content = "Single type - " + slot5_typeB_Match + " matches";
                 }
                 if (gb_Slot6.Background != Brushes.Green)
                 {
                     lbl_Name_Slot6.Content = pokedex[cb_Slot6.SelectedIndex].name;
-                    lbl_TypeA_Slot6.Content = pokedex[cb_Slot6.SelectedIndex].type_a + " - " + slot6_typeA_Match + " matches";
-                    if (pokedex[cb_Slot6.SelectedIndex].type_b != "")
-                        lbl_TypeB_Slot6.Content = pokedex[cb_Slot6.SelectedIndex].type_b + " - " + slot6_typeB_Match + " matches";
+                    lbl_TypeA_Slot6.Content = pokedex[cb_Slot6.SelectedIndex].type_01 + " - " + slot6_typeA_Match + " matches";
+                    if (pokedex[cb_Slot6.SelectedIndex].type_02 != "")
+                        lbl_TypeB_Slot6.Content = pokedex[cb_Slot6.SelectedIndex].type_02 + " - " + slot6_typeB_Match + " matches";
                     else
                         lbl_TypeB_Slot6.Content = "Single type - " + slot6_typeB_Match + " matches";
                 }
@@ -563,57 +627,61 @@ namespace pokewordle
     public class Pokemon
     {
         [XmlAttribute]
-        public int dex { get; set; }
+        public int dex_number { get; set; }
 
         [XmlAttribute]
         public string name { get; set; }
 
         [XmlAttribute]
-        public string type_a { get; set; }
-
+        public string type_01 { get; set; }
         [XmlAttribute]
-        public string type_b { get; set; }
-
+        public string type_02 { get; set; }
+        [XmlAttribute] 
+        public string region { get; set; }
         [XmlAttribute]
-        public string ability { get; set; }
-
+        public int generation {  get; set; }
         [XmlAttribute]
-        public string secondAbility { get; set; }
-
+        public string evo_method { get; set; }
         [XmlAttribute]
-        public string hiddenAbility { get; set; }
+        public List<int> evo_family { get; set; }
         [XmlAttribute]
-        public bool legendary { get; set; }
-
+        public bool is_legendry { get; set; }
         [XmlAttribute]
-        public List<int> acceptableAlts { get; set; }
+        public bool is_mythical { get; set; }
         [XmlAttribute]
-        public int generation { get; set; }
+        public List<int> mutuallyExclusiveDexValues { get; set; }
         [XmlAttribute]
-        public string originRegion { get; set; }
-        [XmlAttribute]
-        public List<int> evolutionaryFamily { get; set; }
-        [XmlAttribute]
-        public string evolutionMethod;
+        public int game {  get; set; }
         public Pokemon()
         {
+            this.dex_number = -1;
+            this.name = "";
+            this.type_01 = "";
+            this.type_02 = "";
+            this.region = "";
+            this.generation = -1;
+            this.evo_method = "";
+            this.evo_family = new List<int>();
+            this.is_legendry = false;
+            this.is_mythical = false;
+            this.mutuallyExclusiveDexValues = new List<int>();
+            this.game = -1;
 
         }
-        public Pokemon(int d, string species, string firstType, string secondType, string firstAbil, string secondAbil, string hiddenAbil, bool legend, List<int> altDexValues, int gen, string region, List<int> family, string evoMethod)
+        public Pokemon(int dex_number, string name, string type_01, string type_02, string region, int generation, string evo_method, List<int> evo_family, bool is_legendry, bool is_mythical, List<int> mutuallyExclusiveDexValues, int game)
         {
-            dex = d;
-            name = species;
-            type_a = firstType;
-            type_b = secondType;
-            ability = firstAbil;
-            secondAbility = secondAbil;
-            hiddenAbility = hiddenAbil;
-            legendary = legend;
-            acceptableAlts = altDexValues;
-            generation = gen;
-            originRegion = region;
-            evolutionaryFamily = family;
-            evolutionMethod = evoMethod;
+            this.dex_number = dex_number;
+            this.name = name;
+            this.type_01 = type_01;
+            this.type_02 = type_02;
+            this.region = region;
+            this.generation = generation;
+            this.evo_method = evo_method;
+            this.evo_family = evo_family;
+            this.is_legendry = is_legendry;
+            this.is_mythical = is_mythical;
+            this.mutuallyExclusiveDexValues = mutuallyExclusiveDexValues;
+            this.game = game;
         }
     }
 }
