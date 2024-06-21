@@ -6,62 +6,104 @@
         xmlns:local="clr-namespace:pokewordle"
         xmlns:System="clr-namespace:System;assembly=System.Runtime" x:Class="pokewordle.MainWindow"
         mc:Ignorable="d"
-        Title="PokeWordle" Height="361" Width="584" Initialized="Window_Initialized">
+        Title="PokeWordle" Height="491" Width="950" Initialized="Window_Initialized">
     <Grid Background="#FF1F1F1F">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
         <ComboBox x:Name="cb_game"  
         IsTextSearchEnabled="True"    
-        IsEditable="True" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="40,36,0,0" />
-        <Label x:Name="Label" Content="Game" HorizontalAlignment="Left" Margin="40,10,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Button x:Name="btn_generate" Content="Generate Party" HorizontalAlignment="Left" Margin="145,37,0,0" VerticalAlignment="Top" Click="btn_generate_Click"/>
-        <CheckBox x:Name="ck_legendries" Content="Allow Legendries during party generation?" HorizontalAlignment="Left" Margin="254,42,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Button x:Name="btn_CheckParty" Content="Check Party" HorizontalAlignment="Left" Margin="484,286,0,0" VerticalAlignment="Top" Click="btn_CheckParty_Click"/>
-        <GroupBox x:Name="gb_Slot1" Header="Slot 1" Margin="10,60,0,0" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Left" Width="153" Background="#00000000">
+        IsEditable="True" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Grid.Column="3" Margin="14,79,0,0" />
+        <Label x:Name="Label" Content="Game" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Margin="14,48,0,0" Grid.Column="3"/>
+        <Button x:Name="btn_generate" Content="Generate Party" HorizontalAlignment="Left" Margin="126,81,0,0" VerticalAlignment="Top" Click="btn_generate_Click" Grid.Column="3"/>
+        <Button x:Name="btn_CheckParty" Content="Check Party" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btn_CheckParty_Click" Grid.Column="3" Grid.Row="1" Margin="38,0,0,0"/>
+        <GroupBox x:Name="gb_Slot1" Header="Slot 1" Foreground="White" Background="#00000000">
             <StackPanel>
-                <ComboBox x:Name="cb_Slot1" Width="120"/>
-                <Label x:Name="lbl_Name_Slot1" Content="Name" Foreground="White" Background="#801F1F1F" />
-                <Label x:Name="lbl_TypeA_Slot1" Content="Type A" Foreground="White" Background="#801F1F1F"/>
-                <Label x:Name="lbl_TypeB_Slot1" Content="Type B" Foreground="White" Background="#801F1F1F"/>
+                <ComboBox x:Name="cb_Slot1" Width="120" SelectionChanged="cb_Slot1_SelectionChanged"/>
+                <Label x:Name="lbl_Name_Slot1" Content="Name: " Foreground="White" Background="#801F1F1F" />
+                <Label x:Name="lbl_TypeA_Slot1" Content="Type A: " Foreground="White" Background="#801F1F1F"/>
+                <Label x:Name="lbl_TypeB_Slot1" Content="Type B: " Foreground="White" Background="#801F1F1F"/>
+                <Label x:Name="lbl_Region_Slot1" Content="Region: " Foreground="White"/>
+                <Label x:Name="lbl_Gen_Slot1" Content="Generation: " Foreground="White"/>
+                <Label x:Name="lbl_EMethod_Slot1" Content="Evo Method: " Foreground="White"/>
+                <Label x:Name="lbl_Family_Slot1" Content="Evo Family: " Foreground="White"/>
             </StackPanel>
         </GroupBox>
-        <GroupBox x:Name="gb_Slot2" Header="Slot 2" Margin="168,60,0,0" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Left" Width="153">
+        <GroupBox x:Name="gb_Slot2" Header="Slot 2" Foreground="White" Grid.Column="1">
             <StackPanel>
                 <ComboBox x:Name="cb_Slot2" Width="120"/>
                 <Label x:Name="lbl_Name_Slot2" Content="Name" Foreground="White" Background="#801F1F1F" />
                 <Label x:Name="lbl_TypeA_Slot2" Content="Type A" Foreground="White" Background="#801F1F1F"/>
                 <Label x:Name="lbl_TypeB_Slot2" Content="Type B" Foreground="White" Background="#801F1F1F"/>
+                <Label x:Name="lbl_Region_Slot2" Content="Region: " Foreground="White"/>
+                <Label x:Name="lbl_Gen_Slot3" Content="Generation: " Foreground="White"/>
+                <Label x:Name="lbl_EMethod_Slot2" Content="Evo Method: " Foreground="White"/>
+                <Label x:Name="lbl_Family_Slot2" Content="Evo Family: " Foreground="White"/>
             </StackPanel>
         </GroupBox>
-        <GroupBox x:Name="gb_Slot3" Header="Slot 3" Margin="326,60,0,0" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Left" Width="153">
+        <GroupBox x:Name="gb_Slot3" Header="Slot 3" Foreground="White" Grid.Column="2">
             <StackPanel>
                 <ComboBox x:Name="cb_Slot3" Width="120"/>
                 <Label x:Name="lbl_Name_Slot3" Content="Name" Foreground="White" Background="#801F1F1F" />
                 <Label x:Name="lbl_TypeA_Slot3" Content="Type A" Foreground="White" Background="#801F1F1F"/>
                 <Label x:Name="lbl_TypeB_Slot3" Content="Type B" Foreground="White" Background="#801F1F1F"/>
+                <Label x:Name="lbl_Region_Slot2_Copy" Content="Region: " Foreground="White"/>
+                <Label x:Name="lbl_Gen_Slot3_Copy" Content="Generation: " Foreground="White"/>
+                <Label x:Name="lbl_EMethod_Slot2_Copy" Content="Evo Method: " Foreground="White"/>
+                <Label x:Name="lbl_Family_Slot2_Copy" Content="Evo Family: " Foreground="White"/>
             </StackPanel>
         </GroupBox>
-        <GroupBox x:Name="gb_Slot4" Header="Slot 4" Margin="10,183,0,0" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Left" Width="153">
+        <GroupBox x:Name="gb_Slot4" Header="Slot 4" Foreground="White" Grid.Row="1">
             <StackPanel>
                 <ComboBox x:Name="cb_Slot4" Width="120"/>
                 <Label x:Name="lbl_Name_Slot4" Content="Name" Foreground="White" Background="#801F1F1F" />
                 <Label x:Name="lbl_TypeA_Slot4" Content="Type A" Foreground="White" Background="#801F1F1F"/>
                 <Label x:Name="lbl_TypeB_Slot4" Content="Type B" Foreground="White" Background="#801F1F1F"/>
+                <Label x:Name="lbl_Region_Slot2_Copy1" Content="Region: " Foreground="White"/>
+                <Label x:Name="lbl_Gen_Slot3_Copy1" Content="Generation: " Foreground="White"/>
+                <Label x:Name="lbl_EMethod_Slot2_Copy1" Content="Evo Method: " Foreground="White"/>
+                <Label x:Name="lbl_Family_Slot2_Copy1" Content="Evo Family: " Foreground="White"/>
             </StackPanel>
         </GroupBox>
-        <GroupBox x:Name="gb_Slot5" Header="Slot 5" Margin="168,183,0,0" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Left" Width="153">
+        <GroupBox x:Name="gb_Slot5" Header="Slot 5" Foreground="White" Grid.Row="1" Grid.Column="1">
             <StackPanel>
                 <ComboBox x:Name="cb_Slot5" Width="120"/>
                 <Label x:Name="lbl_Name_Slot5" Content="Name" Foreground="White" Background="#801F1F1F" />
                 <Label x:Name="lbl_TypeA_Slot5" Content="Type A" Foreground="White" Background="#801F1F1F"/>
                 <Label x:Name="lbl_TypeB_Slot5" Content="Type B" Foreground="White" Background="#801F1F1F"/>
+                <Label x:Name="lbl_Region_Slot2_Copy2" Content="Region: " Foreground="White"/>
+                <Label x:Name="lbl_Gen_Slot3_Copy2" Content="Generation: " Foreground="White"/>
+                <Label x:Name="lbl_EMethod_Slot2_Copy2" Content="Evo Method: " Foreground="White"/>
+                <Label x:Name="lbl_Family_Slot2_Copy2" Content="Evo Family: " Foreground="White"/>
             </StackPanel>
         </GroupBox>
-        <GroupBox x:Name="gb_Slot6" Header="Slot 6" Margin="326,183,0,0" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Left" Width="153">
+        <GroupBox x:Name="gb_Slot6" Header="Slot 6" Foreground="White" Grid.Row="1" Grid.Column="2">
             <StackPanel>
                 <ComboBox x:Name="cb_Slot6" Width="120"/>
                 <Label x:Name="lbl_Name_Slot6" Content="Name" Foreground="White" Background="#801F1F1F" />
                 <Label x:Name="lbl_TypeA_Slot6" Content="Type A" Foreground="White" Background="#801F1F1F"/>
                 <Label x:Name="lbl_TypeB_Slot6" Content="Type B" Foreground="White" Background="#801F1F1F"/>
+                <Label x:Name="lbl_Region_Slot2_Copy3" Content="Region: " Foreground="White"/>
+                <Label x:Name="lbl_Gen_Slot3_Copy3" Content="Generation: " Foreground="White"/>
+                <Label x:Name="lbl_EMethod_Slot2_Copy3" Content="Evo Method: " Foreground="White"/>
+                <Label x:Name="lbl_Family_Slot2_Copy3" Content="Evo Family: " Foreground="White"/>
             </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Party Settings" Foreground="White" Grid.Column="5" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="14,0,0,10" >
+            <Grid HorizontalAlignment="Center">
+                <CheckBox x:Name="ck_legendries" Content="Allow Legendries" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Margin="4,4,0,0"/>
+                <CheckBox x:Name="ck_mythicals" Content="Allow Mythicals" HorizontalAlignment="Left" Margin="4,24,0,0" VerticalAlignment="Top" Foreground="White"/>
+                <CheckBox x:Name="ck_trades" Content="Allow Trades" HorizontalAlignment="Left" Margin="4,44,0,0" VerticalAlignment="Top" Foreground="White"/>
+                <CheckBox x:Name="ck_exclusives" Content="Allow Mutual Exclusives" HorizontalAlignment="Left" Margin="4,64,0,0" VerticalAlignment="Top" Foreground="White"/>
+                <CheckBox Content="Allow Duplicates" HorizontalAlignment="Left" Margin="4,84,0,0" VerticalAlignment="Top" Foreground="White"/>
+            </Grid>
         </GroupBox>
     </Grid>
 </Window>

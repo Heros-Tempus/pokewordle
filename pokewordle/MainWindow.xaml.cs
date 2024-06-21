@@ -622,6 +622,11 @@ namespace pokewordle
             }
 
         }
+
+        private void cb_Slot1_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            //when changed populate the slot labels with information about the selected mon
+        }
     }
 
     public class Pokemon
