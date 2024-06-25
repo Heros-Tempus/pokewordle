@@ -26,7 +26,17 @@
         <Button x:Name="btn_CheckParty" Content="Check Party" HorizontalAlignment="Left" Click="btn_CheckParty_Click" Grid.Column="3" Grid.Row="1" Margin="10,140,0,0" Height="20" VerticalAlignment="Top"/>
         <GroupBox x:Name="gb_Slot1" Header="Slot 1" Foreground="White" Background="#00000000">
             <StackPanel x:Name="slot1">
-                <ComboBox x:Name="cb_Slot1" Width="120" SelectionChanged="cb_Party_SelectionChanged"/>
+                <ComboBox x:Name="cb_Slot1" Width="120" SelectionChanged="cb_Party_SelectionChanged">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock>
+                                <Run Text="{Binding name}" />
+                                <Run Text="   " /> <!-- space -->
+                                <Run Text="{Binding form_name}" />
+                            </TextBlock>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
                 <Label x:Name="lbl_Name_Slot1" Content="Name: " Foreground="White" Background="#801F1F1F" />
                 <Label x:Name="lbl_Type01_Slot1" Content="TypeA: " Foreground="White" Background="#801F1F1F"/>
                 <Label x:Name="lbl_Type02_Slot1" Content="TypeB:" Foreground="White" Background="#801F1F1F"/>
@@ -38,7 +48,17 @@
         </GroupBox>
         <GroupBox x:Name="gb_Slot2" Header="Slot 2" Foreground="White" Grid.Column="1">
             <StackPanel x:Name="slot2">
-                <ComboBox x:Name="cb_Slot2" Width="120" SelectionChanged="cb_Party_SelectionChanged"/>
+                <ComboBox x:Name="cb_Slot2" Width="120" SelectionChanged="cb_Party_SelectionChanged">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock>
+                                <Run Text="{Binding name}" />
+                                <Run Text="   " /> <!-- space -->
+                                <Run Text="{Binding form_name}" />
+                            </TextBlock>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
                 <Label x:Name="lbl_Name_Slot2" Content="Name:" Foreground="White" Background="#801F1F1F" />
                 <Label x:Name="lbl_Type01_Slot2" Content="TypeA:" Foreground="White" Background="#801F1F1F"/>
                 <Label x:Name="lbl_Type02_Slot2" Content="TypeB:" Foreground="White" Background="#801F1F1F"/>
@@ -50,7 +70,17 @@
         </GroupBox>
         <GroupBox x:Name="gb_Slot3" Header="Slot 3" Foreground="White" Grid.Column="2">
             <StackPanel x:Name="slot3">
-                <ComboBox x:Name="cb_Slot3" Width="120" SelectionChanged="cb_Party_SelectionChanged"/>
+                <ComboBox x:Name="cb_Slot3" Width="120" SelectionChanged="cb_Party_SelectionChanged">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock>
+                                <Run Text="{Binding name}" />
+                                <Run Text="   " /> <!-- space -->
+                                <Run Text="{Binding form_name}" />
+                            </TextBlock>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
                 <Label x:Name="lbl_Name_Slot3" Content="Name:" Foreground="White" Background="#801F1F1F" />
                 <Label x:Name="lbl_Type01_Slot3" Content="TypeA:" Foreground="White" Background="#801F1F1F"/>
                 <Label x:Name="lbl_Type02_Slot3" Content="TypeB:" Foreground="White" Background="#801F1F1F"/>
@@ -62,7 +92,17 @@
         </GroupBox>
         <GroupBox x:Name="gb_Slot4" Header="Slot 4" Foreground="White" Grid.Row="1">
             <StackPanel x:Name="slot4">
-                <ComboBox x:Name="cb_Slot4" Width="120" SelectionChanged="cb_Party_SelectionChanged"/>
+                <ComboBox x:Name="cb_Slot4" Width="120" SelectionChanged="cb_Party_SelectionChanged">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock>
+                                <Run Text="{Binding name}" />
+                                <Run Text="   " /> <!-- space -->
+                                <Run Text="{Binding form_name}" />
+                            </TextBlock>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
                 <Label x:Name="lbl_Name_Slot4" Content="Name:" Foreground="White" Background="#801F1F1F" />
                 <Label x:Name="lbl_Type01_Slot4" Content="TypeA:" Foreground="White" Background="#801F1F1F"/>
                 <Label x:Name="lbl_Type02_Slot4" Content="TypeB:" Foreground="White" Background="#801F1F1F"/>
@@ -74,7 +114,17 @@
         </GroupBox>
         <GroupBox x:Name="gb_Slot5" Header="Slot 5" Foreground="White" Grid.Row="1" Grid.Column="1">
             <StackPanel x:Name="slot5">
-                <ComboBox x:Name="cb_Slot5" Width="120" SelectionChanged="cb_Party_SelectionChanged"/>
+                <ComboBox x:Name="cb_Slot5" Width="120" SelectionChanged="cb_Party_SelectionChanged">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock>
+                                <Run Text="{Binding name}" />
+                                <Run Text="   " /> <!-- space -->
+                                <Run Text="{Binding form_name}" />
+                            </TextBlock>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
                 <Label x:Name="lbl_Name_Slot5" Content="Name:" Foreground="White" Background="#801F1F1F" />
                 <Label x:Name="lbl_Type01_Slot5" Content="TypeA:" Foreground="White" Background="#801F1F1F"/>
                 <Label x:Name="lbl_Type02_Slot5" Content="TypeB:" Foreground="White" Background="#801F1F1F"/>
@@ -86,7 +136,17 @@
         </GroupBox>
         <GroupBox x:Name="gb_Slot6" Header="Slot 6" Foreground="White" Grid.Row="1" Grid.Column="2">
             <StackPanel x:Name="slot6">
-                <ComboBox x:Name="cb_Slot6" Width="120" SelectionChanged="cb_Party_SelectionChanged"/>
+                <ComboBox x:Name="cb_Slot6" Width="120" SelectionChanged="cb_Party_SelectionChanged">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock>
+                                <Run Text="{Binding name}" />
+                                <Run Text="   " /> <!-- space -->
+                                <Run Text="{Binding form_name}" />
+                            </TextBlock>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
                 <Label x:Name="lbl_Name_Slot6" Content="Name:" Foreground="White" Background="#801F1F1F" />
                 <Label x:Name="lbl_Type01_Slot6" Content="TypeA:" Foreground="White" Background="#801F1F1F"/>
                 <Label x:Name="lbl_Type02_Slot6" Content="TypeB:" Foreground="White" Background="#801F1F1F"/>

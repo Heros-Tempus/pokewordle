@@ -55,6 +55,12 @@ namespace pokewordle
         public MainWindow()
         {
             InitializeComponent();
+            cb_Slot1.ItemsSource = pokedex;
+            cb_Slot2.ItemsSource = pokedex;
+            cb_Slot3.ItemsSource = pokedex;
+            cb_Slot4.ItemsSource = pokedex;
+            cb_Slot5.ItemsSource = pokedex;
+            cb_Slot6.ItemsSource = pokedex;
         }
         private void btn_generate_Click(object sender, RoutedEventArgs e)
         {
@@ -122,7 +128,6 @@ namespace pokewordle
             catch (Exception)
             {
                 //couldnt load party
-                File.Delete(saveFilePath);
                 File.WriteAllText(saveFilePath, null);
                 cb_game.SelectedIndex = 0;
             }
@@ -145,6 +150,7 @@ namespace pokewordle
             FileStream outFile = File.Create(path);
             XmlSerializer formatter = new XmlSerializer(typeof(List<Pokemon>));
             formatter.Serialize(outFile, listofmons);
+            outFile.Close();
         }
         private void generateDex()
         {
@@ -155,7 +161,7 @@ namespace pokewordle
                 parser.SetDelimiters(",");
 
                 string[] header = parser.ReadFields();
-                string[] regions = header.Skip(12).ToArray();
+                string[] regions = header.Skip(13).ToArray();
                 foreach (string region in regions) 
                 { 
                     cb_game.Items.Add(region);
@@ -178,7 +184,7 @@ namespace pokewordle
                     mon.baby = Convert.ToBoolean(fields[10]);
                     mon.final_evo = Convert.ToBoolean(fields[11]);
 
-                    Dictionary<string, string> gameFieldParser = fields[12 + cb_game.SelectedIndex].Split('~').Select(part => part.Split('=')).Where(part => part.Length == 2).ToDictionary(sp => sp[0], sp => sp[1]);
+                    Dictionary<string, string> gameFieldParser = fields[13 + cb_game.SelectedIndex].Split('~').Select(part => part.Split('=')).Where(part => part.Length == 2).ToDictionary(sp => sp[0], sp => sp[1]);
 
                     if (gameFieldParser.ContainsKey("Available"))
                     {
@@ -239,10 +245,6 @@ namespace pokewordle
                             mon.is_mythical = Convert.ToBoolean(overrideParser["is_mythical"]);
                         }
                     }
-                    if (gameFieldParser.ContainsKey("Alt Forms"))
-                    {
-
-                    }
                     if (gameFieldParser.ContainsKey("Mutually Exclusive"))
                     {
                         mon.mutuallyExclusiveDexValues = gameFieldParser["Mutually Exclusive"].Split(';').Select(Int32.Parse).ToList();
@@ -255,29 +257,39 @@ namespace pokewordle
                     }
 
                     mon.game = cb_game.SelectedIndex;
+
                     pokedex.Add(mon);
+                    if (gameFieldParser.ContainsKey("Alt Forms"))
+                    {
+                        mon.form_name = fields[12];
+
+                        List<string> forms = gameFieldParser["Alt Forms"].Split('|').ToList();
+
+                        foreach (string form in forms)
+                        {
+                            Pokemon altMon = new Pokemon();
+                            var formParser = form.Split('&').Select(part => part.Split('-')).Where(part => part.Length == 2).ToDictionary(sp => sp[0], sp => sp[1]);
+                            altMon.dex_number = mon.dex_number;
+                            altMon.name = mon.name;
+                            altMon.form_name = formParser["form_name"];
+                            altMon.type_01 = formParser["type_01"];
+                            altMon.type_02 = formParser["type_02"];
+                            altMon.region = formParser["region"];
+                            altMon.generation = Convert.ToInt32(formParser["generation"]);
+                            altMon.evo_method = formParser["evo_method"];
+                            altMon.evo_family = formParser["evo_family"].Split(';').Select(Int32.Parse).ToList();
+                            altMon.is_legendry = Convert.ToBoolean(formParser["is_legendry"]);
+                            altMon.is_mythical = Convert.ToBoolean(formParser["is_mythical"]);
+                            altMon.baby = Convert.ToBoolean(formParser["is_baby"]);
+                            altMon.final_evo = Convert.ToBoolean(formParser["is_final"]);
+                            pokedex.Add(altMon);
+                        }
+
+                    }
                 }
             }
-            populateSlots();
         }
-        private void populateSlots()
-        {
-            cb_Slot1.Items.Clear();
-            cb_Slot2.Items.Clear();
-            cb_Slot3.Items.Clear();
-            cb_Slot4.Items.Clear();
-            cb_Slot5.Items.Clear();
-            cb_Slot6.Items.Clear();
-            foreach (Pokemon mon in pokedex)
-            {
-                cb_Slot1.Items.Add(mon.name);
-                cb_Slot2.Items.Add(mon.name);
-                cb_Slot3.Items.Add(mon.name);
-                cb_Slot4.Items.Add(mon.name);
-                cb_Slot5.Items.Add(mon.name);
-                cb_Slot6.Items.Add(mon.name);
-            }
-        }
+    
         private List<Pokemon> generateParty()
         {
             //reset slot 1
@@ -568,164 +580,161 @@ namespace pokewordle
                 var slot5_matches = keys.ToDictionary(k => k, k => 0);
                 var slot6_matches = keys.ToDictionary(k => k, k => 0);
 
+                var slot1 = cb_Slot1.SelectedItem as Pokemon;
+                var slot2 = cb_Slot1.SelectedItem as Pokemon;
+                var slot3 = cb_Slot1.SelectedItem as Pokemon;
+                var slot4 = cb_Slot1.SelectedItem as Pokemon;
+                var slot5 = cb_Slot1.SelectedItem as Pokemon;
+                var slot6 = cb_Slot1.SelectedItem as Pokemon;
                 //check for direct matches
                 foreach (var mon in temp)
                 {
                     //check slot1
-                    if (mon.mutuallyExclusiveDexValues.Contains(pokedex[cb_Slot1.SelectedIndex].dex_number) && gb_Slot1.Background != Brushes.Green)
+                    if (((mon.name == slot1.name && mon.form_name == slot1.form_name) || mon.mutuallyExclusiveDexValues.Contains(slot1.dex_number)) && gb_Slot1.Background != Brushes.Green)
                     {//found a match
-                        cb_Slot1.SelectedIndex = cb_Slot1.Items.IndexOf(mon.name);
-                        lbl_Family_Slot1.Content = "Match";
+                        cb_Slot1.SelectedIndex = cb_Slot1.Items.IndexOf(mon);
                         gb_Slot1.Background = Brushes.Green;
                         continue;
                     }
                     //check slot2
-                    if (secretParty.Count >= 2 && mon.mutuallyExclusiveDexValues.Contains(pokedex[cb_Slot2.SelectedIndex].dex_number) && gb_Slot2.Background != Brushes.Green)
+                    if (secretParty.Count >= 2 && ((mon.name == slot2.name && mon.form_name == slot2.form_name) || mon.mutuallyExclusiveDexValues.Contains(slot2.dex_number)) && gb_Slot2.Background != Brushes.Green)
                     {//found a match
-                        cb_Slot2.SelectedIndex = cb_Slot2.Items.IndexOf(mon.name);
-                        lbl_Family_Slot2.Content = "Match";
+                        cb_Slot2.SelectedIndex = cb_Slot2.Items.IndexOf(mon);
                         gb_Slot2.Background = Brushes.Green;
                         continue;
                     }
                     //check slot3
-                    if (secretParty.Count >= 3 && mon.mutuallyExclusiveDexValues.Contains(pokedex[cb_Slot3.SelectedIndex].dex_number) && gb_Slot3.Background != Brushes.Green)
+                    if (secretParty.Count >= 3 && ((mon.name == slot3.name && mon.form_name == slot3.form_name) || mon.mutuallyExclusiveDexValues.Contains(slot3.dex_number)) && gb_Slot3.Background != Brushes.Green)
                     {//found a match
-                        cb_Slot3.SelectedIndex = cb_Slot3.Items.IndexOf(mon.name);
-                        lbl_Family_Slot3.Content = "Match";
+                        cb_Slot3.SelectedIndex = cb_Slot3.Items.IndexOf(mon);
                         gb_Slot3.Background = Brushes.Green;
                         continue;
                     }
                     //check slot4
-                    if (secretParty.Count >= 4 && mon.mutuallyExclusiveDexValues.Contains(pokedex[cb_Slot4.SelectedIndex].dex_number) && gb_Slot4.Background != Brushes.Green)
+                    if (secretParty.Count >= 4 && ((mon.name == slot4.name && mon.form_name == slot4.form_name) || mon.mutuallyExclusiveDexValues.Contains(slot4.dex_number)) && gb_Slot4.Background != Brushes.Green)
                     {//found a match
-                        cb_Slot4.SelectedIndex = cb_Slot4.Items.IndexOf(mon.name);
-                        lbl_Family_Slot4.Content = "Match";
+                        cb_Slot4.SelectedIndex = cb_Slot4.Items.IndexOf(mon);
                         gb_Slot4.Background = Brushes.Green;
                         continue;
                     }
                     //check slot5
-                    if (secretParty.Count >= 5 && mon.mutuallyExclusiveDexValues.Contains(pokedex[cb_Slot5.SelectedIndex].dex_number) && gb_Slot5.Background != Brushes.Green)
+                    if (secretParty.Count >= 5 && ((mon.name == slot5.name && mon.form_name == slot5.form_name) || mon.mutuallyExclusiveDexValues.Contains(slot5.dex_number)) && gb_Slot5.Background != Brushes.Green)
                     {//found a match
-                        cb_Slot5.SelectedIndex = cb_Slot5.Items.IndexOf(mon.name);
-                        lbl_Family_Slot5.Content = "Match";
+                        cb_Slot5.SelectedIndex = cb_Slot5.Items.IndexOf(mon);
                         gb_Slot5.Background = Brushes.Green;
                         continue;
                     }
                     //check slot6
-                    if (secretParty.Count >= 6 && mon.mutuallyExclusiveDexValues.Contains(pokedex[cb_Slot6.SelectedIndex].dex_number) && gb_Slot6.Background != Brushes.Green)
+                    if (secretParty.Count >= 6 && ((mon.name == slot6.name && mon.form_name == slot6.form_name) || mon.mutuallyExclusiveDexValues.Contains(slot6.dex_number)) && gb_Slot6.Background != Brushes.Green)
                     {//found a match
-                        cb_Slot6.SelectedIndex = cb_Slot6.Items.IndexOf(mon.name);
-                        lbl_Family_Slot6.Content = "Match";
+                        cb_Slot6.SelectedIndex = cb_Slot6.Items.IndexOf(mon);
                         gb_Slot6.Background = Brushes.Green;
                         continue;
                     }
                 }
 
-                //exclude direct matches from further checks
-                if (gb_Slot1.Background == Brushes.Green)
-                    temp.Remove(temp.Find(x=>x.name== pokedex[cb_Slot1.SelectedIndex].name));
-                if (secretParty.Count >= 2 && gb_Slot2.Background == Brushes.Green)
-                    temp.Remove(temp.Find(x => x.name == pokedex[cb_Slot2.SelectedIndex].name));
-                if (secretParty.Count >= 3 && gb_Slot3.Background == Brushes.Green)
-                    temp.Remove(temp.Find(x => x.name == pokedex[cb_Slot3.SelectedIndex].name));
-                if (secretParty.Count >= 4 && gb_Slot4.Background == Brushes.Green)
-                    temp.Remove(temp.Find(x => x.name == pokedex[cb_Slot4.SelectedIndex].name));
-                if (secretParty.Count >= 5 && gb_Slot5.Background == Brushes.Green)
-                    temp.Remove(temp.Find(x => x.name == pokedex[cb_Slot5.SelectedIndex].name));
-                if (secretParty.Count >= 6 && gb_Slot6.Background == Brushes.Green)
-                    temp.Remove(temp.Find(x => x.name == pokedex[cb_Slot6.SelectedIndex].name));
+                ////exclude direct matches from further checks
+                //if (gb_Slot1.Background == Brushes.Green)
+                //    temp.Remove(temp.Find(x=>x.name== pokedex[cb_Slot1.SelectedIndex].name));
+                //if (secretParty.Count >= 2 && gb_Slot2.Background == Brushes.Green)
+                //    temp.Remove(temp.Find(x => x.name == pokedex[cb_Slot2.SelectedIndex].name));
+                //if (secretParty.Count >= 3 && gb_Slot3.Background == Brushes.Green)
+                //    temp.Remove(temp.Find(x => x.name == pokedex[cb_Slot3.SelectedIndex].name));
+                //if (secretParty.Count >= 4 && gb_Slot4.Background == Brushes.Green)
+                //    temp.Remove(temp.Find(x => x.name == pokedex[cb_Slot4.SelectedIndex].name));
+                //if (secretParty.Count >= 5 && gb_Slot5.Background == Brushes.Green)
+                //    temp.Remove(temp.Find(x => x.name == pokedex[cb_Slot5.SelectedIndex].name));
+                //if (secretParty.Count >= 6 && gb_Slot6.Background == Brushes.Green)
+                //    temp.Remove(temp.Find(x => x.name == pokedex[cb_Slot6.SelectedIndex].name));
 
                 //count number of matched properties for any mon that isnt a direct match
                 foreach (var mon in temp)
                 {
-                    if (gb_Slot1.Background != Brushes.Green)
-                    {//count matching properties for slot 1
-                        if (pokedex[cb_Slot1.SelectedIndex].type_01 == mon.type_01 || pokedex[cb_Slot1.SelectedIndex].type_01 == mon.type_02)
-                            slot1_matches["type01"]++;
-                        if (pokedex[cb_Slot1.SelectedIndex].type_02 == mon.type_01 || pokedex[cb_Slot1.SelectedIndex].type_02 == mon.type_02)
-                            slot1_matches["type02"]++;
-                        if (pokedex[cb_Slot1.SelectedIndex].region == mon.region)
-                            slot1_matches["region"]++;
-                        if (pokedex[cb_Slot1.SelectedIndex].generation == mon.generation)
-                            slot1_matches["gen"]++;
-                        if (pokedex[cb_Slot1.SelectedIndex].evo_method == mon.evo_method)
-                            slot1_matches["evo_method"]++;
-                        if (pokedex[cb_Slot1.SelectedIndex].evo_family.Contains(mon.dex_number))
-                            slot1_matches["evo_family"]++;
-                    }
-                    if (secretParty.Count >= 2 && gb_Slot2.Background != Brushes.Green)
+                    if (slot1.type_01 == mon.type_01 || slot1.type_01 == mon.type_02)
+                        slot1_matches["type01"]++;
+                    if (slot1.type_02 == mon.type_01 || slot1.type_02 == mon.type_02)
+                        slot1_matches["type02"]++;
+                    if (slot1.region == mon.region)
+                        slot1_matches["region"]++;
+                    if (slot1.generation == mon.generation)
+                        slot1_matches["gen"]++;
+                    if (slot1.evo_method == mon.evo_method)
+                        slot1_matches["evo_method"]++;
+                    if (slot1.evo_family.Contains(mon.dex_number))
+                        slot1_matches["evo_family"]++;
+                    if (secretParty.Count >= 2)
                     {//count matching properties for slot 2
-                        if (pokedex[cb_Slot2.SelectedIndex].type_01 == mon.type_01 || pokedex[cb_Slot2.SelectedIndex].type_01 == mon.type_02)
+                        if (slot2.type_01 == mon.type_01 || slot2.type_01 == mon.type_02)
                             slot2_matches["type01"]++;
-                        if (pokedex[cb_Slot2.SelectedIndex].type_02 == mon.type_01 || pokedex[cb_Slot2.SelectedIndex].type_02 == mon.type_02)
+                        if (slot2.type_02 == mon.type_01 || slot2.type_02 == mon.type_02)
                             slot2_matches["type02"]++;
-                        if (pokedex[cb_Slot2.SelectedIndex].region == mon.region)
+                        if (slot2.region == mon.region)
                             slot2_matches["region"]++;
-                        if (pokedex[cb_Slot2.SelectedIndex].generation == mon.generation)
+                        if (slot2.generation == mon.generation)
                             slot2_matches["gen"]++;
-                        if (pokedex[cb_Slot2.SelectedIndex].evo_method == mon.evo_method)
+                        if (slot2.evo_method == mon.evo_method)
                             slot2_matches["evo_method"]++;
-                        if (pokedex[cb_Slot2.SelectedIndex].evo_family.Contains(mon.dex_number))
+                        if (slot2.evo_family.Contains(mon.dex_number))
                             slot2_matches["evo_family"]++;
                     }
-                    if (secretParty.Count >= 3 && gb_Slot3.Background != Brushes.Green)
+                    if (secretParty.Count >= 3)
                     {//count matching properties for slot 3
-                        if (pokedex[cb_Slot3.SelectedIndex].type_01 == mon.type_01 || pokedex[cb_Slot3.SelectedIndex].type_01 == mon.type_02)
+                        if (slot3.type_01 == mon.type_01 || slot3.type_01 == mon.type_02)
                             slot3_matches["type01"]++;
-                        if (pokedex[cb_Slot3.SelectedIndex].type_02 == mon.type_01 || pokedex[cb_Slot3.SelectedIndex].type_02 == mon.type_02)
+                        if (slot3.type_02 == mon.type_01 || slot3.type_02 == mon.type_02)
                             slot3_matches["type02"]++;
-                        if (pokedex[cb_Slot3.SelectedIndex].region == mon.region)
+                        if (slot3.region == mon.region)
                             slot3_matches["region"]++;
-                        if (pokedex[cb_Slot3.SelectedIndex].generation == mon.generation)
+                        if (slot3.generation == mon.generation)
                             slot3_matches["gen"]++;
-                        if (pokedex[cb_Slot3.SelectedIndex].evo_method == mon.evo_method)
+                        if (slot3.evo_method == mon.evo_method)
                             slot3_matches["evo_method"]++;
-                        if (pokedex[cb_Slot3.SelectedIndex].evo_family.Contains(mon.dex_number))
+                        if (slot3.evo_family.Contains(mon.dex_number))
                             slot3_matches["evo_family"]++;
                     }
-                    if (secretParty.Count >= 4 && gb_Slot4.Background != Brushes.Green)
+                    if (secretParty.Count >= 4)
                     {//count matching properties for slot 4
-                        if (pokedex[cb_Slot4.SelectedIndex].type_01 == mon.type_01 || pokedex[cb_Slot4.SelectedIndex].type_01 == mon.type_02)
+                        if (slot4.type_01 == mon.type_01 || slot4.type_01 == mon.type_02)
                             slot4_matches["type01"]++;
-                        if (pokedex[cb_Slot4.SelectedIndex].type_02 == mon.type_01 || pokedex[cb_Slot4.SelectedIndex].type_02 == mon.type_02)
+                        if (slot4.type_02 == mon.type_01 || slot4.type_02 == mon.type_02)
                             slot4_matches["type02"]++;
-                        if (pokedex[cb_Slot4.SelectedIndex].region == mon.region)
+                        if (slot4.region == mon.region)
                             slot4_matches["region"]++;
-                        if (pokedex[cb_Slot4.SelectedIndex].generation == mon.generation)
+                        if (slot4.generation == mon.generation)
                             slot4_matches["gen"]++;
-                        if (pokedex[cb_Slot4.SelectedIndex].evo_method == mon.evo_method)
+                        if (slot4.evo_method == mon.evo_method)
                             slot4_matches["evo_method"]++;
-                        if (pokedex[cb_Slot4.SelectedIndex].evo_family.Contains(mon.dex_number))
+                        if (slot4.evo_family.Contains(mon.dex_number))
                             slot4_matches["evo_family"]++;
                     }
-                    if (secretParty.Count >= 5 && gb_Slot5.Background != Brushes.Green)
+                    if (secretParty.Count >= 5)
                     {//count matching properties for slot 5
-                        if (pokedex[cb_Slot5.SelectedIndex].type_01 == mon.type_01 || pokedex[cb_Slot5.SelectedIndex].type_01 == mon.type_02)
+                        if (slot5.type_01 == mon.type_01 || slot5.type_01 == mon.type_02)
                             slot5_matches["type01"]++;
-                        if (pokedex[cb_Slot5.SelectedIndex].type_02 == mon.type_01 || pokedex[cb_Slot5.SelectedIndex].type_02 == mon.type_02)
+                        if (slot5.type_02 == mon.type_01 || slot5.type_02 == mon.type_02)
                             slot5_matches["type02"]++;
-                        if (pokedex[cb_Slot5.SelectedIndex].region == mon.region)
+                        if (slot5.region == mon.region)
                             slot5_matches["region"]++;
-                        if (pokedex[cb_Slot5.SelectedIndex].generation == mon.generation)
+                        if (slot5.generation == mon.generation)
                             slot5_matches["gen"]++;
-                        if (pokedex[cb_Slot5.SelectedIndex].evo_method == mon.evo_method)
+                        if (slot5.evo_method == mon.evo_method)
                             slot5_matches["evo_method"]++;
-                        if (pokedex[cb_Slot5.SelectedIndex].evo_family.Contains(mon.dex_number))
+                        if (slot5.evo_family.Contains(mon.dex_number))
                             slot5_matches["evo_family"]++;
                     }
-                    if (secretParty.Count >= 6 && gb_Slot6.Background != Brushes.Green)
+                    if (secretParty.Count >= 6)
                     {//count matching properties for slot 6
-                        if (pokedex[cb_Slot6.SelectedIndex].type_01 == mon.type_01 || pokedex[cb_Slot6.SelectedIndex].type_01 == mon.type_02)
+                        if (slot6.type_01 == mon.type_01 || slot6.type_01 == mon.type_02)
                             slot6_matches["type01"]++;
-                        if (pokedex[cb_Slot6.SelectedIndex].type_02 == mon.type_01 || pokedex[cb_Slot6.SelectedIndex].type_02 == mon.type_02)
+                        if (slot6.type_02 == mon.type_01 || slot6.type_02 == mon.type_02)
                             slot6_matches["type02"]++;
-                        if (pokedex[cb_Slot6.SelectedIndex].region == mon.region)
+                        if (slot6.region == mon.region)
                             slot6_matches["region"]++;
-                        if (pokedex[cb_Slot6.SelectedIndex].generation == mon.generation)
+                        if (slot6.generation == mon.generation)
                             slot6_matches["gen"]++;
-                        if (pokedex[cb_Slot6.SelectedIndex].evo_method == mon.evo_method)
+                        if (slot6.evo_method == mon.evo_method)
                             slot6_matches["evo_method"]++;
-                        if (pokedex[cb_Slot6.SelectedIndex].evo_family.Contains(mon.dex_number))
+                        if (slot6.evo_family.Contains(mon.dex_number))
                             slot6_matches["evo_family"]++;
                     }
                 }
@@ -764,20 +773,18 @@ namespace pokewordle
                         gb_Slot6.Background = Brushes.Red;
                 }
 
-                //fill out labels of each slot that isnt a direct match
-                if (gb_Slot1.Background != Brushes.Green)
+                var x = cb_Slot1.SelectedItem as Pokemon;
+                //fill out labels of each slot
+                lbl_Name_Slot1.Content = "Name: " + slot1.name;
+                lbl_Type01_Slot1.Content = lbl_Type01_Slot1.Content.ToString().Split("\u200B")[0] + "\u200B - " + slot1_matches["type01"] + " matches";
+                lbl_Type02_Slot1.Content = lbl_Type02_Slot1.Content.ToString().Split("\u200B")[0] + "\u200B - " + slot1_matches["type02"] + " matches";
+                lbl_Region_Slot1.Content = lbl_Region_Slot1.Content.ToString().Split("\u200B")[0] + "\u200B - " + slot1_matches["region"] + " matches";
+                lbl_Gen_Slot1.Content = lbl_Gen_Slot1.Content.ToString().Split("\u200B")[0] + "\u200B - " + slot1_matches["gen"] + " matches";
+                lbl_EMethod_Slot1.Content = lbl_EMethod_Slot1.Content.ToString().Split("\u200B")[0] + "\u200B - " + slot1_matches["evo_method"] + " matches";
+                lbl_Family_Slot1.Content = "Evo Family - " + slot1_matches["evo_family"] + " matches";
+                if (secretParty.Count >= 2)
                 {
-                    lbl_Name_Slot1.Content = "Name: " + pokedex[cb_Slot1.SelectedIndex].name;
-                    lbl_Type01_Slot1.Content = lbl_Type01_Slot1.Content.ToString().Split("\u200B")[0] + "\u200B - " + slot1_matches["type01"] + " matches";
-                    lbl_Type02_Slot1.Content = lbl_Type02_Slot1.Content.ToString().Split("\u200B")[0] + "\u200B - " + slot1_matches["type02"] + " matches";
-                    lbl_Region_Slot1.Content = lbl_Region_Slot1.Content.ToString().Split("\u200B")[0] + "\u200B - " + slot1_matches["region"] + " matches";
-                    lbl_Gen_Slot1.Content = lbl_Gen_Slot1.Content.ToString().Split("\u200B")[0] + "\u200B - " + slot1_matches["gen"] + " matches";
-                    lbl_EMethod_Slot1.Content = lbl_EMethod_Slot1.Content.ToString().Split("\u200B")[0] + "\u200B - " + slot1_matches["evo_method"] + " matches";
-                    lbl_Family_Slot1.Content = "Evo Family - " + slot1_matches["evo_family"] + " matches";
-                }
-                if (secretParty.Count >= 2 && gb_Slot2.Background != Brushes.Green)
-                {
-                    lbl_Name_Slot2.Content = "Name: " + pokedex[cb_Slot2.SelectedIndex].name;
+                    lbl_Name_Slot2.Content = "Name: " + slot2.name;
                     lbl_Type01_Slot2.Content = lbl_Type01_Slot2.Content.ToString().Split("\u200B")[0] + "\u200B - " + slot2_matches["type01"] + " matches";
                     lbl_Type02_Slot2.Content = lbl_Type02_Slot2.Content.ToString().Split("\u200B")[0] + "\u200B - " + slot2_matches["type02"] + " matches";
                     lbl_Region_Slot2.Content = lbl_Region_Slot2.Content.ToString().Split("\u200B")[0] + "\u200B - " + slot2_matches["region"] + " matches";
@@ -785,9 +792,9 @@ namespace pokewordle
                     lbl_EMethod_Slot2.Content = lbl_EMethod_Slot2.Content.ToString().Split("\u200B")[0] + "\u200B - " + slot2_matches["evo_method"] + " matches";
                     lbl_Family_Slot2.Content = "Evo Family - " + slot2_matches["evo_family"] + " matches";
                 }
-                if (secretParty.Count >= 3 && gb_Slot3.Background != Brushes.Green)
+                if (secretParty.Count >= 3)
                 {
-                    lbl_Name_Slot3.Content = "Name: " + pokedex[cb_Slot3.SelectedIndex].name;
+                    lbl_Name_Slot3.Content = "Name: " + slot3.name;
                     lbl_Type01_Slot3.Content = lbl_Type01_Slot3.Content.ToString().Split("\u200B")[0] + "\u200B - " + slot3_matches["type01"] + " matches";
                     lbl_Type02_Slot3.Content = lbl_Type02_Slot3.Content.ToString().Split("\u200B")[0] + "\u200B - " + slot3_matches["type02"] + " matches";
                     lbl_Region_Slot3.Content = lbl_Region_Slot3.Content.ToString().Split("\u200B")[0] + "\u200B - " + slot3_matches["region"] + " matches";
@@ -795,9 +802,9 @@ namespace pokewordle
                     lbl_EMethod_Slot3.Content = lbl_EMethod_Slot3.Content.ToString().Split("\u200B")[0] + "\u200B - " + slot3_matches["evo_method"] + " matches";
                     lbl_Family_Slot3.Content = "Evo Family - " + slot3_matches["evo_family"] + " matches";
                 }
-                if (secretParty.Count >= 4 && gb_Slot4.Background != Brushes.Green)
+                if (secretParty.Count >= 4)
                 {
-                    lbl_Name_Slot4.Content = "Name: " + pokedex[cb_Slot4.SelectedIndex].name;
+                    lbl_Name_Slot4.Content = "Name: " + slot4.name;
                     lbl_Type01_Slot4.Content = lbl_Type01_Slot4.Content.ToString().Split("\u200B")[0] + "\u200B - " + slot4_matches["type01"] + " matches";
                     lbl_Type02_Slot4.Content = lbl_Type02_Slot4.Content.ToString().Split("\u200B")[0] + "\u200B - " + slot4_matches["type02"] + " matches";
                     lbl_Region_Slot4.Content = lbl_Region_Slot4.Content.ToString().Split("\u200B")[0] + "\u200B - " + slot4_matches["region"] + " matches";
@@ -805,9 +812,9 @@ namespace pokewordle
                     lbl_EMethod_Slot4.Content = lbl_EMethod_Slot4.Content.ToString().Split("\u200B")[0] + "\u200B - " + slot4_matches["evo_method"] + " matches";
                     lbl_Family_Slot4.Content = "Evo Family - " + slot4_matches["evo_family"] + " matches";
                 }
-                if (secretParty.Count >= 5 && gb_Slot5.Background != Brushes.Green)
+                if (secretParty.Count >= 5)
                 {
-                    lbl_Name_Slot5.Content = "Name: " + pokedex[cb_Slot5.SelectedIndex].name;
+                    lbl_Name_Slot5.Content = "Name: " + slot5.name;
                     lbl_Type01_Slot5.Content = lbl_Type01_Slot5.Content.ToString().Split("\u200B")[0] + "\u200B - " + slot5_matches["type01"] + " matches";
                     lbl_Type02_Slot5.Content = lbl_Type02_Slot5.Content.ToString().Split("\u200B")[0] + "\u200B - " + slot5_matches["type02"] + " matches";
                     lbl_Region_Slot5.Content = lbl_Region_Slot5.Content.ToString().Split("\u200B")[0] + "\u200B - " + slot5_matches["region"] + " matches";
@@ -815,9 +822,9 @@ namespace pokewordle
                     lbl_EMethod_Slot5.Content = lbl_EMethod_Slot5.Content.ToString().Split("\u200B")[0] + "\u200B - " + slot5_matches["evo_method"] + " matches";
                     lbl_Family_Slot5.Content = "Evo Family - " + slot5_matches["evo_family"] + " matches";
                 }
-                if (secretParty.Count >= 6 && gb_Slot6.Background != Brushes.Green)
+                if (secretParty.Count >= 6)
                 {
-                    lbl_Name_Slot6.Content = "Name: " + pokedex[cb_Slot6.SelectedIndex].name;
+                    lbl_Name_Slot6.Content = "Name: " + slot6.name;
                     lbl_Type01_Slot6.Content = lbl_Type01_Slot6.Content.ToString().Split("\u200B")[0] + "\u200B - " + slot6_matches["type01"] + " matches";
                     lbl_Type02_Slot6.Content = lbl_Type02_Slot6.Content.ToString().Split("\u200B")[0] + "\u200B - " + slot6_matches["type02"] + " matches";
                     lbl_Region_Slot6.Content = lbl_Region_Slot6.Content.ToString().Split("\u200B")[0] + "\u200B - " + slot6_matches["region"] + " matches";
@@ -837,6 +844,7 @@ namespace pokewordle
 
             if (sender.Equals(cb_Slot1))
             {
+                var x = cb_Slot1.SelectedItem as Pokemon;
                 if (cb_Slot1.SelectedIndex == -1)
                 {
                     //reset slot 1
@@ -881,15 +889,15 @@ namespace pokewordle
                     //selection was updated, so update slot 1
                     if (gb_Slot1.Background != Brushes.Green || e.AddedItems.Count > 0)
                         gb_Slot1.Background = Brushes.Transparent;
-                    lbl_Name_Slot1.Content = "Name: " + pokedex[cb_Slot1.SelectedIndex].name + "\u200B";
-                    lbl_Type01_Slot1.Content = "TypeA: " + pokedex[cb_Slot1.SelectedIndex].type_01 + "\u200B";
-                    if (pokedex[cb_Slot1.SelectedIndex].type_02 != "")
-                        lbl_Type02_Slot1.Content = "TypeB: " + pokedex[cb_Slot1.SelectedIndex].type_02 + "\u200B";
+                    lbl_Name_Slot1.Content = "Name: " + x.name + "\u200B";
+                    lbl_Type01_Slot1.Content = "TypeA: " + x.type_01 + "\u200B";
+                    if (x.type_02 != "")
+                        lbl_Type02_Slot1.Content = "TypeB: " + x.type_02 + "\u200B";
                     else
                         lbl_Type02_Slot1.Content = "TypeB: Single type\u200B";
-                    lbl_Region_Slot1.Content = "Region: " + pokedex[cb_Slot1.SelectedIndex].region + "\u200B";
-                    lbl_Gen_Slot1.Content = "Gen: " + pokedex[cb_Slot1.SelectedIndex].generation + "\u200B";
-                    lbl_EMethod_Slot1.Content = "Evo Method: " + pokedex[cb_Slot1.SelectedIndex].evo_method + "\u200B";
+                    lbl_Region_Slot1.Content = "Region: " + x.region + "\u200B";
+                    lbl_Gen_Slot1.Content = "Gen: " + x.generation + "\u200B";
+                    lbl_EMethod_Slot1.Content = "Evo Method: " + x.evo_method + "\u200B";
                 }
             }
             else if (sender.Equals(cb_Slot2))
@@ -1246,7 +1254,9 @@ namespace pokewordle
         [XmlAttribute]
         public bool baby { get; set; }
         [XmlAttribute]
-        public bool final_evo {  get; set; }
+        public bool final_evo { get; set; }
+        [XmlAttribute]
+        public string form_name { get; set; }
         public Pokemon()
         {
             this.dex_number = -1;
@@ -1263,8 +1273,9 @@ namespace pokewordle
             this.game = -1;
             this.baby = false;
             this.final_evo = false;
+            this.form_name = "";
         }
-        public Pokemon(int dex_number, string name, string type_01, string type_02, string region, int generation, string evo_method, List<int> evo_family, bool is_legendry, bool baby, bool final_evo, bool is_mythical, List<int> mutuallyExclusiveDexValues, int game)
+        public Pokemon(int dex_number, string name, string type_01, string type_02, string region, int generation, string evo_method, List<int> evo_family, bool is_legendry, bool baby, bool final_evo, bool is_mythical, List<int> mutuallyExclusiveDexValues, string form_name, int game)
         {
             this.dex_number = dex_number;
             this.name = name;
@@ -1280,6 +1291,18 @@ namespace pokewordle
             this.game = game;
             this.baby = false;
             this.final_evo = false;
+            this.form_name = form_name;
+        }
+        public string ToString()
+        {
+            if (this.form_name == "")
+            {
+                return this.dex_number + " - " + this.name;
+            }
+            else
+            {
+                return this.dex_number + " - " + this.name + " - " + this.form_name;
+            }
         }
     }
 }
