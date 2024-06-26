@@ -193,6 +193,10 @@ namespace pokewordle
                             continue;
                         }
                     }
+                    if (gameFieldParser.ContainsKey("Catchable"))
+                    {
+                        mon.ignore_evo_restriction = Convert.ToBoolean(gameFieldParser["Catchable"]);
+                    }
                     if (gameFieldParser.ContainsKey("Override")) 
                     {
                         Dictionary<string, string> overrideParser = gameFieldParser["Override"].Split('&').Select(part => part.Split('-')).Where(part => part.Length == 2).ToDictionary(sp => sp[0], sp => sp[1]);
@@ -284,9 +288,14 @@ namespace pokewordle
                             altMon.final_evo = Convert.ToBoolean(formParser["is_final"]);
                             pokedex.Add(altMon);
                         }
-
                     }
                 }
+                cb_Slot1.Items.Refresh();
+                cb_Slot2.Items.Refresh();
+                cb_Slot3.Items.Refresh();
+                cb_Slot4.Items.Refresh();
+                cb_Slot5.Items.Refresh();
+                cb_Slot6.Items.Refresh();
             }
         }
     
@@ -521,7 +530,7 @@ namespace pokewordle
 
                 if (randoMon.is_mythical && ck_allow_mythicals.IsChecked == false) {  continue; }
 
-                if (randoMon.evo_method == "Trade" && ck_allow_trade_evos.IsChecked == false) { continue; }
+                if (randoMon.evo_method == "Trade" && ck_allow_trade_evos.IsChecked == false && !randoMon.ignore_evo_restriction) { continue; }
 
                 if (randoParty.Any(x => x.mutuallyExclusiveDexValues.Contains(randoMon.dex_number)) && ck_allow_exclusives.IsChecked == false) { continue; }
 
@@ -529,11 +538,11 @@ namespace pokewordle
 
                 if (!randoMon.final_evo && ck_final_evo_only.IsChecked == true) { continue; }
 
-                if ((randoMon.evo_method == "Used item" || randoMon.evo_method == "Held item") && ck_disable_item_evos.IsChecked == true) { continue; }
+                if ((randoMon.evo_method == "Used item" || randoMon.evo_method == "Held item") && ck_disable_item_evos.IsChecked == true && !randoMon.ignore_evo_restriction) { continue; }
 
-                if (randoMon.evo_method == "Friendship" && ck_disable_friendship_evos.IsChecked == true) { continue; }
+                if (randoMon.evo_method == "Friendship" && ck_disable_friendship_evos.IsChecked == true && !randoMon.ignore_evo_restriction) { continue; }
 
-                if (randoMon.evo_method == "Unique" && ck_disable_unique_evos.IsChecked == true) { continue; }
+                if (randoMon.evo_method == "Unique" && ck_disable_unique_evos.IsChecked == true && !randoMon.ignore_evo_restriction) { continue; }
 
                 randoParty.Add(randoMon);
 
@@ -1257,6 +1266,8 @@ namespace pokewordle
         public bool final_evo { get; set; }
         [XmlAttribute]
         public string form_name { get; set; }
+        [XmlAttribute]
+        public bool ignore_evo_restriction { get; set; }//used to override evolution based restrictions if the mon can be directly caught
         public Pokemon()
         {
             this.dex_number = -1;
@@ -1274,8 +1285,9 @@ namespace pokewordle
             this.baby = false;
             this.final_evo = false;
             this.form_name = "";
+            this.ignore_evo_restriction = false;
         }
-        public Pokemon(int dex_number, string name, string type_01, string type_02, string region, int generation, string evo_method, List<int> evo_family, bool is_legendry, bool baby, bool final_evo, bool is_mythical, List<int> mutuallyExclusiveDexValues, string form_name, int game)
+        public Pokemon(int dex_number, string name, string type_01, string type_02, string region, int generation, string evo_method, List<int> evo_family, bool is_legendry, bool baby, bool final_evo, bool is_mythical, List<int> mutuallyExclusiveDexValues, string form_name, int game, bool ignore_evo_restrictions)
         {
             this.dex_number = dex_number;
             this.name = name;
@@ -1292,6 +1304,7 @@ namespace pokewordle
             this.baby = false;
             this.final_evo = false;
             this.form_name = form_name;
+            this.ignore_evo_restriction = ignore_evo_restriction;
         }
         public string ToString()
         {

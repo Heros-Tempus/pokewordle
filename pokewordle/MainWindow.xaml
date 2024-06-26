@@ -31,7 +31,7 @@
                         <DataTemplate>
                             <TextBlock>
                                 <Run Text="{Binding name}" />
-                                <Run Text="   " /> <!-- space -->
+                                <Run Text=" " />
                                 <Run Text="{Binding form_name}" />
                             </TextBlock>
                         </DataTemplate>
@@ -53,7 +53,7 @@
                         <DataTemplate>
                             <TextBlock>
                                 <Run Text="{Binding name}" />
-                                <Run Text="   " /> <!-- space -->
+                                <Run Text=" " />
                                 <Run Text="{Binding form_name}" />
                             </TextBlock>
                         </DataTemplate>
@@ -75,7 +75,7 @@
                         <DataTemplate>
                             <TextBlock>
                                 <Run Text="{Binding name}" />
-                                <Run Text="   " /> <!-- space -->
+                                <Run Text=" " />
                                 <Run Text="{Binding form_name}" />
                             </TextBlock>
                         </DataTemplate>
@@ -97,7 +97,7 @@
                         <DataTemplate>
                             <TextBlock>
                                 <Run Text="{Binding name}" />
-                                <Run Text="   " /> <!-- space -->
+                                <Run Text=" " />
                                 <Run Text="{Binding form_name}" />
                             </TextBlock>
                         </DataTemplate>
@@ -119,7 +119,7 @@
                         <DataTemplate>
                             <TextBlock>
                                 <Run Text="{Binding name}" />
-                                <Run Text="   " /> <!-- space -->
+                                <Run Text=" " />
                                 <Run Text="{Binding form_name}" />
                             </TextBlock>
                         </DataTemplate>
@@ -141,7 +141,7 @@
                         <DataTemplate>
                             <TextBlock>
                                 <Run Text="{Binding name}" />
-                                <Run Text="   " /> <!-- space -->
+                                <Run Text=" " />
                                 <Run Text="{Binding form_name}" />
                             </TextBlock>
                         </DataTemplate>
@@ -165,11 +165,11 @@
                 <CheckBox x:Name="ck_allow_dupes" Content="Allow Duplicates" HorizontalAlignment="Left" Margin="4,84,0,0" VerticalAlignment="Top" Foreground="White" Grid.ColumnSpan="2"/>
                 <CheckBox x:Name="ck_allow_babies" Content="Allow Babies" HorizontalAlignment="Left" Margin="4,104,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Foreground="White"/>
                 <CheckBox x:Name="ck_final_evo_only" Content="Final Evos Only" HorizontalAlignment="Left" Margin="4,124,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Foreground="White"/>
-                <CheckBox x:Name="ck_disable_item_evos" Content="Disable Item Based Evos" HorizontalAlignment="Left" Margin="4,144,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Foreground="White" ToolTip="By default, evolutions requiring items are allowed (e.g. stones, held items, used items). Checking this box will exclude them from the generated party."/>
+                <CheckBox x:Name="ck_disable_item_evos" Content="Disable Item Based Evos" HorizontalAlignment="Left" Margin="4,144,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Foreground="White" ToolTip="Exclude Pokemon that evolve via items (only applies to Pokemon that cannot be directly captured)"/>
                 <Slider x:Name="sl_party_size" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="120" Maximum="6" Minimum="1" SmallChange="1" TickPlacement="BottomRight" IsSnapToTickEnabled="True" AutoToolTipPlacement="BottomRight" Value="6"/>
                 <Label Grid.Column="1" Content="Party Size" HorizontalAlignment="Center" VerticalAlignment="Bottom" Foreground="White" Margin="0,0,0,20"/>
-                <CheckBox x:Name="ck_disable_friendship_evos" Content="Disable Friendship Evos" HorizontalAlignment="Left" Margin="4,164,0,0" VerticalAlignment="Top" Foreground="White"/>
-                <CheckBox x:Name="ck_disable_unique_evos" Content="Disable Unique Evos" HorizontalAlignment="Left" Margin="4,184,0,0" VerticalAlignment="Top" Foreground="White"/>
+                <CheckBox x:Name="ck_disable_friendship_evos" Content="Disable Friendship Evos" HorizontalAlignment="Left" Margin="4,164,0,0" VerticalAlignment="Top" Foreground="White" ToolTip="Exclude Pokemon that evolve via friendship (only applies to Pokemon that cannot be directly captured)"/>
+                <CheckBox x:Name="ck_disable_unique_evos" Content="Disable Unique Evos" HorizontalAlignment="Left" Margin="4,184,0,0" VerticalAlignment="Top" Foreground="White" ToolTip="Exclude Pokemon that have unique evolution methods (only applies to Pokemon that cannot be directly captured)"/>
             </Grid>
         </GroupBox>
     </Grid>
