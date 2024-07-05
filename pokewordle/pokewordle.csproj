@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Resources\pokemon_dataset.csv" />
+	  <None Remove="Resources\pokemon_dataset.csv"/>
   </ItemGroup>
 
   <ItemGroup>

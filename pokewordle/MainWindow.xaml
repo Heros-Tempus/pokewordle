@@ -20,23 +20,14 @@
         </Grid.RowDefinitions>
         <ComboBox x:Name="cb_game"  
         IsTextSearchEnabled="True"    
-        IsEditable="True" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="100" Grid.Column="3" Margin="10,0,0,181" />
+        IsEditable="True" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="100" Grid.Column="3" Margin="10,0,0,181" IsSynchronizedWithCurrentItem="True" IsTabStop="True" TabIndex="18" >
+        </ComboBox>
         <Label x:Name="debug_label" Content="Game" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="White" Margin="10,0,0,202" Grid.Column="3"/>
-        <Button x:Name="btn_generate" Content="Generate Party" Margin="114,0,32,182" VerticalAlignment="Bottom" Click="btn_generate_Click" Grid.Column="3" Padding="1,1,1,1"/>
-        <Button x:Name="btn_CheckParty" Content="Check Party" HorizontalAlignment="Left" Click="btn_CheckParty_Click" Grid.Column="3" Grid.Row="1" Margin="10,140,0,0" Height="20" VerticalAlignment="Top"/>
+        <Button x:Name="btn_generate" Content="Generate Party" Margin="114,0,32,182" VerticalAlignment="Bottom" Click="btn_generate_Click" Grid.Column="3" Padding="1,1,1,1" ToolTip="Generate a new secret party for the selected game." TabIndex="19"/>
+        <Button x:Name="btn_CheckParty" Content="Submit Guess" HorizontalAlignment="Left" Click="btn_CheckParty_Click" Grid.Column="3" Grid.Row="1" Margin="10,140,0,0" Height="20" VerticalAlignment="Top" ToolTip="Compare the party you selected against the secret party." Width="100" TabIndex="7"/>
         <GroupBox x:Name="gb_Slot1" Header="Slot 1" Foreground="White" Background="#00000000">
             <StackPanel x:Name="slot1">
-                <ComboBox x:Name="cb_Slot1" Width="120" SelectionChanged="cb_Party_SelectionChanged">
-                    <ComboBox.ItemTemplate>
-                        <DataTemplate>
-                            <TextBlock>
-                                <Run Text="{Binding name}" />
-                                <Run Text=" " />
-                                <Run Text="{Binding form_name}" />
-                            </TextBlock>
-                        </DataTemplate>
-                    </ComboBox.ItemTemplate>
-                </ComboBox>
+                <ComboBox x:Name="cb_Slot1" Width="120" SelectionChanged="cb_Party_SelectionChanged" IsEditable="True" StaysOpenOnEdit="True" TabIndex="1"/>
                 <Label x:Name="lbl_Name_Slot1" Content="Name: " Foreground="White" Background="#801F1F1F" />
                 <Label x:Name="lbl_Type01_Slot1" Content="TypeA: " Foreground="White" Background="#801F1F1F"/>
                 <Label x:Name="lbl_Type02_Slot1" Content="TypeB:" Foreground="White" Background="#801F1F1F"/>
@@ -48,17 +39,7 @@
         </GroupBox>
         <GroupBox x:Name="gb_Slot2" Header="Slot 2" Foreground="White" Grid.Column="1">
             <StackPanel x:Name="slot2">
-                <ComboBox x:Name="cb_Slot2" Width="120" SelectionChanged="cb_Party_SelectionChanged">
-                    <ComboBox.ItemTemplate>
-                        <DataTemplate>
-                            <TextBlock>
-                                <Run Text="{Binding name}" />
-                                <Run Text=" " />
-                                <Run Text="{Binding form_name}" />
-                            </TextBlock>
-                        </DataTemplate>
-                    </ComboBox.ItemTemplate>
-                </ComboBox>
+                <ComboBox x:Name="cb_Slot2" Width="120" SelectionChanged="cb_Party_SelectionChanged" StaysOpenOnEdit="True" IsEditable="True" TabIndex="2"/>
                 <Label x:Name="lbl_Name_Slot2" Content="Name:" Foreground="White" Background="#801F1F1F" />
                 <Label x:Name="lbl_Type01_Slot2" Content="TypeA:" Foreground="White" Background="#801F1F1F"/>
                 <Label x:Name="lbl_Type02_Slot2" Content="TypeB:" Foreground="White" Background="#801F1F1F"/>
@@ -70,17 +51,7 @@
         </GroupBox>
         <GroupBox x:Name="gb_Slot3" Header="Slot 3" Foreground="White" Grid.Column="2">
             <StackPanel x:Name="slot3">
-                <ComboBox x:Name="cb_Slot3" Width="120" SelectionChanged="cb_Party_SelectionChanged">
-                    <ComboBox.ItemTemplate>
-                        <DataTemplate>
-                            <TextBlock>
-                                <Run Text="{Binding name}" />
-                                <Run Text=" " />
-                                <Run Text="{Binding form_name}" />
-                            </TextBlock>
-                        </DataTemplate>
-                    </ComboBox.ItemTemplate>
-                </ComboBox>
+                <ComboBox x:Name="cb_Slot3" Width="120" SelectionChanged="cb_Party_SelectionChanged" StaysOpenOnEdit="True" IsEditable="True" TabIndex="3"/>
                 <Label x:Name="lbl_Name_Slot3" Content="Name:" Foreground="White" Background="#801F1F1F" />
                 <Label x:Name="lbl_Type01_Slot3" Content="TypeA:" Foreground="White" Background="#801F1F1F"/>
                 <Label x:Name="lbl_Type02_Slot3" Content="TypeB:" Foreground="White" Background="#801F1F1F"/>
@@ -92,17 +63,7 @@
         </GroupBox>
         <GroupBox x:Name="gb_Slot4" Header="Slot 4" Foreground="White" Grid.Row="1">
             <StackPanel x:Name="slot4">
-                <ComboBox x:Name="cb_Slot4" Width="120" SelectionChanged="cb_Party_SelectionChanged">
-                    <ComboBox.ItemTemplate>
-                        <DataTemplate>
-                            <TextBlock>
-                                <Run Text="{Binding name}" />
-                                <Run Text=" " />
-                                <Run Text="{Binding form_name}" />
-                            </TextBlock>
-                        </DataTemplate>
-                    </ComboBox.ItemTemplate>
-                </ComboBox>
+                <ComboBox x:Name="cb_Slot4" Width="120" SelectionChanged="cb_Party_SelectionChanged" IsEditable="True" StaysOpenOnEdit="True" TabIndex="4"/>
                 <Label x:Name="lbl_Name_Slot4" Content="Name:" Foreground="White" Background="#801F1F1F" />
                 <Label x:Name="lbl_Type01_Slot4" Content="TypeA:" Foreground="White" Background="#801F1F1F"/>
                 <Label x:Name="lbl_Type02_Slot4" Content="TypeB:" Foreground="White" Background="#801F1F1F"/>
@@ -114,17 +75,7 @@
         </GroupBox>
         <GroupBox x:Name="gb_Slot5" Header="Slot 5" Foreground="White" Grid.Row="1" Grid.Column="1">
             <StackPanel x:Name="slot5">
-                <ComboBox x:Name="cb_Slot5" Width="120" SelectionChanged="cb_Party_SelectionChanged">
-                    <ComboBox.ItemTemplate>
-                        <DataTemplate>
-                            <TextBlock>
-                                <Run Text="{Binding name}" />
-                                <Run Text=" " />
-                                <Run Text="{Binding form_name}" />
-                            </TextBlock>
-                        </DataTemplate>
-                    </ComboBox.ItemTemplate>
-                </ComboBox>
+                <ComboBox x:Name="cb_Slot5" Width="120" SelectionChanged="cb_Party_SelectionChanged" IsEditable="True" StaysOpenOnEdit="True" TabIndex="5"/>
                 <Label x:Name="lbl_Name_Slot5" Content="Name:" Foreground="White" Background="#801F1F1F" />
                 <Label x:Name="lbl_Type01_Slot5" Content="TypeA:" Foreground="White" Background="#801F1F1F"/>
                 <Label x:Name="lbl_Type02_Slot5" Content="TypeB:" Foreground="White" Background="#801F1F1F"/>
@@ -136,17 +87,7 @@
         </GroupBox>
         <GroupBox x:Name="gb_Slot6" Header="Slot 6" Foreground="White" Grid.Row="1" Grid.Column="2">
             <StackPanel x:Name="slot6">
-                <ComboBox x:Name="cb_Slot6" Width="120" SelectionChanged="cb_Party_SelectionChanged">
-                    <ComboBox.ItemTemplate>
-                        <DataTemplate>
-                            <TextBlock>
-                                <Run Text="{Binding name}" />
-                                <Run Text=" " />
-                                <Run Text="{Binding form_name}" />
-                            </TextBlock>
-                        </DataTemplate>
-                    </ComboBox.ItemTemplate>
-                </ComboBox>
+                <ComboBox x:Name="cb_Slot6" Width="120" SelectionChanged="cb_Party_SelectionChanged" IsEditable="True" StaysOpenOnEdit="True" TabIndex="6"/>
                 <Label x:Name="lbl_Name_Slot6" Content="Name:" Foreground="White" Background="#801F1F1F" />
                 <Label x:Name="lbl_Type01_Slot6" Content="TypeA:" Foreground="White" Background="#801F1F1F"/>
                 <Label x:Name="lbl_Type02_Slot6" Content="TypeB:" Foreground="White" Background="#801F1F1F"/>
@@ -158,18 +99,18 @@
         </GroupBox>
         <GroupBox Header="Party Settings" Foreground="White" Grid.Column="3" HorizontalAlignment="Left" Margin="10,70,0,119" Grid.RowSpan="2" >
             <Grid HorizontalAlignment="Center">
-                <CheckBox x:Name="ck_allow_legendries" Content="Allow Legendries" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Margin="4,4,0,0" Grid.ColumnSpan="2"/>
-                <CheckBox x:Name="ck_allow_mythicals" Content="Allow Mythicals" HorizontalAlignment="Left" Margin="4,24,0,0" VerticalAlignment="Top" Foreground="White" Grid.ColumnSpan="2"/>
-                <CheckBox x:Name="ck_allow_trade_evos" Content="Allow Trade Based Evos" HorizontalAlignment="Left" Margin="4,44,0,0" VerticalAlignment="Top" Foreground="White" Grid.ColumnSpan="2"/>
-                <CheckBox x:Name="ck_allow_exclusives" Content="Allow Mutual Exclusives" HorizontalAlignment="Left" Margin="4,64,0,0" VerticalAlignment="Top" Foreground="White" Grid.ColumnSpan="2"/>
-                <CheckBox x:Name="ck_allow_dupes" Content="Allow Duplicates" HorizontalAlignment="Left" Margin="4,84,0,0" VerticalAlignment="Top" Foreground="White" Grid.ColumnSpan="2"/>
-                <CheckBox x:Name="ck_allow_babies" Content="Allow Babies" HorizontalAlignment="Left" Margin="4,104,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Foreground="White"/>
-                <CheckBox x:Name="ck_final_evo_only" Content="Final Evos Only" HorizontalAlignment="Left" Margin="4,124,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Foreground="White"/>
-                <CheckBox x:Name="ck_disable_item_evos" Content="Disable Item Based Evos" HorizontalAlignment="Left" Margin="4,144,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Foreground="White" ToolTip="Exclude Pokemon that evolve via items (only applies to Pokemon that cannot be directly captured)"/>
+                <CheckBox x:Name="ck_allow_legendries" Content="Allow Legendries" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Margin="4,4,0,0" Grid.ColumnSpan="2" ToolTip="Allows legendry Pokemon to be included in the secret party." TabIndex="8"/>
+                <CheckBox x:Name="ck_allow_mythicals" Content="Allow Mythicals" HorizontalAlignment="Left" Margin="4,24,0,0" VerticalAlignment="Top" Foreground="White" Grid.ColumnSpan="2" ToolTip="Allows mythical Pokemon to be included in the secret party if, and only if, they are available in the base game." TabIndex="9"/>
+                <CheckBox x:Name="ck_allow_trade_evos" Content="Allow Trade Based Evos" HorizontalAlignment="Left" Margin="4,44,0,0" VerticalAlignment="Top" Foreground="White" Grid.ColumnSpan="2" ToolTip="Allow trade based evolutions to be included in the secret party." TabIndex="10"/>
+                <CheckBox x:Name="ck_allow_exclusives" Content="Allow Mutual Exclusives" HorizontalAlignment="Left" Margin="4,64,0,0" VerticalAlignment="Top" Foreground="White" Grid.ColumnSpan="2" ToolTip="Allow multiple Pokemon from a given mutually exclusive set to be added to the secret party. " TabIndex="11"/>
+                <CheckBox x:Name="ck_allow_dupes" Content="Allow Duplicates" HorizontalAlignment="Left" Margin="4,84,0,0" VerticalAlignment="Top" Foreground="White" Grid.ColumnSpan="2" ToolTip="Allow duplicate Pokemon in the secret party." TabIndex="12"/>
+                <CheckBox x:Name="ck_allow_babies" Content="Allow Babies" HorizontalAlignment="Left" Margin="4,104,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Foreground="White" ToolTip="Allow baby Pokemon in the secret party." TabIndex="13"/>
+                <CheckBox x:Name="ck_final_evo_only" Content="Final Evos Only" HorizontalAlignment="Left" Margin="4,124,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Foreground="White" ToolTip="Limit the secret party to only include fully evolved Pokemon." TabIndex="14"/>
+                <CheckBox x:Name="ck_disable_item_evos" Content="Disable Item Based Evos" HorizontalAlignment="Left" Margin="4,144,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Foreground="White" ToolTip="Exclude Pokemon from the secret party that evolve via items (only applies to Pokemon that cannot be directly captured)" TabIndex="15"/>
                 <Slider x:Name="sl_party_size" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="120" Maximum="6" Minimum="1" SmallChange="1" TickPlacement="BottomRight" IsSnapToTickEnabled="True" AutoToolTipPlacement="BottomRight" Value="6"/>
                 <Label Grid.Column="1" Content="Party Size" HorizontalAlignment="Center" VerticalAlignment="Bottom" Foreground="White" Margin="0,0,0,20"/>
-                <CheckBox x:Name="ck_disable_friendship_evos" Content="Disable Friendship Evos" HorizontalAlignment="Left" Margin="4,164,0,0" VerticalAlignment="Top" Foreground="White" ToolTip="Exclude Pokemon that evolve via friendship (only applies to Pokemon that cannot be directly captured)"/>
-                <CheckBox x:Name="ck_disable_unique_evos" Content="Disable Unique Evos" HorizontalAlignment="Left" Margin="4,184,0,0" VerticalAlignment="Top" Foreground="White" ToolTip="Exclude Pokemon that have unique evolution methods (only applies to Pokemon that cannot be directly captured)"/>
+                <CheckBox x:Name="ck_disable_friendship_evos" Content="Disable Friendship Evos" HorizontalAlignment="Left" Margin="4,164,0,0" VerticalAlignment="Top" Foreground="White" ToolTip="Exclude Pokemon from the secret party that evolve via friendship (only applies to Pokemon that cannot be directly captured)" TabIndex="16"/>
+                <CheckBox x:Name="ck_disable_unique_evos" Content="Disable Unique Evos" HorizontalAlignment="Left" Margin="4,184,0,0" VerticalAlignment="Top" Foreground="White" ToolTip="Exclude Pokemon from the secret party that have unique evolution methods (only applies to Pokemon that cannot be directly captured)" TabIndex="17"/>
             </Grid>
         </GroupBox>
     </Grid>
